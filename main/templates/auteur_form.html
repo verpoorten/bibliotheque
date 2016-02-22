@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block breadcrumb %}
+  <li><a href="{% url 'auteur_list' %}">Auteurs</a></li>
+  <li class="active">Auteur</li>
+{% endblock %}
+{% block content %}
+<div class="panel panel-default">
+  <div class="panel-body">
+    <form  method="post" action="{% url 'auteur-update' %}">
+      {% csrf_token %}
+      <input type="hidden" value="modify" name="action"/>
+      <input type="hidden" value="{{ auteur.id }}" name="id"/>
+      <div class="row">
+        <div class="col-md-6">
+        <label for="nom">Nom</label>
+        <input class="form-control" id="nom" value="{{ auteur.nomp| default_if_none:'' }}" name="nom">
+        </div>
+        <div class="col-md-6">
+          <label for="prenom" class="control-label">Prénom</label>
+          <input class="form-control" id="prenom" value="{{ auteur.prenom| default_if_none:'' }}" name="prenom">
+        </div>
+      </div>
+
+      <div class="row">
+          <div class="col-md-12">
+            <br>
+            <p align="right"><input type="submit" title="Enregistrer les infos propres à l'auteur" value="Enregistrer"></p>
+        </div>
+      </div>
+
+
+
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}
