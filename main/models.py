@@ -31,6 +31,14 @@ class Livre(models.Model):
     titre  = models.CharField(max_length = 100)
     langue    = models.CharField(max_length=5,choices = LANGUE, default = 'FR')
 
+    @staticmethod
+    def find_all():
+        return Livre.objects.all()
+
+    @staticmethod
+    def find_livre(id):
+        return Livre.objects.get(pk=id)
+
     def __str__(self):
         return self.titre
 

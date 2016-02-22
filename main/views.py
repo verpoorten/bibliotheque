@@ -53,3 +53,44 @@ def auteur_delete(request, id):
     auteur.delete()
     return render(request, 'auteur_list.html',
                     {'auteurs': Auteur.find_all()})
+
+
+
+
+def livre_list(request):
+        return render(request, 'livre_list.html',
+                        {'livres': Livre.find_all()})
+
+
+def livre_create(request):
+    livre = Livre()
+    return render(request, "livre_form.html",
+                  {'livre':         livre})
+
+def livre_form(request, livre_id):
+    livre = Livre.find_livre(livre_id)
+
+    return render(request, "livre_form.html",
+                  {'livre':     livre})
+
+def livre_update(request):
+    livre = Livre()
+
+    if ('add' == request.POST['action'] or 'modify' == request.POST['action']):
+        if request.POST['id'] and not request.POST['id'] == 'None':
+            livre = get_object_or_404(Livre, pk=request.POST['id'])
+        else:
+            livre = Livre()
+        livre.titre = request.POST['titre']
+        livre.langue = request.POST['langue']
+
+        livre.save()
+
+    return render(request, 'livre_list.html',
+                    {'livres': Livre.find_all()})
+
+def livre_delete(request, id):
+    livre = get_object_or_404(Livre, pk=id)
+    livre.delete()
+    return render(request, 'livre_list.html',
+                    {'livres': Livre.find_all()})
