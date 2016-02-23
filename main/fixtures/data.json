@@ -1,0 +1,5041 @@
+[
+  {
+    "model": "main.personne",
+    "pk": 8,
+    "fields": {
+      "prenom": "Leila",
+      "nom": "Verpoorten"
+    }
+  },
+  {
+    "model": "main.personne",
+    "pk": 1,
+    "fields": {
+      "prenom": "Coryse",
+      "nom": "Trausch"
+    }
+  },
+  {
+    "model": "main.personne",
+    "pk": 2,
+    "fields": {
+      "prenom": "Frédérique",
+      "nom": "Orban"
+    }
+  },
+  {
+    "model": "main.personne",
+    "pk": 3,
+    "fields": {
+      "prenom": "Germaine",
+      "nom": "Lesquoy"
+    }
+  },
+  {
+    "model": "main.personne",
+    "pk": 4,
+    "fields": {
+      "prenom": "Michel",
+      "nom": "Lambotte"
+    }
+  },
+  {
+    "model": "main.personne",
+    "pk": 5,
+    "fields": {
+      "prenom": "Stéphanie",
+      "nom": "Jadoulle"
+    }
+  },
+  {
+    "model": "main.personne",
+    "pk": 6,
+    "fields": {
+      "prenom": "Stéphan",
+      "nom": "Marchal"
+    }
+  },
+  {
+    "model": "main.personne",
+    "pk": 7,
+    "fields": {
+      "prenom": "Roger",
+      "nom": "Verpoorten"
+    }
+  },
+
+  {    "model":"main.auteur",    "pk": 1 ,    "fields": {      "prenom": "Warren",
+      "nom": "Adler"
+    }
+  },
+{    "model":"main.auteur",    "pk": 2 ,    "fields": {      "prenom": "_",
+      "nom": "Anouchka"
+    }
+  },
+{    "model":"main.auteur",    "pk": 3 ,    "fields": {      "prenom": "Christine",
+      "nom": "Arnothy"
+    }
+  },
+{    "model":"main.auteur",    "pk": 4 ,    "fields": {      "prenom": "André",
+      "nom": "Auquier"
+    }
+  },
+{    "model":"main.auteur",    "pk": 5 ,    "fields": {      "prenom": "Paul",
+      "nom": "Auster"
+    }
+  },
+{    "model":"main.auteur",    "pk": 6 ,    "fields": {      "prenom": "Honoré",
+      "nom": "Balzac"
+    }
+  },
+{    "model":"main.auteur",    "pk": 7 ,    "fields": {      "prenom": "Frederic",
+      "nom": "Beigbeder"
+    }
+  },
+{    "model":"main.auteur",    "pk": 8 ,    "fields": {      "prenom": "_",
+      "nom": "Boileau /Narcejac"
+    }
+  },
+{    "model":"main.auteur",    "pk": 9 ,    "fields": {      "prenom": "Inès",
+      "nom": "Cagnati"
+    }
+  },
+{    "model":"main.auteur",    "pk": 10 ,    "fields": {      "prenom": "_",
+      "nom": "Camus"
+    }
+  },
+{    "model":"main.auteur",    "pk": 11 ,    "fields": {      "prenom": "Patrick",
+      "nom": "Cauvin"
+    }
+  },
+{    "model":"main.auteur",    "pk": 12 ,    "fields": {      "prenom": "Agatha",
+      "nom": "Christie"
+    }
+  },
+{    "model":"main.auteur",    "pk": 13 ,    "fields": {      "prenom": "Tom",
+      "nom": "Clancy"
+    }
+  },
+{    "model":"main.auteur",    "pk": 14 ,    "fields": {      "prenom": "Robin",
+      "nom": "Cook"
+    }
+  },
+{    "model":"main.auteur",    "pk": 15 ,    "fields": {      "prenom": "Hubert",
+      "nom": "Corbin"
+    }
+  },
+{    "model":"main.auteur",    "pk": 16 ,    "fields": {      "prenom": "Patricia",
+      "nom": "Cornwell"
+    }
+  },
+{    "model":"main.auteur",    "pk": 17 ,    "fields": {      "prenom": "Deborah",
+      "nom": "Crombie"
+    }
+  },
+{    "model":"main.auteur",    "pk": 18 ,    "fields": {      "prenom": "Clive",
+      "nom": "Cussler"
+    }
+  },
+{    "model":"main.auteur",    "pk": 19 ,    "fields": {      "prenom": "Maurice",
+      "nom": "Dantec"
+    }
+  },
+{    "model":"main.auteur",    "pk": 20 ,    "fields": {      "prenom": "Antoine",
+      "nom": "De Saint-Exupéry"
+    }
+  },
+{    "model":"main.auteur",    "pk": 21 ,    "fields": {      "prenom": "Conrad",
+      "nom": "Detrez"
+    }
+  },
+{    "model":"main.auteur",    "pk": 22 ,    "fields": {      "prenom": "Charles",
+      "nom": "Dickens"
+    }
+  },
+{    "model":"main.auteur",    "pk": 23 ,    "fields": {      "prenom": "Geneviève",
+      "nom": "Dormann"
+    }
+  },
+{    "model":"main.auteur",    "pk": 24 ,    "fields": {      "prenom": "Daphné",
+      "nom": "Du Maurier"
+    }
+  },
+{    "model":"main.auteur",    "pk": 25 ,    "fields": {      "prenom": "Sonia",
+      "nom": "Dubois"
+    }
+  },
+{    "model":"main.auteur",    "pk": 26 ,    "fields": {      "prenom": "Alexandre",
+      "nom": "Dumas"
+    }
+  },
+{    "model":"main.auteur",    "pk": 27 ,    "fields": {      "prenom": "Robert",
+      "nom": "Escarpit"
+    }
+  },
+{    "model":"main.auteur",    "pk": 28 ,    "fields": {      "prenom": "Nicholas",
+      "nom": "Evans"
+    }
+  },
+{    "model":"main.auteur",    "pk": 29 ,    "fields": {      "prenom": "Penelope",
+      "nom": "Evans"
+    }
+  },
+{    "model":"main.auteur",    "pk": 30 ,    "fields": {      "prenom": "_",
+      "nom": "Exbrayat"
+    }
+  },
+{    "model":"main.auteur",    "pk": 31 ,    "fields": {      "prenom": "David",
+      "nom": "Fisher"
+    }
+  },
+{    "model":"main.auteur",    "pk": 32 ,    "fields": {      "prenom": "Ken",
+      "nom": "Follet"
+    }
+  },
+{    "model":"main.auteur",    "pk": 33 ,    "fields": {      "prenom": "Nicci",
+      "nom": "French"
+    }
+  },
+{    "model":"main.auteur",    "pk": 34 ,    "fields": {      "prenom": "Pauline",
+      "nom": "Gedge"
+    }
+  },
+{    "model":"main.auteur",    "pk": 35 ,    "fields": {      "prenom": "Elizabeth",
+      "nom": "George"
+    }
+  },
+{    "model":"main.auteur",    "pk": 36 ,    "fields": {      "prenom": "Jean-Christophe",
+      "nom": "Grangé"
+    }
+  },
+{    "model":"main.auteur",    "pk": 37 ,    "fields": {      "prenom": "Martha",
+      "nom": "Grimes"
+    }
+  },
+{    "model":"main.auteur",    "pk": 38 ,    "fields": {      "prenom": "John",
+      "nom": "Grisham"
+    }
+  },
+{    "model":"main.auteur",    "pk": 39 ,    "fields": {      "prenom": "Thomas",
+      "nom": "Harris"
+    }
+  },
+{    "model":"main.auteur",    "pk": 40 ,    "fields": {      "prenom": "_",
+      "nom": "Henoumont"
+    }
+  },
+{    "model":"main.auteur",    "pk": 41 ,    "fields": {      "prenom": "Carol",
+      "nom": "Higgins Clark"
+    }
+  },
+{    "model":"main.auteur",    "pk": 42 ,    "fields": {      "prenom": "Mary",
+      "nom": "Higgins Clark"
+    }
+  },
+{    "model":"main.auteur",    "pk": 43 ,    "fields": {      "prenom": "Patricia",
+      "nom": "Highsmith"
+    }
+  },
+{    "model":"main.auteur",    "pk": 44 ,    "fields": {      "prenom": "Victor",
+      "nom": "Hugo"
+    }
+  },
+{    "model":"main.auteur",    "pk": 45 ,    "fields": {      "prenom": "Denis",
+      "nom": "Humbert"
+    }
+  },
+{    "model":"main.auteur",    "pk": 46 ,    "fields": {      "prenom": "Calvino",
+      "nom": "Italo"
+    }
+  },
+{    "model":"main.auteur",    "pk": 47 ,    "fields": {      "prenom": "P.D.",
+      "nom": "James"
+    }
+  },
+{    "model":"main.auteur",    "pk": 48 ,    "fields": {      "prenom": "Alexandre",
+      "nom": "Jardin"
+    }
+  },
+{    "model":"main.auteur",    "pk": 49 ,    "fields": {      "prenom": "Rod",
+      "nom": "Jones"
+    }
+  },
+{    "model":"main.auteur",    "pk": 50 ,    "fields": {      "prenom": "Stephen",
+      "nom": "King"
+    }
+  },
+{    "model":"main.auteur",    "pk": 51 ,    "fields": {      "prenom": "Dean",
+      "nom": "Koontz"
+    }
+  },
+{    "model":"main.auteur",    "pk": 52 ,    "fields": {      "prenom": "Emmanuelle",
+      "nom": "Laborit"
+    }
+  },
+{    "model":"main.auteur",    "pk": 53 ,    "fields": {      "prenom": "Ysabelle",
+      "nom": "Lacamp"
+    }
+  },
+{    "model":"main.auteur",    "pk": 54 ,    "fields": {      "prenom": "Brigitte",
+      "nom": "Le Varlet"
+    }
+  },
+{    "model":"main.auteur",    "pk": 55 ,    "fields": {      "prenom": "Bernard",
+      "nom": "Lenteric"
+    }
+  },
+{    "model":"main.auteur",    "pk": 56 ,    "fields": {      "prenom": "Gaston",
+      "nom": "Leroux"
+    }
+  },
+{    "model":"main.auteur",    "pk": 57 ,    "fields": {      "prenom": "Jean",
+      "nom": "Lévi"
+    }
+  },
+{    "model":"main.auteur",    "pk": 58 ,    "fields": {      "prenom": "Justine",
+      "nom": "Levy"
+    }
+  },
+{    "model":"main.auteur",    "pk": 59 ,    "fields": {      "prenom": "Roy",
+      "nom": "Lewis"
+    }
+  },
+{    "model":"main.auteur",    "pk": 60 ,    "fields": {      "prenom": "Peter",
+      "nom": "Lovesey"
+    }
+  },
+{    "model":"main.auteur",    "pk": 61 ,    "fields": {      "prenom": "Robert",
+      "nom": "Ludlum"
+    }
+  },
+{    "model":"main.auteur",    "pk": 62 ,    "fields": {      "prenom": "Patricia",
+      "nom": "Mac Donald"
+    }
+  },
+{    "model":"main.auteur",    "pk": 63 ,    "fields": {      "prenom": "Gordon",
+      "nom": "Mac Gill"
+    }
+  },
+{    "model":"main.auteur",    "pk": 64 ,    "fields": {      "prenom": "Terry",
+      "nom": "Mac Millan"
+    }
+  },
+{    "model":"main.auteur",    "pk": 65 ,    "fields": {      "prenom": "_",
+      "nom": "Macaulay"
+    }
+  },
+{    "model":"main.auteur",    "pk": 66 ,    "fields": {      "prenom": "Pierre",
+      "nom": "Magnan"
+    }
+  },
+{    "model":"main.auteur",    "pk": 67 ,    "fields": {      "prenom": "Betty",
+      "nom": "Mahmoody"
+    }
+  },
+{    "model":"main.auteur",    "pk": 68 ,    "fields": {      "prenom": "Graham",
+      "nom": "Masterton"
+    }
+  },
+{    "model":"main.auteur",    "pk": 69 ,    "fields": {      "prenom": "Olivier",
+      "nom": "Mau"
+    }
+  },
+{    "model":"main.auteur",    "pk": 70 ,    "fields": {      "prenom": "_",
+      "nom": "Maupassant"
+    }
+  },
+{    "model":"main.auteur",    "pk": 71 ,    "fields": {      "prenom": "François",
+      "nom": "Mauriac"
+    }
+  },
+{    "model":"main.auteur",    "pk": 72 ,    "fields": {      "prenom": "André",
+      "nom": "Maurois"
+    }
+  },
+{    "model":"main.auteur",    "pk": 73 ,    "fields": {      "prenom": "Herman",
+      "nom": "Melville"
+    }
+  },
+{    "model":"main.auteur",    "pk": 74 ,    "fields": {      "prenom": "_",
+      "nom": "Molière"
+    }
+  },
+{    "model":"main.auteur",    "pk": 75 ,    "fields": {      "prenom": "François",
+      "nom": "Morel"
+    }
+  },
+{    "model":"main.auteur",    "pk": 76 ,    "fields": {      "prenom": "Amélie",
+      "nom": "Nothomb"
+    }
+  },
+{    "model":"main.auteur",    "pk": 77 ,    "fields": {      "prenom": "Joyce Carol",
+      "nom": "Oates"
+    }
+  },
+{    "model":"main.auteur",    "pk": 78 ,    "fields": {      "prenom": "Marcel",
+      "nom": "Pagnol"
+    }
+  },
+{    "model":"main.auteur",    "pk": 79 ,    "fields": {      "prenom": "James",
+      "nom": "Patterson"
+    }
+  },
+{    "model":"main.auteur",    "pk": 80 ,    "fields": {      "prenom": "R.",
+      "nom": "Peyrefitte"
+    }
+  },
+{    "model":"main.auteur",    "pk": 81 ,    "fields": {      "prenom": "Bill",
+      "nom": "Pronzini"
+    }
+  },
+{    "model":"main.auteur",    "pk": 82 ,    "fields": {      "prenom": "Raymond",
+      "nom": "Radiguet"
+    }
+  },
+{    "model":"main.auteur",    "pk": 83 ,    "fields": {      "prenom": "Jean",
+      "nom": "Ray"
+    }
+  },
+{    "model":"main.auteur",    "pk": 84 ,    "fields": {      "prenom": "Anne",
+      "nom": "Rivers Siddons"
+    }
+  },
+{    "model":"main.auteur",    "pk": 85 ,    "fields": {      "prenom": "J.K.",
+      "nom": "Rowling"
+    }
+  },
+{    "model":"main.auteur",    "pk": 86 ,    "fields": {      "prenom": "Ann",
+      "nom": "Rule"
+    }
+  },
+{    "model":"main.auteur",    "pk": 87 ,    "fields": {      "prenom": "_",
+      "nom": "Sciascia"
+    }
+  },
+{    "model":"main.auteur",    "pk": 88 ,    "fields": {      "prenom": "_",
+      "nom": "Simenon"
+    }
+  },
+{    "model":"main.auteur",    "pk": 89 ,    "fields": {      "prenom": "Scoot",
+      "nom": "Sir Walter"
+    }
+  },
+{    "model":"main.auteur",    "pk": 90 ,    "fields": {      "prenom": "Nicholas",
+      "nom": "Sparks"
+    }
+  },
+{    "model":"main.auteur",    "pk": 91 ,    "fields": {      "prenom": "Danielle",
+      "nom": "Steel"
+    }
+  },
+{    "model":"main.auteur",    "pk": 92 ,    "fields": {      "prenom": "R.L.",
+      "nom": "Stevenson"
+    }
+  },
+{    "model":"main.auteur",    "pk": 93 ,    "fields": {      "prenom": "Paul Loup",
+      "nom": "Sulitzer"
+    }
+  },
+{    "model":"main.auteur",    "pk": 94 ,    "fields": {      "prenom": "Donna",
+      "nom": "Tartt"
+    }
+  },
+{    "model":"main.auteur",    "pk": 95 ,    "fields": {      "prenom": "Carlene",
+      "nom": "Thompson"
+    }
+  },
+{    "model":"main.auteur",    "pk": 96 ,    "fields": {      "prenom": "Bernard",
+      "nom": "Tristan"
+    }
+  },
+{    "model":"main.auteur",    "pk": 97 ,    "fields": {      "prenom": "Fred",
+      "nom": "Uhlman"
+    }
+  },
+{    "model":"main.auteur",    "pk": 98 ,    "fields": {      "prenom": "Didier",
+      "nom": "Van Cauwelaert"
+    }
+  },
+{    "model":"main.auteur",    "pk": 99 ,    "fields": {      "prenom": "Boris",
+      "nom": "Vian"
+    }
+  },
+{    "model":"main.auteur",    "pk": 100 ,    "fields": {      "prenom": "Evelyne",
+      "nom": "Wilwerth"
+    }
+  },
+{    "model":"main.auteur",    "pk": 101 ,    "fields": {      "prenom": "Stuart",
+      "nom": "Woods"
+    }
+  },
+{    "model":"main.auteur",    "pk": 102 ,    "fields": {      "prenom": "Françoise",
+      "nom": "Xénakis"
+    }
+  },
+{    "model":"main.auteur",    "pk": 103 ,    "fields": {      "prenom": "Marion",
+      "nom": "Zimmer Bradley"
+    }
+  },
+{    "model":"main.auteur",    "pk": 104 ,    "fields": {      "prenom": "Emile",
+      "nom": "Zola"
+    }
+  },
+{    "model":"main.auteur",    "pk": 105 ,    "fields": {      "prenom": "_",
+      "nom": "Zyke"
+    }
+  },
+{    "model":"main.auteur",    "pk": 106 ,    "fields": {      "prenom": "Joe",
+      "nom": "Connelly"
+    }
+  },
+{    "model":"main.auteur",    "pk": 107 ,    "fields": {      "prenom": "Mary Jane",
+      "nom": "Clark"
+    }
+  }
+  ,
+  {    "model":"main.auteur",    "pk": 108 ,    "fields": {      "prenom": "-",
+      "nom": "Inconnu"
+    }
+  }
+  ,
+{    "model":"main.livre",    "pk":  252 ,    "fields": {      "titre": "Otages de la peur",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  253 ,    "fields": {      "titre": "Comme un voile d'ombre",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  254 ,    "fields": {      "titre": "Un dernier baiser",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  255 ,    "fields": {      "titre": "La nuit est mon royaume",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  256 ,    "fields": {      "titre": "L'enchanteur",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  257 ,    "fields": {      "titre": "Le zèbre",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  258 ,    "fields": {      "titre": "Tout ce qui meurt",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  259 ,    "fields": {      "titre": "Depuis que tu es partie",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  260 ,    "fields": {      "titre": "La nuit des temps",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  261 ,    "fields": {      "titre": "Pour solde de tout compte",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  262 ,    "fields": {      "titre": "Roadmaster",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  263 ,    "fields": {      "titre": "Baton rouge",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  1 ,    "fields": {      "titre": "Léviathan",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  2 ,    "fields": {      "titre": "Manigances",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  3 ,    "fields": {      "titre": "Le vicomte pourfendu",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  4 ,    "fields": {      "titre": "E=mc², mon amour",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  5 ,    "fields": {      "titre": "Un meurtre est-il facile?",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  6 ,    "fields": {      "titre": "Le vallon",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  7 ,    "fields": {      "titre": "Le cheval pâle",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  8 ,    "fields": {      "titre": "Le bal de la victoire",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  9 ,    "fields": {      "titre": "Rendez-vous à Bagdad",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  10 ,    "fields": {      "titre": "L'homme au complet marron",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  11 ,    "fields": {      "titre": "Risque mortel",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  12 ,    "fields": {      "titre": "Vertiges",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  13 ,    "fields": {      "titre": "Postmortem",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  14 ,    "fields": {      "titre": "Une peine d'exception",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  15 ,    "fields": {      "titre": "Mort en eaux troubles",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  16 ,    "fields": {      "titre": "Treasure",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  17 ,    "fields": {      "titre": "Panique à la maison Blanche",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  18 ,    "fields": {      "titre": "David Copperfield",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  19 ,    "fields": {      "titre": "Journal d'une grosse repentie",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  20 ,    "fields": {      "titre": "J'aimais bien Rowenta",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  21 ,    "fields": {      "titre": "Un bien bel homme",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  22 ,    "fields": {      "titre": "Les douceurs provinciales",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  23 ,    "fields": {      "titre": "Barthélémy et sa colère",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  24 ,    "fields": {      "titre": "L'inspecteur mourra seul",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  25 ,    "fields": {      "titre": "Conversation avec mon chat",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  26 ,    "fields": {      "titre": "Dragon rouge",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  27 ,    "fields": {      "titre": "Black Sunday",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  28 ,    "fields": {      "titre": "Bien frappé",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  29 ,    "fields": {      "titre": "L'accroc",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  30 ,    "fields": {      "titre": "Un si joli village",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  31 ,    "fields": {      "titre": "L'ile des morts",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  32 ,    "fields": {      "titre": "Meurtres en blouses blanches",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  33 ,    "fields": {      "titre": "Meurtre dans un fauteil",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  34 ,    "fields": {      "titre": "Pêché originel",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  35 ,    "fields": {      "titre": "Fanfan",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  36 ,    "fields": {      "titre": "Le tallisman des territoires",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  37 ,    "fields": {      "titre": "Rose Madder",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  38 ,    "fields": {      "titre": "Jessie",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  39 ,    "fields": {      "titre": "La petite fille qui aimait Tom Gordon",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  40 ,    "fields": {      "titre": "Misery",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  41 ,    "fields": {      "titre": "Les yeux des ténèbres",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  42 ,    "fields": {      "titre": "Fièvre de glace",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  43 ,    "fields": {      "titre": "Watchers",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  44 ,    "fields": {      "titre": "The face of fear",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  45 ,    "fields": {      "titre": "Prison de glace",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  46 ,    "fields": {      "titre": "La nuit du forainFunhouse",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  47 ,    "fields": {      "titre": "Fear nothing",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  48 ,    "fields": {      "titre": "Miroirs de sang",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  49 ,    "fields": {      "titre": "La maison interdite",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  50 ,    "fields": {      "titre": "Etranges détours",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  51 ,    "fields": {      "titre": "Le mystère de la chambre jaune",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  52 ,    "fields": {      "titre": "L'oeil du perroquet",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  53 ,    "fields": {      "titre": "Le rendez-vous",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  54 ,    "fields": {      "titre": "Pourquoi j'ai mangé mon père",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  55 ,    "fields": {      "titre": "Trois flics dans un canot",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  56 ,    "fields": {      "titre": "La vengeance dans la peau",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  57 ,    "fields": {      "titre": "Le commissaire dans la truffière",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  58 ,    "fields": {      "titre": "Jamais sans ma fille",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  59 ,    "fields": {      "titre": "Le portrait du mal",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  60 ,    "fields": {      "titre": "Une femme sous surveillance",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  61 ,    "fields": {      "titre": "Personnes disparues",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  62 ,    "fields": {      "titre": "Little Bouddha",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  63 ,    "fields": {      "titre": "Où sont les hommes?",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  64 ,    "fields": {      "titre": "Meuh!",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  65 ,    "fields": {      "titre": "Attentat",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  66 ,    "fields": {      "titre": "Les combustibles",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  67 ,    "fields": {      "titre": "Faites de moi ce que vous voulez",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  68 ,    "fields": {      "titre": "La gloire de mon père",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  69 ,    "fields": {      "titre": "Tout ça n'est qu'un jeu",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  70 ,    "fields": {      "titre": "Un tueur si proche",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  71 ,    "fields": {      "titre": "Le revolver de Maigret",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  72 ,    "fields": {      "titre": "L'île aux trésors",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  73 ,    "fields": {      "titre": "Le maître des illusions",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  74 ,    "fields": {      "titre": "L'ami retrouvé",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  75 ,    "fields": {      "titre": "Canal océan",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  76 ,    "fields": {      "titre": "Echange mortel",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  77 ,    "fields": {      "titre": "Alixe",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  78 ,    "fields": {      "titre": "Salem",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  79 ,    "fields": {      "titre": "Feu de glace",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  80 ,    "fields": {      "titre": "Présumée coupable",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  81 ,    "fields": {      "titre": "Tu es si jolie ce soir",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  82 ,    "fields": {      "titre": "Petite sœur",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  83 ,    "fields": {      "titre": "Sans retour",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  84 ,    "fields": {      "titre": "Et il ne restera que poussière…",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  85 ,    "fields": {      "titre": "La ville des frelons",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  86 ,    "fields": {      "titre": "Avec intention de nuire",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  87 ,    "fields": {      "titre": "Clear and Present Danger",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  88 ,    "fields": {      "titre": "Chasse à mort",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  89 ,    "fields": {      "titre": "Le crime du golf",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  90 ,    "fields": {      "titre": "La fête du potiron",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  91 ,    "fields": {      "titre": "Noir comme le souvenir",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  92 ,    "fields": {      "titre": "Bazaar",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  93 ,    "fields": {      "titre": "99 Francs",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  94 ,    "fields": {      "titre": "Un cadavre dans le placard",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  95 ,    "fields": {      "titre": "Recherche jeune femme aimant danser",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  96 ,    "fields": {      "titre": "La clinique du docteur H",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  97 ,    "fields": {      "titre": "La nuit du renard",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  98 ,    "fields": {      "titre": "Souviens-toi",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  99 ,    "fields": {      "titre": "Mauvaises manières",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  100 ,    "fields": {      "titre": "3 jours avant Noël",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  102 ,    "fields": {      "titre": "Le maître du jeu",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  103 ,    "fields": {      "titre": "Le client",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  104 ,    "fields": {      "titre": "La nuit des cafards",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  105 ,    "fields": {      "titre": "Le silence des agneaux",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  106 ,    "fields": {      "titre": "Hannibal",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  107 ,    "fields": {      "titre": "Avant de te dire adieu",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  108 ,    "fields": {      "titre": "Et nous nous reverrons",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  109 ,    "fields": {      "titre": "Tu m'appartiens",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  110 ,    "fields": {      "titre": "Ni vue ni connue",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  111 ,    "fields": {      "titre": "La maison du clair de lune",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  112 ,    "fields": {      "titre": "Ce que vivent les roses",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  113 ,    "fields": {      "titre": "Un jour tu verras",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  114 ,    "fields": {      "titre": "Nous n'irons plus au bois",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  115 ,    "fields": {      "titre": "Le fantôme de Lady Margaret",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  116 ,    "fields": {      "titre": "Dors ma jolie",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  117 ,    "fields": {      "titre": "Ne pleure pas ma belle",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  118 ,    "fields": {      "titre": "Les démons du passé",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  119 ,    "fields": {      "titre": "La maison du guet",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  120 ,    "fields": {      "titre": "Un cri dans la nuit",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  121 ,    "fields": {      "titre": "Douce nuit",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  122 ,    "fields": {      "titre": "Joyeux Noël, merry Christmas",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  123 ,    "fields": {      "titre": "Une si longue nuit",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  124 ,    "fields": {      "titre": "L'écume des jours",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  125 ,    "fields": {      "titre": "La peste",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  126 ,    "fields": {      "titre": "Les racines du mal",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  127 ,    "fields": {      "titre": "5H25",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  128 ,    "fields": {      "titre": "Pourquoi tuer le pépé?",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  129 ,    "fields": {      "titre": "Hygiène d'un assassin",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  130 ,    "fields": {      "titre": "Mercure",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  131 ,    "fields": {      "titre": "Expiation",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  132 ,    "fields": {      "titre": "La boîte à image",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  133 ,    "fields": {      "titre": "Mordoc",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  134 ,    "fields": {      "titre": "La guerre des roses",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  135 ,    "fields": {      "titre": "La piste africaine",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  136 ,    "fields": {      "titre": "Elle lui dirait dans l'île/Le temps usé",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  137 ,    "fields": {      "titre": "Les parents paresseux",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  138 ,    "fields": {      "titre": "Un aller simple",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  139 ,    "fields": {      "titre": "A chacun son dû",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  140 ,    "fields": {      "titre": "Une poignée de seigle",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  141 ,    "fields": {      "titre": "La mystérieuse affaire de styles",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  142 ,    "fields": {      "titre": "La mort n'est pas une fin",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  143 ,    "fields": {      "titre": "Meurtre à Cape Cod",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  144 ,    "fields": {      "titre": "Let me call you sweetheart",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  145 ,    "fields": {      "titre": "While my pretty one sleeps",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  146 ,    "fields": {      "titre": "Au commencement était le crime",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  147 ,    "fields": {      "titre": "Le Mont-Brûlé",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  148 ,    "fields": {      "titre": "Ces gens qui frappent à la porte",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  149 ,    "fields": {      "titre": "L'île sauvage",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  150 ,    "fields": {      "titre": "Nuit de braconne",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  151 ,    "fields": {      "titre": "Rob Roy",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  152 ,    "fields": {      "titre": "Les vieux fusils",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  153 ,    "fields": {      "titre": "Le tombeau de Saqquarah",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  154 ,    "fields": {      "titre": "La main gauche",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  155 ,    "fields": {      "titre": "Les contes de la Saint Glinglin",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  156 ,    "fields": {      "titre": "Les amitiés particulières",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  157 ,    "fields": {      "titre": "Double reflet",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  158 ,    "fields": {      "titre": "Les plumes du coq",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  159 ,    "fields": {      "titre": "Génie la folle",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  160 ,    "fields": {      "titre": "La civilisation perdue",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  161 ,    "fields": {      "titre": "La fille du ciel",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  162 ,    "fields": {      "titre": "Images de la nuit",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  163 ,    "fields": {      "titre": "La double mort de Linda",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  164 ,    "fields": {      "titre": "Un étranger dans la maison",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  165 ,    "fields": {      "titre": "Les lions du Panshir",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  166 ,    "fields": {      "titre": "Les 13 enigmes",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  167 ,    "fields": {      "titre": "Climats",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  168 ,    "fields": {      "titre": "Weekend sauvage",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  169 ,    "fields": {      "titre": "Sara",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  170 ,    "fields": {      "titre": "Une bouteille à la mer",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  171 ,    "fields": {      "titre": "L'ombre d'un soupçon",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  172 ,    "fields": {      "titre": "Le grand empereur et ses automates",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  173 ,    "fields": {      "titre": "Mobydick",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  174 ,    "fields": {      "titre": "Cash",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  175 ,    "fields": {      "titre": "Le saguoin",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  176 ,    "fields": {      "titre": "La proie du chat",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  177 ,    "fields": {      "titre": "Le jardin des disparus",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  178 ,    "fields": {      "titre": "Une créature de rêve",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  179 ,    "fields": {      "titre": "L'homme qui racontait des histoires",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  180 ,    "fields": {      "titre": "Le roman de Sophie Trébuchet",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  181 ,    "fields": {      "titre": "Vol de nuit",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  182 ,    "fields": {      "titre": "Le petit prince",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  183 ,    "fields": {      "titre": "Par dessus bord",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  184 ,    "fields": {      "titre": "La ligne verte",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  185 ,    "fields": {      "titre": "Jack & Jill",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  186 ,    "fields": {      "titre": "Dans la rue où vit celle que j'aime",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  187 ,    "fields": {      "titre": "Le cercle des loups",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  188 ,    "fields": {      "titre": "Les larmes du dragon",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  189 ,    "fields": {      "titre": "Les rivières pourpres",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  190 ,    "fields": {      "titre": "La nuit des enfants rois",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  191 ,    "fields": {      "titre": "L'énigme du parc",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  192 ,    "fields": {      "titre": "Nana",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  193 ,    "fields": {      "titre": "La curée",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  194 ,    "fields": {      "titre": "Chef d'œuvre inconnu",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  195 ,    "fields": {      "titre": "Germinal",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  196 ,    "fields": {      "titre": "Le dernier jour d'un condamné",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  197 ,    "fields": {      "titre": "Le lièvre de mon grand-père",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  198 ,    "fields": {      "titre": "Virus",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  199 ,    "fields": {      "titre": "Phase terminale",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  200 ,    "fields": {      "titre": "Dernier refuge",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  201 ,    "fields": {      "titre": "L'avare",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  202 ,    "fields": {      "titre": "Sarrasine",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  203 ,    "fields": {      "titre": "Le diable au corps",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  204 ,    "fields": {      "titre": "Enquête dans le brouillard",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  205 ,    "fields": {      "titre": "La locataire",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  206 ,    "fields": {      "titre": "Au chat et à la souris",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  207 ,    "fields": {      "titre": "Une affaire très personnelle",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  208 ,    "fields": {      "titre": "Un bon petit gars",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  209 ,    "fields": {      "titre": "Malpertuis",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  210 ,    "fields": {      "titre": "Harry Potter à l'école des sorciers",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  211 ,    "fields": {      "titre": "Le cri de la mouette",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  212 ,    "fields": {      "titre": "L'île des chiens",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  213 ,    "fields": {      "titre": "Le billet gagnant",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  214 ,    "fields": {      "titre": "Le concil de pierre",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  215 ,    "fields": {      "titre": "Une seconde chance",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  216 ,    "fields": {      "titre": "Harry Potter et la chambre des secrets",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  217 ,    "fields": {      "titre": "Souffle le vent",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  218 ,    "fields": {      "titre": "La justice de Salomon",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  219 ,    "fields": {      "titre": "La queue du scorpion",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  220 ,    "fields": {      "titre": "Les garçons",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  221 ,    "fields": {      "titre": "Le rôdeur",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  222 ,    "fields": {      "titre": "La diabolique",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  223 ,    "fields": {      "titre": "Et ne jamais la laisser partir",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  224 ,    "fields": {      "titre": "Le singe",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  225 ,    "fields": {      "titre": "Intensité",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  226 ,    "fields": {      "titre": "Rhapsodie en noir",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  227 ,    "fields": {      "titre": "L'histoire d'Hellen Keller",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  228 ,    "fields": {      "titre": "La gueurre des boutons",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  229 ,    "fields": {      "titre": "La dernière prophétie",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  230 ,    "fields": {      "titre": "Harry Potter et le prisonnier d'Azkaban",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  231 ,    "fields": {      "titre": "Un nid de mensonges",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  232 ,    "fields": {      "titre": "Un chance de trop",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  233 ,    "fields": {      "titre": "Ne le dis à personne",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  234 ,    "fields": {      "titre": "Le jeu du furet",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  235 ,    "fields": {      "titre": "Etrange passion",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  236 ,    "fields": {      "titre": "Six de coeur",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  237 ,    "fields": {      "titre": "Ressuciter les morts",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  238 ,    "fields": {      "titre": "L.A. Requiem",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  239 ,    "fields": {      "titre": "La peau sur les os",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  240 ,    "fields": {      "titre": "Entre les mailles du filet",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  241 ,    "fields": {      "titre": "Pulsions",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  242 ,    "fields": {      "titre": "Mutation",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  243 ,    "fields": {      "titre": "L'oiseau des ténèbres",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  244 ,    "fields": {      "titre": "Nos années vaches folles",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  245 ,    "fields": {      "titre": "Le vol de cigogne",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  246 ,    "fields": {      "titre": "Homicide boulevard",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  247 ,    "fields": {      "titre": "Mémoires mortes",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  248 ,    "fields": {      "titre": "Protection des mineurs",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  249 ,    "fields": {      "titre": "Harry Potter et la coupe de feu",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  250 ,    "fields": {      "titre": "Harry Potter et l'ordre du Phénix",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  251 ,    "fields": {      "titre": "Deal Breaker",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  264 ,    "fields": {      "titre": "La ligne noire",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  265 ,    "fields": {      "titre": "Ce soir je veillerai sur toi",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  266 ,    "fields": {      "titre": "Simetierre",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  267 ,    "fields": {      "titre": "The wrong way out",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  268 ,    "fields": {      "titre": "C'est beau mais c'est triste",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  269 ,    "fields": {      "titre": "Carol",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  270 ,    "fields": {      "titre": "Balle de match",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  271 ,    "fields": {      "titre": "Un certain goût pour la mort",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  272 ,    "fields": {      "titre": "Piège de soie",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  273 ,    "fields": {      "titre": "Si elle devait mourir",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  274 ,    "fields": {      "titre": "Dame de coeur",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  275 ,    "fields": {      "titre": "Mr Commitment Marié, moi, jamais",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  276 ,    "fields": {      "titre": "Mr MurderMr Murder",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  277 ,    "fields": {      "titre": "La folie Halloween",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  278 ,    "fields": {      "titre": "Le petit sauvage",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  279 ,    "fields": {      "titre": "Ondes de chocs",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  280 ,    "fields": {      "titre": "Vous ne devinerez jamais",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  281 ,    "fields": {      "titre": "La femme du pilote",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  282 ,    "fields": {      "titre": "La protéine du diable",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  283 ,    "fields": {      "titre": "Disparition Fatale",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  284 ,    "fields": {      "titre": "La valse du diable",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  285 ,    "fields": {      "titre": "Toi que j'aimais tant",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  286 ,    "fields": {      "titre": "La fille sans visage",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  287 ,    "fields": {      "titre": "Oscar et la dame en rose",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  288 ,    "fields": {      "titre": "Soie",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  289 ,    "fields": {      "titre": "Le tueur des tornades",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  290 ,    "fields": {      "titre": "Une triche si parfaite",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  291 ,    "fields": {      "titre": "Si tu m'aimais vraiment",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  292 ,    "fields": {      "titre": "La part du mensonge",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  293 ,    "fields": {      "titre": "Les prévaricateurs",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  294 ,    "fields": {      "titre": "Le manipulateur",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  295 ,    "fields": {      "titre": "Voyante",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  296 ,    "fields": {      "titre": "la danse de l'ours",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  297 ,    "fields": {      "titre": "F comme fugitif",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  298 ,    "fields": {      "titre": "mort sur catalogue",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  299 ,    "fields": {      "titre": "Ascenseur pour un tueur",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  300 ,    "fields": {      "titre": "Goutte à goutte",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  301 ,    "fields": {      "titre": "Le bandit n'était pas manchot",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  302 ,    "fields": {      "titre": "Da Vinci Code",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  303 ,    "fields": {      "titre": "Rien ne vaut la douceur du foyer",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  304 ,    "fields": {      "titre": "Juste un regard",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  305 ,    "fields": {      "titre": "Indigo Blues",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  306 ,    "fields": {      "titre": "Stalky et cie",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  307 ,    "fields": {      "titre": "Le sang du renard",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  308 ,    "fields": {      "titre": "",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  309 ,    "fields": {      "titre": "Mortes-eaux",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  310 ,    "fields": {      "titre": "La cité de la joie",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  311 ,    "fields": {      "titre": "La pyramide assassinée",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  312 ,    "fields": {      "titre": "La ballade de la balle élastique",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  313 ,    "fields": {      "titre": "American psycho",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  314 ,    "fields": {      "titre": "Charlie et le grand ascenseur de verre",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  315 ,    "fields": {      "titre": "Le Fléau",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  316 ,    "fields": {      "titre": "J'ai bien connu icare",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  317 ,    "fields": {      "titre": "Les 10 petits nègres",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  360 ,    "fields": {      "titre": "nahtan",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  361 ,    "fields": {      "titre": "Naissances sur ordonnance",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  362 ,    "fields": {      "titre": "Le sommeil des anges",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  363 ,    "fields": {      "titre": "Daddy",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  364 ,    "fields": {      "titre": "Innocent",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  365 ,    "fields": {      "titre": "Danse pour moi",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  366 ,    "fields": {      "titre": "Nulle part ou aller",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  367 ,    "fields": {      "titre": "Les 2 petites filles en bleu",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  368 ,    "fields": {      "titre": "Dans les bois",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  369 ,    "fields": {      "titre": "Un corps parfait",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  370 ,    "fields": {      "titre": "Parce que je t'aime",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  371 ,    "fields": {      "titre": "Plus que tout au monde",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  372 ,    "fields": {      "titre": "Daddy's girl",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  373 ,    "fields": {      "titre": "Démenti formel",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  374 ,    "fields": {      "titre": "Sphinx",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  375 ,    "fields": {      "titre": "Court-circuit",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  376 ,    "fields": {      "titre": "Meurtres à la carte",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  377 ,    "fields": {      "titre": "Les rescapés du coeur",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  378 ,    "fields": {      "titre": "Comme avant",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  379 ,    "fields": {      "titre": "Monsieur Ibrahim et les fleurs du Coran",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  380 ,    "fields": {      "titre": "A tout jamais",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  381 ,    "fields": {      "titre": "La vipère de velours",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  382 ,    "fields": {      "titre": "Le temps d'un ouragan",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  383 ,    "fields": {      "titre": "A vif",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  384 ,    "fields": {      "titre": "Cauchemar sans visage",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  385 ,    "fields": {      "titre": "Déviances",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  386 ,    "fields": {      "titre": "Double Je",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  387 ,    "fields": {      "titre": "Képas",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  388 ,    "fields": {      "titre": "Désolation",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  389 ,    "fields": {      "titre": "Péplum",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  390 ,    "fields": {      "titre": "Nécropolis",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  391 ,    "fields": {      "titre": "La liste des sept",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  392 ,    "fields": {      "titre": "L'ange gabriel",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  393 ,    "fields": {      "titre": "La mort en tenue de soirée",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  394 ,    "fields": {      "titre": "Jardin fatal",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  395 ,    "fields": {      "titre": "Les profondeurs du mal",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  396 ,    "fields": {      "titre": "Double miroir",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  397 ,    "fields": {      "titre": "La fuite en avant",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  398 ,    "fields": {      "titre": "L'appât invisible",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  399 ,    "fields": {      "titre": "La fille de la nuit",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  400 ,    "fields": {      "titre": "Jeux de dupes",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  401 ,    "fields": {      "titre": "Une nouvelle chance",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  402 ,    "fields": {      "titre": "Mes amis mes amours",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  403 ,    "fields": {      "titre": "Et après",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  404 ,    "fields": {      "titre": "Le visage de l'ange",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  405 ,    "fields": {      "titre": "Déception point",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  406 ,    "fields": {      "titre": "L'affaire Gideon",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  407 ,    "fields": {      "titre": "La maison de l'ange",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  408 ,    "fields": {      "titre": "Sauve-moi",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  410 ,    "fields": {      "titre": "Perdues de vue",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  411 ,    "fields": {      "titre": "Petite plume",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  412 ,    "fields": {      "titre": "Du sang sur le green",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  413 ,    "fields": {      "titre": "Sur la route de Gandolfo",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  414 ,    "fields": {      "titre": "Créance de sang",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  318 ,    "fields": {      "titre": "Les vacances d'Hercule Poirot",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  319 ,    "fields": {      "titre": "Les amants calligraphes",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  320 ,    "fields": {      "titre": "Stupeur et tremblements",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  322 ,    "fields": {      "titre": "Cupide",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  323 ,    "fields": {      "titre": "Cadavre X",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  324 ,    "fields": {      "titre": "Un taxi mauve",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  325 ,    "fields": {      "titre": "L'enfant du bosphore",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  326 ,    "fields": {      "titre": "Un plan infaillible",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  327 ,    "fields": {      "titre": "Confessionnal",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  328 ,    "fields": {      "titre": "Il est mort les yeux ouverts",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  329 ,    "fields": {      "titre": "Cartel en tête",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  330 ,    "fields": {      "titre": "La folie du moment",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  331 ,    "fields": {      "titre": "Fête fatale",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  332 ,    "fields": {      "titre": "Une femme traquée",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  333 ,    "fields": {      "titre": "Rien ne va plus",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  334 ,    "fields": {      "titre": "Faux rebond",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  335 ,    "fields": {      "titre": "Si près de vous",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  337 ,    "fields": {      "titre": "La demoiselle d'honneur",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  338 ,    "fields": {      "titre": "Sans feu ni lieu",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  339 ,    "fields": {      "titre": "Premier à mourir",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  340 ,    "fields": {      "titre": "Pas de veine",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  341 ,    "fields": {      "titre": "Mon meilleur Ami",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  342 ,    "fields": {      "titre": "Une pierre dans le coeur",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  343 ,    "fields": {      "titre": "Vous promettez de ne rien dire?",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  344 ,    "fields": {      "titre": "Le poète",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  345 ,    "fields": {      "titre": "Un cas de conscience",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  346 ,    "fields": {      "titre": "Rouges sont les roses",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  347 ,    "fields": {      "titre": "Dans l'ombre de Mary",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  348 ,    "fields": {      "titre": "Vector",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  349 ,    "fields": {      "titre": "Le baiser du serpent",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  350 ,    "fields": {      "titre": "Tout doit disparaître",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  351 ,    "fields": {      "titre": "Argent facile",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  352 ,    "fields": {      "titre": "Une question de confiance",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  353 ,    "fields": {      "titre": "Une femme sous contrôle",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  354 ,    "fields": {      "titre": "Le mystère Strassberger",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  355 ,    "fields": {      "titre": "Plus que vous n'en savez…",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  356 ,    "fields": {      "titre": "Pratiques douteuses",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  357 ,    "fields": {      "titre": "La mort à la traine",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  358 ,    "fields": {      "titre": "Le tueur des bois",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  359 ,    "fields": {      "titre": "Phobies",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  415 ,    "fields": {      "titre": "Sans un mot",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  416 ,    "fields": {      "titre": "Un coupable trop parfait",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  417 ,    "fields": {      "titre": "L'été des machettes",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  419 ,    "fields": {      "titre": "Sept jours pour une éternité",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  420 ,    "fields": {      "titre": "Quatre souris vertes",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  421 ,    "fields": {      "titre": "Les mots qui tuent",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  422 ,    "fields": {      "titre": "Le crime de Mayfair",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  423 ,    "fields": {      "titre": "L'énigme de Rackmoor",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  424 ,    "fields": {      "titre": "Vengeance aveugle",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  425 ,    "fields": {      "titre": "Syncopes",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  426 ,    "fields": {      "titre": "Manipulations",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  435 ,    "fields": {      "titre": "Firmin",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  436 ,    "fields": {      "titre": "Alain Delon est une star au Japon",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  437 ,    "fields": {      "titre": "La Reine des lectrices",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  438 ,    "fields": {      "titre": "Carrie",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  439 ,    "fields": {      "titre": "La féé carabine",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  440 ,    "fields": {      "titre": "Les secrets sont éternels",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  441 ,    "fields": {      "titre": "Le petit copain",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  442 ,    "fields": {      "titre": "Le sablier d'or",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  443 ,    "fields": {      "titre": "Le voleur de Noël",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  444 ,    "fields": {      "titre": "La croisière de noël",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  445 ,    "fields": {      "titre": "Le silence des survivants",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  446 ,    "fields": {      "titre": "Entre hier et demain",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  447 ,    "fields": {      "titre": "Le masque de l'oubli",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  448 ,    "fields": {      "titre": "Un coeur trop lourd",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  449 ,    "fields": {      "titre": "L'appel de l'ange",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  450 ,    "fields": {      "titre": "Une nuit sur la mer",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  451 ,    "fields": {      "titre": "La sixième cible",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  452 ,    "fields": {      "titre": "Lorsque j'étais une oeuvre d'art",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  453 ,    "fields": {      "titre": "L'apprenti",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  454 ,    "fields": {      "titre": "Bikini",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  455 ,    "fields": {      "titre": "Origine suspect",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  456 ,    "fields": {      "titre": "Disparu à jamais",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  457 ,    "fields": {      "titre": "Papa est mort, tourterelle",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  458 ,    "fields": {      "titre": "Le phare",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  459 ,    "fields": {      "titre": "Le Talion",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  460 ,    "fields": {      "titre": "La clinique",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  461 ,    "fields": {      "titre": "L'inconnu du Nord-Express",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  462 ,    "fields": {      "titre": "Vol avec effraction douce",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  463 ,    "fields": {      "titre": "Monster",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  464 ,    "fields": {      "titre": "Meurtre.com",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  465 ,    "fields": {      "titre": "L'homme qui disparait",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  466 ,    "fields": {      "titre": "Caveaux funestes",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  467 ,    "fields": {      "titre": "Forteresse digitale",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  468 ,    "fields": {      "titre": "Sans raison",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  469 ,    "fields": {      "titre": "Darling lilly",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  470 ,    "fields": {      "titre": "Mémoire infidèle",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  471 ,    "fields": {      "titre": "Par action et omission",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  472 ,    "fields": {      "titre": "La cellule de verre",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  473 ,    "fields": {      "titre": "Les deux visage de Janvier",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  474 ,    "fields": {      "titre": "A visage couvert",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  475 ,    "fields": {      "titre": "Signe suspect",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  476 ,    "fields": {      "titre": "Comédies en tout genre",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  477 ,    "fields": {      "titre": "Blonde attitude",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  478 ,    "fields": {      "titre": "Un mariage en décembre",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  479 ,    "fields": {      "titre": "Une femme dans la tourmente",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  480 ,    "fields": {      "titre": "",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  481 ,    "fields": {      "titre": "Toxine",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  482 ,    "fields": {      "titre": "",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  483 ,    "fields": {      "titre": "Psychose",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  484 ,    "fields": {      "titre": "7",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  485 ,    "fields": {      "titre": "La tournante",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  513 ,    "fields": {      "titre": "Promets-moi",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  514 ,    "fields": {      "titre": "Voile rouge",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  515 ,    "fields": {      "titre": "Meurtres pour redemption",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  516 ,    "fields": {      "titre": "Chiens de sang",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  517 ,    "fields": {      "titre": "Vous plaisantez monsieur Tanner",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  518 ,    "fields": {      "titre": "Terminus Elicius",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  519 ,    "fields": {      "titre": "Le mystère par excellence",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  520 ,    "fields": {      "titre": "Jusqu'à ce que la mort nous unisse",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  521 ,    "fields": {      "titre": "Les morsures de l'ombre",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  522 ,    "fields": {      "titre": "Cette nuit-là",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  523 ,    "fields": {      "titre": "Le pouvoir des ténèbres",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  524 ,    "fields": {      "titre": "La dernière note",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  525 ,    "fields": {      "titre": "Sourire en coin",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  526 ,    "fields": {      "titre": "La proie du tueur",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  527 ,    "fields": {      "titre": "Le tueur et son ombre",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  528 ,    "fields": {      "titre": "Profanation",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  529 ,    "fields": {      "titre": "Anges",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  530 ,    "fields": {      "titre": "Mortelle perfection",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  531 ,    "fields": {      "titre": "Le prédicateur",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  532 ,    "fields": {      "titre": "Brume",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  533 ,    "fields": {      "titre": "Le monde sans les enfants",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  534 ,    "fields": {      "titre": "La princesse des glaces",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  535 ,    "fields": {      "titre": "L'hypnotiseur",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  536 ,    "fields": {      "titre": "Un employé modèle",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  537 ,    "fields": {      "titre": "Le tailleur de pierre",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  538 ,    "fields": {      "titre": "L'oiseau de mauvaise augure",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  539 ,    "fields": {      "titre": "Mr Mercedes",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  540 ,    "fields": {      "titre": "Méprise d'otages",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  541 ,    "fields": {      "titre": "Une histoire de fous",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  542 ,    "fields": {      "titre": "",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  543 ,    "fields": {      "titre": "La dernière trace",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  544 ,    "fields": {      "titre": "La dernière escale",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  545 ,    "fields": {      "titre": "Rapt de nuit",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  546 ,    "fields": {      "titre": "La griffe du sud",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  547 ,    "fields": {      "titre": "La poursuite du bonheur",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  548 ,    "fields": {      "titre": "Crise d'otages",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  549 ,    "fields": {      "titre": "L'apparence de la chair",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  550 ,    "fields": {      "titre": "",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  551 ,    "fields": {      "titre": "Le dernier hiver",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  552 ,    "fields": {      "titre": "Le jeu de l'ombre",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  553 ,    "fields": {      "titre": "Robe de marié",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  554 ,    "fields": {      "titre": "Où es-tu?",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  555 ,    "fields": {      "titre": "La prochaine fois",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  556 ,    "fields": {      "titre": "Les visages",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  557 ,    "fields": {      "titre": "11 heures à vivre",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  558 ,    "fields": {      "titre": "Atom[ka]",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  559 ,    "fields": {      "titre": "Stigmate",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  560 ,    "fields": {      "titre": "Avant le gel",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  561 ,    "fields": {      "titre": "La tache",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  562 ,    "fields": {      "titre": "La montagne de l'âme",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  427 ,    "fields": {      "titre": "Danger mortel",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  428 ,    "fields": {      "titre": "La soupe aux cailloux",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  429 ,    "fields": {      "titre": "Je t'ai donné mon cœur",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  430 ,    "fields": {      "titre": "Requiem en eau trouble",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  431 ,    "fields": {      "titre": "Morts en coulisses",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  433 ,    "fields": {      "titre": "Où es-tu maintenant?",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  434 ,    "fields": {      "titre": "Bonjour Tristesse",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  486 ,    "fields": {      "titre": "Une forme de vie",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  487 ,    "fields": {      "titre": "A perte de vue",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  488 ,    "fields": {      "titre": "Les tribulations d'une caissière",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  489 ,    "fields": {      "titre": "La place",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  490 ,    "fields": {      "titre": "Le petit bijou",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  491 ,    "fields": {      "titre": "La Mort et la Belle Vie",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  492 ,    "fields": {      "titre": "Cyrano de Bergerac",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  493 ,    "fields": {      "titre": "Un sac de billes",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  494 ,    "fields": {      "titre": "Une mort ésthétique",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  495 ,    "fields": {      "titre": "Toubib or not toubib",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  496 ,    "fields": {      "titre": "Pourquoi pas nous?",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  497 ,    "fields": {      "titre": "Juste une ombre",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  498 ,    "fields": {      "titre": "Boomerang",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  499 ,    "fields": {      "titre": "Les cendres froides",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  500 ,    "fields": {      "titre": "Jeu pour les vivants",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  501 ,    "fields": {      "titre": "Sans un adieu",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  502 ,    "fields": {      "titre": "Intrusion",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  503 ,    "fields": {      "titre": "Le cortège de la mort",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  504 ,    "fields": {      "titre": "Le symbole perdi",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  505 ,    "fields": {      "titre": "Le bûcher du Boiteux",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  506 ,    "fields": {      "titre": "Haute-Pierre",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  507 ,    "fields": {      "titre": "Garde rapprochée",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  508 ,    "fields": {      "titre": "Derrière la haine",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  509 ,    "fields": {      "titre": "Derrière la haine",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  510 ,    "fields": {      "titre": "Maîtres du jeu",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  511 ,    "fields": {      "titre": "On t'aura prévenue",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  512 ,    "fields": {      "titre": "Tom petit Tom tout petit homme Tom",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  563 ,    "fields": {      "titre": "Prédateurs",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  564 ,    "fields": {      "titre": "Mort imminent",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  565 ,    "fields": {      "titre": "L'affaire Jennifer Jones",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  566 ,    "fields": {      "titre": "L'invisible",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  567 ,    "fields": {      "titre": "Le livre des morts",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  568 ,    "fields": {      "titre": "La mort leur va si bien",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  569 ,    "fields": {      "titre": "Satan était un ange",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  570 ,    "fields": {      "titre": "Purgatoire des innocents",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  571 ,    "fields": {      "titre": "Substitutions",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  572 ,    "fields": {      "titre": "Les enfants des cendres",
+      "langue": "FR"
+    }
+  }
+,
+{    "model":"main.livre",    "pk":  573 ,    "fields": {      "titre": "Train d'enfer pour ange rouge",
+      "langue": "FR"
+    }
+  }
+  ,{    "model":"main.auteurLivre",    "pk" :1 , "fields": {      "auteur": "108",      "livre": "252"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :2 , "fields": {      "auteur": "108",      "livre": "253"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :3 , "fields": {      "auteur": "108",      "livre": "254"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :442 , "fields": {      "auteur": "42",      "livre": "255"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :5 , "fields": {      "auteur": "108",      "livre": "256"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :648 , "fields": {      "auteur": "48",      "livre": "257"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :7 , "fields": {      "auteur": "108",      "livre": "258"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :895 , "fields": {      "auteur": "95",      "livre": "259"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :9 , "fields": {      "auteur": "108",      "livre": "260"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :1035 , "fields": {      "auteur": "35",      "livre": "261"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :1150 , "fields": {      "auteur": "50",      "livre": "262"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :1216 , "fields": {      "auteur": "16",      "livre": "263"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :135 , "fields": {      "auteur": "5",      "livre": "1"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :148 , "fields": {      "auteur": "8",      "livre": "2"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :1546 , "fields": {      "auteur": "46",      "livre": "3"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :1611 , "fields": {      "auteur": "11",      "livre": "4"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :1712 , "fields": {      "auteur": "12",      "livre": "5"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :1812 , "fields": {      "auteur": "12",      "livre": "6"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :1912 , "fields": {      "auteur": "12",      "livre": "7"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :2012 , "fields": {      "auteur": "12",      "livre": "8"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :2112 , "fields": {      "auteur": "12",      "livre": "9"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :2212 , "fields": {      "auteur": "12",      "livre": "10"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :2314 , "fields": {      "auteur": "14",      "livre": "11"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :2414 , "fields": {      "auteur": "14",      "livre": "12"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :2516 , "fields": {      "auteur": "16",      "livre": "13"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :2616 , "fields": {      "auteur": "16",      "livre": "14"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :2716 , "fields": {      "auteur": "16",      "livre": "15"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :2818 , "fields": {      "auteur": "18",      "livre": "16"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :2918 , "fields": {      "auteur": "18",      "livre": "17"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :3022 , "fields": {      "auteur": "22",      "livre": "18"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :3125 , "fields": {      "auteur": "25",      "livre": "19"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :3230 , "fields": {      "auteur": "30",      "livre": "20"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :3330 , "fields": {      "auteur": "30",      "livre": "21"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :3430 , "fields": {      "auteur": "30",      "livre": "22"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :3530 , "fields": {      "auteur": "30",      "livre": "23"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :3630 , "fields": {      "auteur": "30",      "livre": "24"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :3731 , "fields": {      "auteur": "31",      "livre": "25"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :3839 , "fields": {      "auteur": "39",      "livre": "26"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :3939 , "fields": {      "auteur": "39",      "livre": "27"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :4041 , "fields": {      "auteur": "41",      "livre": "28"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :4141 , "fields": {      "auteur": "41",      "livre": "29"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :4245 , "fields": {      "auteur": "45",      "livre": "30"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :4347 , "fields": {      "auteur": "47",      "livre": "31"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :4447 , "fields": {      "auteur": "47",      "livre": "32"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :4547 , "fields": {      "auteur": "47",      "livre": "33"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :4647 , "fields": {      "auteur": "47",      "livre": "34"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :4748 , "fields": {      "auteur": "48",      "livre": "35"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :4850 , "fields": {      "auteur": "50",      "livre": "36"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :4950 , "fields": {      "auteur": "50",      "livre": "37"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :5050 , "fields": {      "auteur": "50",      "livre": "38"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :5150 , "fields": {      "auteur": "50",      "livre": "39"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :5250 , "fields": {      "auteur": "50",      "livre": "40"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :5351 , "fields": {      "auteur": "51",      "livre": "41"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :5451 , "fields": {      "auteur": "51",      "livre": "42"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :5551 , "fields": {      "auteur": "51",      "livre": "43"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :5651 , "fields": {      "auteur": "51",      "livre": "44"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :5751 , "fields": {      "auteur": "51",      "livre": "45"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :5851 , "fields": {      "auteur": "51",      "livre": "46"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :5951 , "fields": {      "auteur": "51",      "livre": "47"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :6051 , "fields": {      "auteur": "51",      "livre": "48"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :6151 , "fields": {      "auteur": "51",      "livre": "49"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :6251 , "fields": {      "auteur": "51",      "livre": "50"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :6356 , "fields": {      "auteur": "56",      "livre": "51"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :6454 , "fields": {      "auteur": "54",      "livre": "52"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :6558 , "fields": {      "auteur": "58",      "livre": "53"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :6659 , "fields": {      "auteur": "59",      "livre": "54"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :6760 , "fields": {      "auteur": "60",      "livre": "55"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :6861 , "fields": {      "auteur": "61",      "livre": "56"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :6966 , "fields": {      "auteur": "66",      "livre": "57"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :7067 , "fields": {      "auteur": "67",      "livre": "58"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :7168 , "fields": {      "auteur": "68",      "livre": "59"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :7262 , "fields": {      "auteur": "62",      "livre": "60"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :7362 , "fields": {      "auteur": "62",      "livre": "61"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :7463 , "fields": {      "auteur": "63",      "livre": "62"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :7564 , "fields": {      "auteur": "64",      "livre": "63"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :7675 , "fields": {      "auteur": "75",      "livre": "64"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :7776 , "fields": {      "auteur": "76",      "livre": "65"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :7876 , "fields": {      "auteur": "76",      "livre": "66"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :7977 , "fields": {      "auteur": "77",      "livre": "67"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :8078 , "fields": {      "auteur": "78",      "livre": "68"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :8181 , "fields": {      "auteur": "81",      "livre": "69"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :8286 , "fields": {      "auteur": "86",      "livre": "70"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :8388 , "fields": {      "auteur": "88",      "livre": "71"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :8492 , "fields": {      "auteur": "92",      "livre": "72"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :8594 , "fields": {      "auteur": "94",      "livre": "73"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :8697 , "fields": {      "auteur": "97",      "livre": "74"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :87100 , "fields": {      "auteur": "100",      "livre": "75"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :88101 , "fields": {      "auteur": "101",      "livre": "76"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :89105 , "fields": {      "auteur": "105",      "livre": "77"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :9050 , "fields": {      "auteur": "50",      "livre": "78"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :9133 , "fields": {      "auteur": "33",      "livre": "79"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :9295 , "fields": {      "auteur": "95",      "livre": "80"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :9395 , "fields": {      "auteur": "95",      "livre": "81"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :9462 , "fields": {      "auteur": "62",      "livre": "82"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :9562 , "fields": {      "auteur": "62",      "livre": "83"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :9616 , "fields": {      "auteur": "16",      "livre": "84"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :9716 , "fields": {      "auteur": "16",      "livre": "85"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :9814 , "fields": {      "auteur": "14",      "livre": "86"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :9913 , "fields": {      "auteur": "13",      "livre": "87"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :10051 , "fields": {      "auteur": "51",      "livre": "88"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :10112 , "fields": {      "auteur": "12",      "livre": "89"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :10212 , "fields": {      "auteur": "12",      "livre": "90"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :10395 , "fields": {      "auteur": "95",      "livre": "91"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :10450 , "fields": {      "auteur": "50",      "livre": "92"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :1057 , "fields": {      "auteur": "7",      "livre": "93"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :10642 , "fields": {      "auteur": "42",      "livre": "94"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :10742 , "fields": {      "auteur": "42",      "livre": "95"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :10842 , "fields": {      "auteur": "42",      "livre": "96"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :10942 , "fields": {      "auteur": "42",      "livre": "97"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :11042 , "fields": {      "auteur": "42",      "livre": "98"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :11142 , "fields": {      "auteur": "42",      "livre": "99"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :112 , "fields": {      "auteur": "108",      "livre": "100"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :11338 , "fields": {      "auteur": "38",      "livre": "102"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :11438 , "fields": {      "auteur": "38",      "livre": "103"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :11551 , "fields": {      "auteur": "51",      "livre": "104"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :11639 , "fields": {      "auteur": "39",      "livre": "105"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :11739 , "fields": {      "auteur": "39",      "livre": "106"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :11842 , "fields": {      "auteur": "42",      "livre": "107"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :11942 , "fields": {      "auteur": "42",      "livre": "108"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :12042 , "fields": {      "auteur": "42",      "livre": "109"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :12142 , "fields": {      "auteur": "42",      "livre": "110"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :12242 , "fields": {      "auteur": "42",      "livre": "111"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :12342 , "fields": {      "auteur": "42",      "livre": "112"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :12442 , "fields": {      "auteur": "42",      "livre": "113"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :12542 , "fields": {      "auteur": "42",      "livre": "114"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :12642 , "fields": {      "auteur": "42",      "livre": "115"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :12742 , "fields": {      "auteur": "42",      "livre": "116"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :12842 , "fields": {      "auteur": "42",      "livre": "117"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :12942 , "fields": {      "auteur": "42",      "livre": "118"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :13042 , "fields": {      "auteur": "42",      "livre": "119"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :13142 , "fields": {      "auteur": "42",      "livre": "120"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :13242 , "fields": {      "auteur": "42",      "livre": "121"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :13342 , "fields": {      "auteur": "42",      "livre": "122"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :13442 , "fields": {      "auteur": "42",      "livre": "123"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :13599 , "fields": {      "auteur": "99",      "livre": "124"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :13610 , "fields": {      "auteur": "10",      "livre": "125"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :13719 , "fields": {      "auteur": "19",      "livre": "126"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :13812 , "fields": {      "auteur": "12",      "livre": "127"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :13930 , "fields": {      "auteur": "30",      "livre": "128"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :14076 , "fields": {      "auteur": "76",      "livre": "129"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :14176 , "fields": {      "auteur": "76",      "livre": "130"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :14262 , "fields": {      "auteur": "62",      "livre": "131"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :1432 , "fields": {      "auteur": "2",      "livre": "132"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :14416 , "fields": {      "auteur": "16",      "livre": "133"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :1451 , "fields": {      "auteur": "1",      "livre": "134"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :1463 , "fields": {      "auteur": "3",      "livre": "135"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :147102 , "fields": {      "auteur": "102",      "livre": "136"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :148 , "fields": {      "auteur": "108",      "livre": "137"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :14998 , "fields": {      "auteur": "98",      "livre": "138"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :15087 , "fields": {      "auteur": "87",      "livre": "139"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :15112 , "fields": {      "auteur": "12",      "livre": "140"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :15212 , "fields": {      "auteur": "12",      "livre": "141"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :15312 , "fields": {      "auteur": "12",      "livre": "142"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :15442 , "fields": {      "auteur": "42",      "livre": "143"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :15542 , "fields": {      "auteur": "42",      "livre": "144"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :15642 , "fields": {      "auteur": "42",      "livre": "145"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :15742 , "fields": {      "auteur": "42",      "livre": "146"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :15824 , "fields": {      "auteur": "24",      "livre": "147"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :15943 , "fields": {      "auteur": "43",      "livre": "148"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :16084 , "fields": {      "auteur": "84",      "livre": "149"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :1614 , "fields": {      "auteur": "4",      "livre": "150"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :16289 , "fields": {      "auteur": "89",      "livre": "151"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :16340 , "fields": {      "auteur": "40",      "livre": "152"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :16434 , "fields": {      "auteur": "34",      "livre": "153"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :16570 , "fields": {      "auteur": "70",      "livre": "154"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :16627 , "fields": {      "auteur": "27",      "livre": "155"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :16780 , "fields": {      "auteur": "80",      "livre": "156"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :16891 , "fields": {      "auteur": "91",      "livre": "157"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :16921 , "fields": {      "auteur": "21",      "livre": "158"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :1709 , "fields": {      "auteur": "9",      "livre": "159"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :17165 , "fields": {      "auteur": "65",      "livre": "160"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :17253 , "fields": {      "auteur": "53",      "livre": "161"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :17349 , "fields": {      "auteur": "49",      "livre": "162"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :17462 , "fields": {      "auteur": "62",      "livre": "163"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :17562 , "fields": {      "auteur": "62",      "livre": "164"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :17632 , "fields": {      "auteur": "32",      "livre": "165"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :17788 , "fields": {      "auteur": "88",      "livre": "166"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :17872 , "fields": {      "auteur": "72",      "livre": "167"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :17915 , "fields": {      "auteur": "15",      "livre": "168"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :180103 , "fields": {      "auteur": "103",      "livre": "169"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :18190 , "fields": {      "auteur": "90",      "livre": "170"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :1821 , "fields": {      "auteur": "1",      "livre": "171"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :18357 , "fields": {      "auteur": "57",      "livre": "172"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :18473 , "fields": {      "auteur": "73",      "livre": "173"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :18593 , "fields": {      "auteur": "93",      "livre": "174"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :18671 , "fields": {      "auteur": "71",      "livre": "175"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :18743 , "fields": {      "auteur": "43",      "livre": "176"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :18843 , "fields": {      "auteur": "43",      "livre": "177"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :18943 , "fields": {      "auteur": "43",      "livre": "178"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :19043 , "fields": {      "auteur": "43",      "livre": "179"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :19123 , "fields": {      "auteur": "23",      "livre": "180"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :19220 , "fields": {      "auteur": "20",      "livre": "181"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :19320 , "fields": {      "auteur": "20",      "livre": "182"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :19441 , "fields": {      "auteur": "41",      "livre": "183"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :19550 , "fields": {      "auteur": "50",      "livre": "184"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :19679 , "fields": {      "auteur": "79",      "livre": "185"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :19742 , "fields": {      "auteur": "42",      "livre": "186"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :19828 , "fields": {      "auteur": "28",      "livre": "187"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :19951 , "fields": {      "auteur": "51",      "livre": "188"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :20036 , "fields": {      "auteur": "36",      "livre": "189"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :20155 , "fields": {      "auteur": "55",      "livre": "190"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :20237 , "fields": {      "auteur": "37",      "livre": "191"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :203104 , "fields": {      "auteur": "104",      "livre": "192"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :204104 , "fields": {      "auteur": "104",      "livre": "193"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :2056 , "fields": {      "auteur": "6",      "livre": "194"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :206104 , "fields": {      "auteur": "104",      "livre": "195"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :20744 , "fields": {      "auteur": "44",      "livre": "196"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :20826 , "fields": {      "auteur": "26",      "livre": "197"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :20914 , "fields": {      "auteur": "14",      "livre": "198"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :21014 , "fields": {      "auteur": "14",      "livre": "199"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :21162 , "fields": {      "auteur": "62",      "livre": "200"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :21274 , "fields": {      "auteur": "74",      "livre": "201"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :2136 , "fields": {      "auteur": "6",      "livre": "202"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :21482 , "fields": {      "auteur": "82",      "livre": "203"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :21535 , "fields": {      "auteur": "35",      "livre": "204"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :21629 , "fields": {      "auteur": "29",      "livre": "205"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :21779 , "fields": {      "auteur": "79",      "livre": "206"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :21817 , "fields": {      "auteur": "17",      "livre": "207"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :21969 , "fields": {      "auteur": "69",      "livre": "208"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :22083 , "fields": {      "auteur": "83",      "livre": "209"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :22185 , "fields": {      "auteur": "85",      "livre": "210"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :22252 , "fields": {      "auteur": "52",      "livre": "211"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :22316 , "fields": {      "auteur": "16",      "livre": "212"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :22442 , "fields": {      "auteur": "42",      "livre": "213"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :22536 , "fields": {      "auteur": "36",      "livre": "214"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :22642 , "fields": {      "auteur": "42",      "livre": "215"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :22785 , "fields": {      "auteur": "85",      "livre": "216"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :22879 , "fields": {      "auteur": "79",      "livre": "217"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :229 , "fields": {      "auteur": "108",      "livre": "218"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :230 , "fields": {      "auteur": "108",      "livre": "219"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :231 , "fields": {      "auteur": "108",      "livre": "220"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :232 , "fields": {      "auteur": "108",      "livre": "221"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :23379 , "fields": {      "auteur": "79",      "livre": "222"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :23486 , "fields": {      "auteur": "86",      "livre": "223"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :23550 , "fields": {      "auteur": "50",      "livre": "224"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :23651 , "fields": {      "auteur": "51",      "livre": "225"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :23795 , "fields": {      "auteur": "95",      "livre": "226"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :238 , "fields": {      "auteur": "108",      "livre": "227"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :239 , "fields": {      "auteur": "108",      "livre": "228"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :24079 , "fields": {      "auteur": "79",      "livre": "229"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :24185 , "fields": {      "auteur": "85",      "livre": "230"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :24235 , "fields": {      "auteur": "35",      "livre": "231"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :243 , "fields": {      "auteur": "108",      "livre": "232"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :244 , "fields": {      "auteur": "108",      "livre": "233"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :24579 , "fields": {      "auteur": "79",      "livre": "234"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :246 , "fields": {      "auteur": "108",      "livre": "235"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :24795 , "fields": {      "auteur": "95",      "livre": "236"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :248106 , "fields": {      "auteur": "106",      "livre": "237"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :249 , "fields": {      "auteur": "108",      "livre": "238"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :25050 , "fields": {      "auteur": "50",      "livre": "239"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :251 , "fields": {      "auteur": "108",      "livre": "240"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :252 , "fields": {      "auteur": "108",      "livre": "241"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :25314 , "fields": {      "auteur": "14",      "livre": "242"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :254 , "fields": {      "auteur": "108",      "livre": "243"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :255 , "fields": {      "auteur": "108",      "livre": "244"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :25636 , "fields": {      "auteur": "36",      "livre": "245"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :257 , "fields": {      "auteur": "108",      "livre": "246"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :25816 , "fields": {      "auteur": "16",      "livre": "247"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :259 , "fields": {      "auteur": "108",      "livre": "248"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :26085 , "fields": {      "auteur": "85",      "livre": "249"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :26185 , "fields": {      "auteur": "85",      "livre": "250"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :262 , "fields": {      "auteur": "108",      "livre": "251"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :26336 , "fields": {      "auteur": "36",      "livre": "264"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :26442 , "fields": {      "auteur": "42",      "livre": "265"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :26550 , "fields": {      "auteur": "50",      "livre": "266"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :266 , "fields": {      "auteur": "108",      "livre": "267"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :267 , "fields": {      "auteur": "108",      "livre": "268"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :26843 , "fields": {      "auteur": "43",      "livre": "269"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :269 , "fields": {      "auteur": "108",      "livre": "270"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :27047 , "fields": {      "auteur": "47",      "livre": "271"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :271 , "fields": {      "auteur": "108",      "livre": "272"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :27295 , "fields": {      "auteur": "95",      "livre": "273"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :273 , "fields": {      "auteur": "108",      "livre": "274"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :274 , "fields": {      "auteur": "108",      "livre": "275"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :27551 , "fields": {      "auteur": "51",      "livre": "276"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :276 , "fields": {      "auteur": "108",      "livre": "277"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :27748 , "fields": {      "auteur": "48",      "livre": "278"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :278 , "fields": {      "auteur": "108",      "livre": "279"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :279107 , "fields": {      "auteur": "107",      "livre": "280"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :280 , "fields": {      "auteur": "108",      "livre": "281"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :281 , "fields": {      "auteur": "108",      "livre": "282"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :282 , "fields": {      "auteur": "108",      "livre": "283"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :283 , "fields": {      "auteur": "108",      "livre": "284"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :28442 , "fields": {      "auteur": "42",      "livre": "285"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :28562 , "fields": {      "auteur": "62",      "livre": "286"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :286 , "fields": {      "auteur": "108",      "livre": "287"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :287 , "fields": {      "auteur": "108",      "livre": "288"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :288 , "fields": {      "auteur": "108",      "livre": "289"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :289 , "fields": {      "auteur": "108",      "livre": "290"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :29086 , "fields": {      "auteur": "86",      "livre": "291"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :291 , "fields": {      "auteur": "108",      "livre": "292"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :292 , "fields": {      "auteur": "108",      "livre": "293"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :293 , "fields": {      "auteur": "108",      "livre": "294"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :29455 , "fields": {      "auteur": "55",      "livre": "295"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :295 , "fields": {      "auteur": "108",      "livre": "296"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :296 , "fields": {      "auteur": "108",      "livre": "297"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :297 , "fields": {      "auteur": "108",      "livre": "298"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :298 , "fields": {      "auteur": "108",      "livre": "299"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :299 , "fields": {      "auteur": "108",      "livre": "300"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :300 , "fields": {      "auteur": "108",      "livre": "301"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :301 , "fields": {      "auteur": "108",      "livre": "302"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :30242 , "fields": {      "auteur": "42",      "livre": "303"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :303 , "fields": {      "auteur": "108",      "livre": "304"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :304 , "fields": {      "auteur": "108",      "livre": "305"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :305 , "fields": {      "auteur": "108",      "livre": "306"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :306 , "fields": {      "auteur": "108",      "livre": "307"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :307 , "fields": {      "auteur": "108",      "livre": "308"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :308 , "fields": {      "auteur": "108",      "livre": "309"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :309 , "fields": {      "auteur": "108",      "livre": "310"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :310 , "fields": {      "auteur": "108",      "livre": "311"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :31150 , "fields": {      "auteur": "50",      "livre": "312"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :312 , "fields": {      "auteur": "108",      "livre": "313"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :313 , "fields": {      "auteur": "108",      "livre": "314"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :31450 , "fields": {      "auteur": "50",      "livre": "315"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :315 , "fields": {      "auteur": "108",      "livre": "316"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :31612 , "fields": {      "auteur": "12",      "livre": "317"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :317 , "fields": {      "auteur": "108",      "livre": "360"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :31814 , "fields": {      "auteur": "14",      "livre": "361"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :319 , "fields": {      "auteur": "108",      "livre": "362"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :320 , "fields": {      "auteur": "108",      "livre": "363"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :321 , "fields": {      "auteur": "108",      "livre": "364"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :322107 , "fields": {      "auteur": "107",      "livre": "365"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :323107 , "fields": {      "auteur": "107",      "livre": "366"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :32442 , "fields": {      "auteur": "42",      "livre": "367"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :325 , "fields": {      "auteur": "108",      "livre": "368"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :326 , "fields": {      "auteur": "108",      "livre": "369"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :327 , "fields": {      "auteur": "108",      "livre": "370"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :328 , "fields": {      "auteur": "108",      "livre": "371"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :329 , "fields": {      "auteur": "108",      "livre": "372"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :330 , "fields": {      "auteur": "108",      "livre": "373"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :33114 , "fields": {      "auteur": "14",      "livre": "374"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :332 , "fields": {      "auteur": "108",      "livre": "375"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :333 , "fields": {      "auteur": "108",      "livre": "376"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :33490 , "fields": {      "auteur": "90",      "livre": "377"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :33590 , "fields": {      "auteur": "90",      "livre": "378"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :336 , "fields": {      "auteur": "108",      "livre": "379"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :33790 , "fields": {      "auteur": "90",      "livre": "380"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :338 , "fields": {      "auteur": "108",      "livre": "381"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :33990 , "fields": {      "auteur": "90",      "livre": "382"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :340 , "fields": {      "auteur": "108",      "livre": "383"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :341 , "fields": {      "auteur": "108",      "livre": "384"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :342 , "fields": {      "auteur": "108",      "livre": "385"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :343 , "fields": {      "auteur": "108",      "livre": "386"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :344 , "fields": {      "auteur": "108",      "livre": "387"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :34550 , "fields": {      "auteur": "50",      "livre": "388"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :34676 , "fields": {      "auteur": "76",      "livre": "389"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :347 , "fields": {      "auteur": "108",      "livre": "390"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :348 , "fields": {      "auteur": "108",      "livre": "391"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :34955 , "fields": {      "auteur": "55",      "livre": "392"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :350 , "fields": {      "auteur": "108",      "livre": "393"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :35111 , "fields": {      "auteur": "11",      "livre": "394"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :352 , "fields": {      "auteur": "108",      "livre": "395"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :353 , "fields": {      "auteur": "108",      "livre": "396"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :354 , "fields": {      "auteur": "108",      "livre": "397"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :355 , "fields": {      "auteur": "108",      "livre": "398"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :356 , "fields": {      "auteur": "108",      "livre": "399"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :35733 , "fields": {      "auteur": "33",      "livre": "400"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :358 , "fields": {      "auteur": "108",      "livre": "401"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :359 , "fields": {      "auteur": "108",      "livre": "402"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :360 , "fields": {      "auteur": "108",      "livre": "403"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :36151 , "fields": {      "auteur": "51",      "livre": "404"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :362 , "fields": {      "auteur": "108",      "livre": "405"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :363 , "fields": {      "auteur": "108",      "livre": "406"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :364 , "fields": {      "auteur": "108",      "livre": "407"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :365 , "fields": {      "auteur": "108",      "livre": "408"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :36695 , "fields": {      "auteur": "95",      "livre": "410"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :367 , "fields": {      "auteur": "108",      "livre": "411"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :368 , "fields": {      "auteur": "108",      "livre": "412"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :36961 , "fields": {      "auteur": "61",      "livre": "413"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :370 , "fields": {      "auteur": "108",      "livre": "414"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :37112 , "fields": {      "auteur": "12",      "livre": "318"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :372 , "fields": {      "auteur": "108",      "livre": "319"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :37376 , "fields": {      "auteur": "76",      "livre": "320"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :374 , "fields": {      "auteur": "108",      "livre": "322"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :37516 , "fields": {      "auteur": "16",      "livre": "323"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :376 , "fields": {      "auteur": "108",      "livre": "324"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :377 , "fields": {      "auteur": "108",      "livre": "325"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :378 , "fields": {      "auteur": "108",      "livre": "326"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :379 , "fields": {      "auteur": "108",      "livre": "327"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :38014 , "fields": {      "auteur": "14",      "livre": "328"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :381 , "fields": {      "auteur": "108",      "livre": "329"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :382 , "fields": {      "auteur": "108",      "livre": "330"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :383 , "fields": {      "auteur": "108",      "livre": "331"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :384 , "fields": {      "auteur": "108",      "livre": "332"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :385 , "fields": {      "auteur": "108",      "livre": "333"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :386 , "fields": {      "auteur": "108",      "livre": "334"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :387107 , "fields": {      "auteur": "107",      "livre": "335"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :388 , "fields": {      "auteur": "108",      "livre": "337"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :389 , "fields": {      "auteur": "108",      "livre": "338"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :39079 , "fields": {      "auteur": "79",      "livre": "339"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :39141 , "fields": {      "auteur": "41",      "livre": "340"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :392 , "fields": {      "auteur": "108",      "livre": "341"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :393 , "fields": {      "auteur": "108",      "livre": "342"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :394107 , "fields": {      "auteur": "107",      "livre": "343"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :395 , "fields": {      "auteur": "108",      "livre": "344"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :396 , "fields": {      "auteur": "108",      "livre": "345"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :39779 , "fields": {      "auteur": "79",      "livre": "346"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :398 , "fields": {      "auteur": "108",      "livre": "347"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :39914 , "fields": {      "auteur": "14",      "livre": "348"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :400 , "fields": {      "auteur": "108",      "livre": "349"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :401 , "fields": {      "auteur": "108",      "livre": "350"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :402 , "fields": {      "auteur": "108",      "livre": "351"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :403 , "fields": {      "auteur": "108",      "livre": "352"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :404 , "fields": {      "auteur": "108",      "livre": "353"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :405 , "fields": {      "auteur": "108",      "livre": "354"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :406 , "fields": {      "auteur": "108",      "livre": "355"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :407 , "fields": {      "auteur": "108",      "livre": "356"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :40851 , "fields": {      "auteur": "51",      "livre": "357"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :409 , "fields": {      "auteur": "108",      "livre": "358"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :410 , "fields": {      "auteur": "108",      "livre": "359"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :411 , "fields": {      "auteur": "108",      "livre": "415"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :41262 , "fields": {      "auteur": "62",      "livre": "416"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :41379 , "fields": {      "auteur": "79",      "livre": "417"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :414 , "fields": {      "auteur": "108",      "livre": "419"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :41579 , "fields": {      "auteur": "79",      "livre": "420"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :41637 , "fields": {      "auteur": "37",      "livre": "421"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :41737 , "fields": {      "auteur": "37",      "livre": "422"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :41837 , "fields": {      "auteur": "37",      "livre": "423"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :41914 , "fields": {      "auteur": "14",      "livre": "424"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :42014 , "fields": {      "auteur": "14",      "livre": "425"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :42114 , "fields": {      "auteur": "14",      "livre": "426"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :422 , "fields": {      "auteur": "108",      "livre": "435"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :423 , "fields": {      "auteur": "108",      "livre": "436"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :424 , "fields": {      "auteur": "108",      "livre": "437"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :42550 , "fields": {      "auteur": "50",      "livre": "438"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :426 , "fields": {      "auteur": "108",      "livre": "439"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :42795 , "fields": {      "auteur": "95",      "livre": "440"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :42894 , "fields": {      "auteur": "94",      "livre": "441"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :429 , "fields": {      "auteur": "108",      "livre": "442"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :430 , "fields": {      "auteur": "108",      "livre": "443"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :431 , "fields": {      "auteur": "108",      "livre": "444"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :432 , "fields": {      "auteur": "108",      "livre": "445"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :43342 , "fields": {      "auteur": "42",      "livre": "446"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :43451 , "fields": {      "auteur": "51",      "livre": "447"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :43586 , "fields": {      "auteur": "86",      "livre": "448"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :436 , "fields": {      "auteur": "108",      "livre": "449"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :43762 , "fields": {      "auteur": "62",      "livre": "450"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :43879 , "fields": {      "auteur": "79",      "livre": "451"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :439 , "fields": {      "auteur": "108",      "livre": "452"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :440 , "fields": {      "auteur": "108",      "livre": "453"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :44179 , "fields": {      "auteur": "79",      "livre": "454"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :44262 , "fields": {      "auteur": "62",      "livre": "455"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :443 , "fields": {      "auteur": "108",      "livre": "456"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :444 , "fields": {      "auteur": "108",      "livre": "457"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :44547 , "fields": {      "auteur": "47",      "livre": "458"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :446 , "fields": {      "auteur": "108",      "livre": "459"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :447 , "fields": {      "auteur": "108",      "livre": "460"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :44843 , "fields": {      "auteur": "43",      "livre": "461"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :44955 , "fields": {      "auteur": "55",      "livre": "462"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :450 , "fields": {      "auteur": "108",      "livre": "463"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :451 , "fields": {      "auteur": "108",      "livre": "464"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :452 , "fields": {      "auteur": "108",      "livre": "465"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :453 , "fields": {      "auteur": "108",      "livre": "466"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :454 , "fields": {      "auteur": "108",      "livre": "467"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :45516 , "fields": {      "auteur": "16",      "livre": "468"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :456 , "fields": {      "auteur": "108",      "livre": "469"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :45735 , "fields": {      "auteur": "35",      "livre": "470"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :458 , "fields": {      "auteur": "108",      "livre": "471"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :45943 , "fields": {      "auteur": "43",      "livre": "472"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :46043 , "fields": {      "auteur": "43",      "livre": "473"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :46147 , "fields": {      "auteur": "47",      "livre": "474"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :46216 , "fields": {      "auteur": "16",      "livre": "475"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :463 , "fields": {      "auteur": "108",      "livre": "476"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :464 , "fields": {      "auteur": "108",      "livre": "477"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :465 , "fields": {      "auteur": "108",      "livre": "478"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :466 , "fields": {      "auteur": "108",      "livre": "479"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :467 , "fields": {      "auteur": "108",      "livre": "480"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :46814 , "fields": {      "auteur": "14",      "livre": "481"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :469 , "fields": {      "auteur": "108",      "livre": "482"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :470 , "fields": {      "auteur": "108",      "livre": "483"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :471 , "fields": {      "auteur": "108",      "livre": "484"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :472 , "fields": {      "auteur": "108",      "livre": "485"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :473 , "fields": {      "auteur": "108",      "livre": "513"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :47416 , "fields": {      "auteur": "16",      "livre": "514"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :475 , "fields": {      "auteur": "108",      "livre": "515"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :476 , "fields": {      "auteur": "108",      "livre": "516"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :477 , "fields": {      "auteur": "108",      "livre": "517"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :478 , "fields": {      "auteur": "108",      "livre": "518"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :47976 , "fields": {      "auteur": "76",      "livre": "519"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :480 , "fields": {      "auteur": "108",      "livre": "520"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :481 , "fields": {      "auteur": "108",      "livre": "521"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :482 , "fields": {      "auteur": "108",      "livre": "522"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :483 , "fields": {      "auteur": "108",      "livre": "523"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :484 , "fields": {      "auteur": "108",      "livre": "524"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :48533 , "fields": {      "auteur": "33",      "livre": "525"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :486 , "fields": {      "auteur": "108",      "livre": "526"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :487 , "fields": {      "auteur": "108",      "livre": "527"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :488 , "fields": {      "auteur": "108",      "livre": "528"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :489 , "fields": {      "auteur": "108",      "livre": "529"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :490 , "fields": {      "auteur": "108",      "livre": "530"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :491 , "fields": {      "auteur": "108",      "livre": "531"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :49250 , "fields": {      "auteur": "50",      "livre": "532"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :493 , "fields": {      "auteur": "108",      "livre": "533"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :494 , "fields": {      "auteur": "108",      "livre": "534"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :495 , "fields": {      "auteur": "108",      "livre": "535"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :496 , "fields": {      "auteur": "108",      "livre": "536"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :497 , "fields": {      "auteur": "108",      "livre": "537"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :498 , "fields": {      "auteur": "108",      "livre": "538"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :49950 , "fields": {      "auteur": "50",      "livre": "539"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :500 , "fields": {      "auteur": "108",      "livre": "540"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :501 , "fields": {      "auteur": "108",      "livre": "541"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :502 , "fields": {      "auteur": "108",      "livre": "542"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :503 , "fields": {      "auteur": "108",      "livre": "543"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :50479 , "fields": {      "auteur": "79",      "livre": "544"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :50562 , "fields": {      "auteur": "62",      "livre": "545"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :50616 , "fields": {      "auteur": "16",      "livre": "546"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :507 , "fields": {      "auteur": "108",      "livre": "547"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :50879 , "fields": {      "auteur": "79",      "livre": "548"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :509 , "fields": {      "auteur": "108",      "livre": "549"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :510 , "fields": {      "auteur": "108",      "livre": "550"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :511 , "fields": {      "auteur": "108",      "livre": "551"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :512 , "fields": {      "auteur": "108",      "livre": "552"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :513 , "fields": {      "auteur": "108",      "livre": "553"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :514 , "fields": {      "auteur": "108",      "livre": "554"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :515 , "fields": {      "auteur": "108",      "livre": "555"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :516 , "fields": {      "auteur": "108",      "livre": "556"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :517 , "fields": {      "auteur": "108",      "livre": "557"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :518 , "fields": {      "auteur": "108",      "livre": "558"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :519 , "fields": {      "auteur": "108",      "livre": "559"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :520 , "fields": {      "auteur": "108",      "livre": "560"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :521 , "fields": {      "auteur": "108",      "livre": "561"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :522 , "fields": {      "auteur": "108",      "livre": "562"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :52314 , "fields": {      "auteur": "14",      "livre": "427"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :524 , "fields": {      "auteur": "108",      "livre": "428"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :52542 , "fields": {      "auteur": "42",      "livre": "429"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :526 , "fields": {      "auteur": "108",      "livre": "430"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :527107 , "fields": {      "auteur": "107",      "livre": "431"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :52842 , "fields": {      "auteur": "42",      "livre": "433"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :529 , "fields": {      "auteur": "108",      "livre": "434"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :53076 , "fields": {      "auteur": "76",      "livre": "486"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :531 , "fields": {      "auteur": "108",      "livre": "487"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :532 , "fields": {      "auteur": "108",      "livre": "488"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :533 , "fields": {      "auteur": "108",      "livre": "489"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :534 , "fields": {      "auteur": "108",      "livre": "490"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :535 , "fields": {      "auteur": "108",      "livre": "491"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :536 , "fields": {      "auteur": "108",      "livre": "492"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :537 , "fields": {      "auteur": "108",      "livre": "493"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :538 , "fields": {      "auteur": "108",      "livre": "494"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :539 , "fields": {      "auteur": "108",      "livre": "495"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :54011 , "fields": {      "auteur": "11",      "livre": "496"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :541 , "fields": {      "auteur": "108",      "livre": "497"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :542 , "fields": {      "auteur": "108",      "livre": "498"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :543 , "fields": {      "auteur": "108",      "livre": "499"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :54443 , "fields": {      "auteur": "43",      "livre": "500"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :545 , "fields": {      "auteur": "108",      "livre": "501"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :546 , "fields": {      "auteur": "108",      "livre": "502"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :54735 , "fields": {      "auteur": "35",      "livre": "503"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :548 , "fields": {      "auteur": "108",      "livre": "504"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :549 , "fields": {      "auteur": "108",      "livre": "505"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :55011 , "fields": {      "auteur": "11",      "livre": "506"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :55179 , "fields": {      "auteur": "79",      "livre": "507"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :552 , "fields": {      "auteur": "108",      "livre": "508"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :553 , "fields": {      "auteur": "108",      "livre": "509"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :554 , "fields": {      "auteur": "108",      "livre": "510"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :55579 , "fields": {      "auteur": "79",      "livre": "511"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :556 , "fields": {      "auteur": "108",      "livre": "512"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :557 , "fields": {      "auteur": "108",      "livre": "563"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :558 , "fields": {      "auteur": "108",      "livre": "564"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :559 , "fields": {      "auteur": "108",      "livre": "565"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :560 , "fields": {      "auteur": "108",      "livre": "566"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :561 , "fields": {      "auteur": "108",      "livre": "567"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :562 , "fields": {      "auteur": "108",      "livre": "568"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :563 , "fields": {      "auteur": "108",      "livre": "569"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :564 , "fields": {      "auteur": "108",      "livre": "570"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :565 , "fields": {      "auteur": "108",      "livre": "571"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :566 , "fields": {      "auteur": "108",      "livre": "572"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :567 , "fields": {      "auteur": "108",      "livre": "573"
+      }
+    }
+  ,{    "model":"main.auteurLivre",    "pk" :568 , "fields": {      "auteur": "108",      "livre": "574"
+      }
+    }
+
+
+]
