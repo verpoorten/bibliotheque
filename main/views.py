@@ -94,3 +94,42 @@ def livre_delete(request, id):
     livre.delete()
     return render(request, 'livre_list.html',
                     {'livres': Livre.find_all()})
+
+
+def delete_auteur_livre(request, auteur_livre_id):
+    auteur_livre = AuteurLivre.find_auteur_livre(auteur_livre_id)
+    livre = auteur_livre.livre
+    auteur_livre.delete()
+    return render(request, "livre_form.html",
+                  {'livre': livre})
+
+def add_auteur_livre(request, livre_id):
+    livre = get_object_or_404(Livre, pk=livre_id)
+    auteur = Auteur()
+    auteur.livre= livre
+
+    return render(request, "auteur_form.html",
+                  {'auteur':     auteur})
+
+def add_auteur_to_livre(request, livre_id):
+    livre = get_object_or_404(Livre, pk=livre_id)
+    auteur_livre = AuteurLivre()
+    auteur_livre.livre= livre
+
+    return render(request, "auteur_livre_form.html",
+                  {'auteur_livre': auteur_livre,
+                   'auteurs':      Auteur.find_all(),
+                   'livre':        livre})
+
+def save_auteur_livre(request):
+    auteur_id=request.POST['auteur_id']
+    livre_id=request.POST['livre_id']
+    auteur_livre = AuteurLivre()
+    auteur = get_object_or_404(Auteur, pk=auteur_id)
+    livre = get_object_or_404(Livre, pk=livre_id)
+    auteur_livre.livre = livre
+    auteur_livre.auteur = auteur
+    auteur_livre.save()
+
+    return render(request, "livre_form.html",
+                  {'livre': livre})

@@ -23,5 +23,14 @@ urlpatterns = [
     url(r'^/livre/([0-9]+)/$', views.livre_form, name='livre'),
     url(r'^livre/update/$', views.livre_update, name='livre-update'),
     url(r'^livre/delete/([0-9]+)/$', views.livre_delete, name='livre-delete'),
+    url(r'^livre/deletea/([0-9]+)/$', views.delete_auteur_livre, name='delete-auteur-livre'),
+    url(r'^livre/add/auteurlivre/([0-9]+)/$', views.add_auteur_to_livre, name='add-auteur-to-livre'),
+    url(r'^livre/save/auteurlivre/$', views.save_auteur_livre, name='auteur-livre-save'),
+
+
+
+
+
+
 
 ]

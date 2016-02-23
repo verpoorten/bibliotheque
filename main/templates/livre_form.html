@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block breadcrumb %}
-  <li><a href="{% url 'auteur_list' %}">Auteurs</a></li>
-  <li class="active">Auteur</li>
+  <li><a href="{% url 'livre_list' %}">Livres</a></li>
+  <li class="active">Livre</li>
 {% endblock %}
 {% block content %}
 <div class="panel panel-default">
@@ -31,16 +31,43 @@
             </select>
         </div>
       </div>
+      <br>
+      <div class="row">
+        <div class="col-md-12">
+        <label for="auteurs">Auteur(s)</label>
+        {% if livre.auteurs_livres  %}
+          <table class="table table-striped table-hover">
+            <thead>
+              <td>Nom</td>
+              <td>Prénom</td>
+              <td></td>
+            </thead>
+            {% for auteur_livre in livre.auteurs_livres %}
+            <tr>
+              <td>{{ auteur_livre.auteur.nom }}</td>
+              <td>{{ auteur_livre.auteur.prenom }}</td>
+              <td><a href="{% url 'delete-auteur-livre' auteur_livre.id %}" title="Pour supprimer l'auteur du  livre"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+            </tr>
+          {% endfor%}
+          </table>
+        {% endif %}
 
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-10">
+        </div>
+        <div class="col-md-2">
+          <a href="{% url 'add-auteur-to-livre' livre.id %}" title="Ajouter un auteur"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </div>
+      </div>
       <div class="row">
           <div class="col-md-12">
             <br>
             <p align="right"><input type="submit" title="Enregistrer les infos propres à un livre" value="Enregistrer"></p>
         </div>
       </div>
-
-
-
 
     </form>
   </div>

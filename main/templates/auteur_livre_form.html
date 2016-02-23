@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="panel panel-default">
+  <div class="panel-body">
+    <form  method="post" action="{% url 'auteur-livre-save' %}">
+      {% csrf_token %}
+      <input type="hidden" value="modify" name="action"/>
+      <input type="text" value="{{ auteur_livre.livre.id }}" name="livre_id"/>
+      <div class="row">
+        <div class="col-md-6">
+        <label for="livre">Livre</label>
+        {{ livre }}
+        </div>
+        <div class="col-md-6">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+        <label for="nom">Nom</label>
+        <select class="form-control" name="auteur_id" >
+            {% for a in auteurs %}
+                {% if a.id == l.id %}
+                  <option value="{{ a.id }}" selected>{{ a }}</option>
+                {%else%}
+                  <option value="{{ a.id }}">{{ a }}</option>
+                {% endif %}
+            {% endfor %}
+          </select>
+        </div>
+        <div class="col-md-6">
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12">
+            <br>
+            <p align="right"><input type="submit" title="Enregistrer" value="Enregistrer"></p>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
