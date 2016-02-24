@@ -5,8 +5,19 @@ class Personne(models.Model):
     nom    = models.CharField(max_length = 100, blank = False, null = False)
     prenom = models.CharField(max_length = 100, blank = False, null = False)
     user        = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
+
     def __str__(self):
         return self.nom.upper() + ", " + self.prenom
+
+    def find_all():
+        return Personne.objects.all()
+
+    def find_all_exclude_user(current_user):
+        return Personne.objects.all().exclude(user = current_user)
+
+    @staticmethod
+    def find_personne_by_user(user):
+        return Personne.objects.get(user=user)
 
 class Livre(models.Model):
     LANGUE = (
@@ -15,6 +26,10 @@ class Livre(models.Model):
     )
     titre  = models.CharField(max_length = 100, blank = False, null = False)
     langue    = models.CharField(max_length=5,choices = LANGUE, default = 'FR')
+
+
+    def proprietaires(self):
+        return Proprietaire.objects.filter(livre = self)
 
     @staticmethod
     def find_all():
@@ -26,6 +41,17 @@ class Livre(models.Model):
 
     def auteurs_livres(self):
         return AuteurLivre.objects.filter(livre=self)
+
+    @staticmethod
+    def find_all_by_user(user):
+        person = Personne.find_personne_by_user(user)
+        print(person)
+        l= Proprietaire.objects.filter(personne=person)
+        liste_livre=[]
+        for p in l:
+            liste_livre.append(p.livre)
+
+        return liste_livre
 
     def __str__(self):
         return self.titre
@@ -83,7 +109,7 @@ class Location(models.Model):
 
 class Proprietaire(models.Model):
     personne = models.ForeignKey(Personne)
-    livre        = models.ForeignKey(Livre)
+    livre    = models.ForeignKey(Livre)
 
 def __str__(self):
         return self.personne.nom + ", " + self.livre.titre

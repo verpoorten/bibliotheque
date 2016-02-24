@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block breadcrumb %}
+  <li><a href="{% url 'livre_list' %}">Livres</a></li>
+  <li class="active">Livre</li>
+{% endblock %}
+{% block content %}
+<div class="panel panel-default">
+  <div class="panel-body">
+    <form  method="post" action="{% url 'proprietaire-save' %}">
+      <input type="hidden" value="{{ proprietaire.livre.id }}" name="livre_id"/>
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-md-6">
+          <label for="personne_id" class="control-label">Langue</label>
+          <select class="form-control" name="personne_id">
+              {% for p in personnes %}
+                <option value="{{p.id}}">{{p}}</option>
+              {% endfor %}
+            </select>
+        </div>
+        <div class="col-md-6">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-md-12">
+            <br>
+            <p align="right"><input type="submit" title="Enregistrer le nouveau propriétaire" value="Enregistrer"></p>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

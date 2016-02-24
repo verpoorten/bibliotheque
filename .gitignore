@@ -4,4 +4,4 @@ db.sqlite3
 bibliovenv/
 main/__pycache__/
 main/migrations/__pycache__/
-
+*.pyc
