@@ -37,10 +37,26 @@ $("[name='checkbox1']").bootstrapSwitch();
         <div class="col-md-3">
           <label for="lu" class="control-label">Lu/pas lu</label>
           {% if lecture %}
-          <input type="checkbox"id="lu"  name="lu" checked/>
+          <input type="checkbox"id="lu" name="lu" checked/>
           {%else%}
           <input type="checkbox" id="lu" name="lu"/>
           {%endif%}
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-12">
+          <label for="categorie" class="control-label">Categorie</label>
+          <select class="form-control" name="categorie">
+            {% for categorie in categories %}
+                <option  value="">Indéfini</option>
+                {% if categorie == livre.categorie %}
+                  <option selected value="{{categorie.id}}">{{categorie}}</option>
+                {% else %}
+                  <option value="{{categorie.id}}">{{categorie}}</option>
+                {% endif %}
+              {% endfor%}
+            </select>
         </div>
       </div>
       <br>
@@ -92,11 +108,19 @@ $("[name='checkbox1']").bootstrapSwitch();
               <thead>
                   <th>Nom</th>
                   <th></th>
+                  <th></th>
               </thead>
               {% for p in livre.proprietaires %}
                   <tr>
                       <td>{{ p.personne | default_if_none:'' }}</td>
                       <td><a href="{% url 'proprietaire-remove-from-livre' p.id %}" title="Pour supprimer un propriétaire d'un livre"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
+                      <td>{% if p.est_disponible %}<a href="{% url 'proprietaire-emprunt-livre' p.id %}" title="Pour noter l'emprunt du livre">J'emprunte</a>
+                        {% else %}
+                          {%if p.emprunt_courant %}
+                            <a href="{% url 'proprietaire-retour-livre' p.emprunt_courant %}" title="Retour du livre">Retour</a>
+                          {%else%}
+                            {%endif%}
+                        {%endif%}
                   </tr>
               {% endfor%}
           </table>

@@ -11,12 +11,14 @@ from dateutil.relativedelta import relativedelta
 import datetime
 from django.db import models
 
+@login_required
 def home(request):
     # return render(request, 'home.html',
     #                 {'livres': None})
     return render(request, 'home.html',
                     {'livres':   Livre.find_all_by_user(request.user),
-                     'lectures': Lecture.find_all_by_user(request.user)})
+                     'lectures': Lecture.find_all_by_user(request.user),
+                     'emprunts' : Emprunt.find_emprunt_courant_by_user(request.user)})
 
 def auteur_list(request):
         return render(request, 'auteur_list.html',
@@ -58,11 +60,27 @@ def auteur_delete(request, id):
                     {'auteurs': Auteur.find_all()})
 
 
+def livre_search(request):
+    query = Livre.objects.all()
+    proprietaire = None
+    auteur = None
+    if request.GET['proprietaire_id']:
+        proprietaire = request.GET['proprietaire_id']
 
+    if request.GET['auteur_id']:
+        auteur = request.GET['auteur_id']
+
+    livres = Livre.find_by_proprietaire_auteur(proprietaire, auteur)
+    return render(request, 'livre_list.html',
+                    {'livres': livres,
+                    'proprietaires' : Proprietaire.objects.all(),
+                    'auteurs' : Auteur.objects.all()})
 
 def livre_list(request):
     return render(request, 'livre_list.html',
-                    {'livres': Livre.find_all()})
+                    {'livres': Livre.find_all(),
+                     'proprietaires' : Proprietaire.objects.all(),
+                     'auteurs' : Auteur.objects.all()})
 
 
 def livre_create(request):
@@ -75,6 +93,7 @@ def livre_form(request, livre_id):
     lecture = Livre.find_lecture(livre_id,request.user)
     return render(request, "livre_form.html",
                   {'livre':     livre,
+                   'categories': Categorie.objects.all(),
                    'lecture':   lecture})
 
 def livre_update(request):
@@ -88,7 +107,11 @@ def livre_update(request):
             livre = Livre()
         livre.titre = request.POST['titre']
         livre.langue = request.POST['langue']
-
+        if request.POST['categorie'] and not request.POST['categorie'] == 'None':
+            categorie = get_object_or_404(Categorie, pk=request.POST['categorie'])
+        else:
+            categorie = None
+        livre.categorie = categorie
         livre.save()
         lu=False
         if request.POST.get('lu',None) == "on":
@@ -187,7 +210,41 @@ def delete_proprietaire(request, proprietaire_id):
     return render(request, "livre_form.html",
                   {'livre': livre})
 
-def test(request):
-    livre = get_object_or_404(Livre, pk=1)
+
+def proprietaire_emprunt_livre(request, proprietaire_id):
+    print('proprietaire_emprunt_livre')
+    proprietaire = get_object_or_404(Proprietaire, pk=proprietaire_id)
+    livre = proprietaire.livre
+    emprunt = Proprietaire.find_emprunt_en_cours_by_proprietaire(proprietaire)
+    if emprunt:
+        print('il existe déjà un emprunt')
+        pass
+    else:
+        print('il n existe déjà un emprunt')
+        emprunt = Emprunt()
+        personne = Personne.find_personne_by_user(request.user)
+        emprunt.personne = personne
+        emprunt.proprietaire=proprietaire
+        emprunt.date_emprunt=timezone.now()
+        emprunt.date_retour = None
+        emprunt.livre = livre
+        emprunt.save()
+    lecture = Livre.find_lecture(livre.id,request.user)
     return render(request, "livre_form.html",
-                  {'livre': livre})
+                  {'livre':     livre,
+                   'categories': Categorie.objects.all(),
+                   'lecture':   lecture})
+
+def proprietaire_retour_livre(request, emprunt_id):
+    print('proprietaire_retour_livre')
+    emprunt = get_object_or_404(Emprunt, pk=emprunt_id)
+
+    if emprunt:
+        emprunt.date_retour = timezone.now()
+        emprunt.save()
+    livre = get_object_or_404(Livre, pk=emprunt.proprietaire.livre.id)
+    lecture = Livre.find_lecture(livre.id,request.user)
+    return render(request, "livre_form.html",
+                  {'livre':     livre,
+                   'categories': Categorie.objects.all(),
+                   'lecture':   lecture})

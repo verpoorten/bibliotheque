@@ -21,6 +21,8 @@ urlpatterns = [
     url(r'^livres/$', views.livre_list, name='livre_list'),
     url(r'^livre/create/$', views.livre_create, name='livre-create'),
     url(r'^/livre/([0-9]+)/$', views.livre_form, name='livre'),
+    url(r'^/livre/search/$', views.livre_search, name='livre-search'),
+
     url(r'^livre/update/$', views.livre_update, name='livre-update'),
     url(r'^livre/delete/([0-9]+)/$', views.livre_delete, name='livre-delete'),
     url(r'^livre/deletea/([0-9]+)/$', views.delete_auteur_livre, name='delete-auteur-livre'),
@@ -29,7 +31,8 @@ urlpatterns = [
     url(r'^livre/add/proprietaire/([0-9]+)/$', views.add_proprietaire_to_livre, name='proprietaire-add-to-livre'),
     url(r'^livre/save/proprietaire/$', views.save_proprietaire, name='proprietaire-save'),
     url(r'^livre/delete/proprietaire/([0-9]+)/$', views.delete_proprietaire, name='proprietaire-remove-from-livre'),
-    url(r'^test/$', views.test, name='test'),
+    url(r'^livre/emprunt/([0-9]+)/$', views.proprietaire_emprunt_livre, name='proprietaire-emprunt-livre'),
+    url(r'^livre/retour/([0-9]+)/$', views.proprietaire_retour_livre, name='proprietaire-retour-livre'),
     url(r'^/livre/([0-9]+)/update/$', views.livre_form),
 
 

@@ -47,4 +47,27 @@
 
       </div>
     </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">Mes emprunts courants</div>
+      <div class="panel-body">
+        <br>
+          <table class="table table-striped table-hover">
+              <thead>
+                  <th>Livre</th>
+                  <th>Auteur(s)</th>
+                  <th></th>
+              </thead>
+
+          {% for e in emprunts %}
+              <tr>
+                  <td>{{ e.proprietaire.livre}}  </td>
+                  <td>{{ e.proprietaire.livre.auteurs_livres_str}}</td>
+                  <td><a href="{% url 'proprietaire-retour-livre' e.id %}" title="Retour du livre">Retour</a></td>
+
+              </tr>
+          {% endfor%}
+          </table>
+
+        </div>
+      </div>
 {% endblock %}

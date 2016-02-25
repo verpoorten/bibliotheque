@@ -7,7 +7,35 @@
 
   {% endblock %}
   {% block content %}
-
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <form method="get" action="{% url 'livre-search' %}" >
+        <div class="row">
+          <div class="col-md-4">
+            <label for="proprietaire_id" class="control-label">Propriétaire</label>
+            <select name="proprietaire_id">
+              <option value="">-</option>
+              {% for proprietaire in proprietaires %}
+              <option value="{{proprietaire.id}}">{{proprietaire.personne.nom}} {{proprietaire.personne.prenom}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="auteur_id" class="control-label">Auteur</label>
+            <select name="auteur_id">
+              <option value="">-</option>
+              {% for auteur in auteurs %}
+              <option value="{{auteur.id}}">{{auteur}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="col-md-4">
+            <input type="submit" value="OK" name="btn"
+          </div>
+        </div>
+    </form>
+    </div>
+  </div>
   <div class="panel panel-default">
     <div class="panel-body">
       <br>
