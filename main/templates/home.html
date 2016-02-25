@@ -12,16 +12,39 @@
       <table class="table table-striped table-hover">
           <thead>
               <th>Titre</th>
-              <th>Lu</th>
+              <th>Auteur(s)</th>
+
           </thead>
       {% for livre in livres %}
           <tr>
               <td><a href="{% url 'livre' livre.pk%}" title="Pour modifier un livre">{{ livre.titre | default_if_none:'' }}</a>  </td>
-              <td>{{ livre.lecture | default_if_none:'OUI' }}</a>  </td>
+              <td>{{ livre.auteurs_livres_str }}</td>
           </tr>
       {% endfor%}
       </table>
 
     </div>
   </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">Mes lectures</div>
+    <div class="panel-body">
+      <br>
+        <table class="table table-striped table-hover">
+            <thead>
+                <th>Livre</th>
+                <th>Auteur(s)</th>
+            </thead>
+
+        {% for lecture in lectures %}
+            <tr>
+                <td>{{ lecture}}  </td>
+                <td>{{ lecture.auteurs_livres_str}}</td>
+
+            </tr>
+        {% endfor%}
+        </table>
+
+      </div>
+    </div>
 {% endblock %}

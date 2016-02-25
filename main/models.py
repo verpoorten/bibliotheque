@@ -33,7 +33,7 @@ class Livre(models.Model):
 
     @staticmethod
     def find_all():
-        return Livre.objects.all()
+        return Livre.objects.all().order_by('titre')
 
     @staticmethod
     def find_livre(id):
@@ -65,6 +65,17 @@ class Livre(models.Model):
         except:
             return None
 
+    def auteurs_livres_str(self):
+        s = ""
+        cpt=0
+        for al in  AuteurLivre.objects.filter(livre=self):
+            print(al.livre)
+            if cpt>0:
+                s = s + ", " + al.auteur
+            else:
+                s = al.auteur
+            cpt=cpt+1
+        return s
 
 class Lecteur(models.Model):
     livre  = models.ForeignKey(Livre, blank = False, null = False)
@@ -121,13 +132,25 @@ class Proprietaire(models.Model):
     personne = models.ForeignKey(Personne)
     livre    = models.ForeignKey(Livre)
 
-def __str__(self):
-        return self.personne.nom + ", " + self.livre.titre
+    def __str__(self):
+            return self.personne.nom + ", " + self.livre.titre
 
 
 class Lecture(models.Model):
     personne = models.ForeignKey(Personne,blank = False, null = False)
     livre    = models.ForeignKey(Livre, blank = False, null = False)
 
-def __str__(self):
-        return self.personne.nom + ", " + self.livre.titre
+    def __str__(self):
+            return self.personne.nom + ", " + self.livre.titre
+
+    @staticmethod
+    def find_all_by_user(user):
+        print('find_all_by_user')
+        person = Personne.find_personne_by_user(user)
+        l= Lecture.objects.filter(personne=person)
+        liste_livre=[]
+        for p in l:
+            print('for')
+            liste_livre.append(p.livre)
+        print(liste_livre)
+        return liste_livre

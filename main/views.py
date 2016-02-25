@@ -15,7 +15,8 @@ def home(request):
     # return render(request, 'home.html',
     #                 {'livres': None})
     return render(request, 'home.html',
-                    {'livres': Livre.find_all_by_user(request.user)})
+                    {'livres':   Livre.find_all_by_user(request.user),
+                     'lectures': Lecture.find_all_by_user(request.user)})
 
 def auteur_list(request):
         return render(request, 'auteur_list.html',
@@ -111,7 +112,7 @@ def livre_update(request):
             lecture = Livre.find_lecture(livre.id,request.user)
             if lecture:
                 lecture.delete()
-                   
+
     return render(request, 'livre_list.html',
                     {'livres': Livre.find_all()})
 
