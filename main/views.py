@@ -71,11 +71,13 @@ def livre_create(request):
 
 def livre_form(request, livre_id):
     livre = Livre.find_livre(livre_id)
-
+    lecture = Livre.find_lecture(livre_id,request.user)
     return render(request, "livre_form.html",
-                  {'livre':     livre})
+                  {'livre':     livre,
+                   'lecture':   lecture})
 
 def livre_update(request):
+    print('livreupdate')
     livre = Livre()
 
     if ('add' == request.POST['action'] or 'modify' == request.POST['action']):
@@ -87,7 +89,29 @@ def livre_update(request):
         livre.langue = request.POST['langue']
 
         livre.save()
+        lu=False
+        if request.POST.get('lu',None) == "on":
+            print('on')
+            lu= True
 
+        else:
+            print ('off')
+        if lu:
+            lecture = Livre.find_lecture(livre.id,request.user)
+            if lecture:
+                pass
+            else:
+                personne = Personne.find_personne_by_user(request.user)
+                lecture = Lecture()
+                lecture.livre  = livre
+                lecture.personne = personne
+                lecture.save()
+
+        else:
+            lecture = Livre.find_lecture(livre.id,request.user)
+            if lecture:
+                lecture.delete()
+                   
     return render(request, 'livre_list.html',
                     {'livres': Livre.find_all()})
 
@@ -159,5 +183,10 @@ def delete_proprietaire(request, proprietaire_id):
     proprietaire = get_object_or_404(Proprietaire, pk=proprietaire_id)
     livre = proprietaire.livre
     proprietaire.delete()
+    return render(request, "livre_form.html",
+                  {'livre': livre})
+
+def test(request):
+    livre = get_object_or_404(Livre, pk=1)
     return render(request, "livre_form.html",
                   {'livre': livre})

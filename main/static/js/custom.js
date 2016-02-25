@@ -1,19 +1,20 @@
 
-$("#date_finn" ).change(function(event) {
-  alert('change');
+/*$("#lu" ).click(function(event) {
+
   var target = $(event.target);
   var id = target.attr("id");
   if (typeof id == 'undefined') {
     target = target.parent();
     id = target.attr("id");
   }
-  /*Récupère la valeur du champ*/
-  alert(event.target.value || "");
-  /*J'ai pas encore modifié ci-dessous pour avoir le nécessaire*/
-  if (typeof id != 'undefined') {
-    link = id.replace(/-/g , "/");
-    link = "/" + link;
 
+  alert(event.target.checked);
+
+  if (typeof id != 'undefined') {
+
+    link = id.replace(/-/g , "/");
+    link =  link;
+    alert(link);
       $.ajax({
         type: "POST",
         url: link,
@@ -26,4 +27,4 @@ $("#date_finn" ).change(function(event) {
       });
 
   }
-});
+});*/

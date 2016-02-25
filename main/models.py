@@ -56,6 +56,16 @@ class Livre(models.Model):
     def __str__(self):
         return self.titre
 
+    @staticmethod
+    def find_lecture(livre_id,user):
+        person = Personne.find_personne_by_user(user)
+        livre = Livre.objects.get(pk=livre_id)
+        try:
+            return Lecture.objects.get(personne=person,livre= livre)
+        except:
+            return None
+
+
 class Lecteur(models.Model):
     livre  = models.ForeignKey(Livre, blank = False, null = False)
     personne  = models.ForeignKey(Personne, blank = False, null = False)
@@ -110,6 +120,14 @@ class Location(models.Model):
 class Proprietaire(models.Model):
     personne = models.ForeignKey(Personne)
     livre    = models.ForeignKey(Livre)
+
+def __str__(self):
+        return self.personne.nom + ", " + self.livre.titre
+
+
+class Lecture(models.Model):
+    personne = models.ForeignKey(Personne,blank = False, null = False)
+    livre    = models.ForeignKey(Livre, blank = False, null = False)
 
 def __str__(self):
         return self.personne.nom + ", " + self.livre.titre

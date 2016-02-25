@@ -29,6 +29,8 @@ urlpatterns = [
     url(r'^livre/add/proprietaire/([0-9]+)/$', views.add_proprietaire_to_livre, name='proprietaire-add-to-livre'),
     url(r'^livre/save/proprietaire/$', views.save_proprietaire, name='proprietaire-save'),
     url(r'^livre/delete/proprietaire/([0-9]+)/$', views.delete_proprietaire, name='proprietaire-remove-from-livre'),
+    url(r'^test/$', views.test, name='test'),
+    url(r'^/livre/([0-9]+)/update/$', views.livre_form),
 
 
 

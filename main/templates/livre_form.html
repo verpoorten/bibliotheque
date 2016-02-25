@@ -1,9 +1,13 @@
 {% extends "layout.html" %}
+{% load staticfiles %}
 {% block breadcrumb %}
   <li><a href="{% url 'livre_list' %}">Livres</a></li>
   <li class="active">Livre</li>
 {% endblock %}
 {% block content %}
+<script>
+$("[name='checkbox1']").bootstrapSwitch();
+</script>
 <div class="panel panel-default">
   <div class="panel-body">
     <form  method="post" action="{% url 'livre-update' %}">
@@ -15,7 +19,7 @@
         <label for="nom">Titre</label>
         <input class="form-control" id="titre" value="{{ livre.titre| default_if_none:'' }}" name="titre">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-3">
           <label for="langue" class="control-label">Langue</label>
           <select class="form-control" name="langue">
               {% if livre.langue == 'FR' %}
@@ -29,6 +33,14 @@
                 <option value="ENG">Anglais</option>
               {% endif %}
             </select>
+        </div>
+        <div class="col-md-3">
+          <label for="lu" class="control-label">Lu/pas lu</label>
+          {% if lecture %}
+          <input type="checkbox"id="lu"  name="lu" checked/>
+          {%else%}
+          <input type="checkbox" id="lu" name="lu"/>
+          {%endif%}
         </div>
       </div>
       <br>
