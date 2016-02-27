@@ -18,7 +18,8 @@ def home(request):
     return render(request, 'home.html',
                     {'livres':   Livre.find_all_by_user(request.user),
                      'lectures': Lecture.find_all_by_user(request.user),
-                     'emprunts' : Emprunt.find_emprunt_courant_by_user(request.user)})
+                     'emprunts' : Emprunt.find_emprunt_courant_by_user(request.user),
+                     'en_locations' : Emprunt.find_locations(request.user)})
 
 def auteur_list(request):
         return render(request, 'auteur_list.html',
@@ -236,7 +237,9 @@ def proprietaire_emprunt_livre(request, proprietaire_id):
                    'lecture':   lecture})
 
 def proprietaire_retour_livre(request, emprunt_id):
-    print('proprietaire_retour_livre')
+    """
+    Indique un livre comme rendu
+    """
     emprunt = get_object_or_404(Emprunt, pk=emprunt_id)
 
     if emprunt:
@@ -248,3 +251,28 @@ def proprietaire_retour_livre(request, emprunt_id):
                   {'livre':     livre,
                    'categories': Categorie.objects.all(),
                    'lecture':   lecture})
+
+
+def proprietaire_retour_lu_livre(request, emprunt_id):
+    """
+    Indique un livre comme rendu et ajoute un enregistrement lecture
+    Exécuté depuis la page home
+    """
+    emprunt = get_object_or_404(Emprunt, pk=emprunt_id)
+
+    if emprunt:
+        emprunt.date_retour = timezone.now()
+        emprunt.save()
+    livre = get_object_or_404(Livre, pk=emprunt.proprietaire.livre.id)
+    lecture = Livre.find_lecture(livre.id,request.user)
+
+    if lecture:
+        pass
+    else:
+        person = Personne.find_personne_by_user(request.user)
+        lecture = Lecture()
+        lecture.personne = person
+        lecture.livre = livre
+        lecture.save()
+
+    return home(request)

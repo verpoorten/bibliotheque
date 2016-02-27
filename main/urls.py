@@ -11,6 +11,7 @@ urlpatterns = [
     # login / logout urls
     url(r'^login/$', login, name='login'),
     url(r'^logout/$', logout, name='logout'),
+    
     url(r'^auteurs/$', views.auteur_list, name='auteur_list'),
 
     url(r'^auteur/create/$', views.auteur_create, name='auteur-create'),
@@ -33,6 +34,8 @@ urlpatterns = [
     url(r'^livre/delete/proprietaire/([0-9]+)/$', views.delete_proprietaire, name='proprietaire-remove-from-livre'),
     url(r'^livre/emprunt/([0-9]+)/$', views.proprietaire_emprunt_livre, name='proprietaire-emprunt-livre'),
     url(r'^livre/retour/([0-9]+)/$', views.proprietaire_retour_livre, name='proprietaire-retour-livre'),
+    url(r'^livre/retour/lu/([0-9]+)/$', views.proprietaire_retour_lu_livre, name='proprietaire-retour-lu-livre'),
+
     url(r'^/livre/([0-9]+)/update/$', views.livre_form),
 
 

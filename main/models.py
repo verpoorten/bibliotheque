@@ -190,6 +190,8 @@ class Proprietaire(models.Model):
         else:
             return None
 
+    def find_by_personne(personne):
+        return Proprietaire.objects.filter(personne=personne)
 
 class Lecture(models.Model):
     personne = models.ForeignKey(Personne,blank = False, null = False)
@@ -200,14 +202,11 @@ class Lecture(models.Model):
 
     @staticmethod
     def find_all_by_user(user):
-        print('find_all_by_user')
         person = Personne.find_personne_by_user(user)
         l= Lecture.objects.filter(personne=person)
         liste_livre=[]
         for p in l:
-            print('for')
             liste_livre.append(p.livre)
-        print(liste_livre)
         return liste_livre
 
 
@@ -221,3 +220,15 @@ class Emprunt(models.Model):
     def find_emprunt_courant_by_user(user):
         personne = Personne.find_personne_by_user(user)
         return Emprunt.objects.filter(personne = personne, date_retour__isnull=True)
+
+    def find_locations(user):
+        print('find_locations')
+        personne = Personne.find_personne_by_user(user)
+        list_propriete = Proprietaire.find_by_personne(personne)
+        print(list_propriete)
+        locations = []
+        for p in list_propriete:
+            loc =  Emprunt.objects.filter(proprietaire = p, date_retour__isnull=True)
+            for l in loc:
+                locations.append(l)
+        return locations
