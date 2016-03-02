@@ -40,12 +40,14 @@
                     <th>Livre</th>
                     <th>Auteur(s)</th>
                     <th>Emprunteur</th>
+                    <th></th>
                 </thead>
                 {% for e in en_locations %}
                     <tr>
                         <td>{{ e.proprietaire.livre}}  </td>
                         <td>{{ e.proprietaire.livre.auteurs_livres_str}}</td>
                         <td>{{ e.personne}}</td>
+                        <td><a href="{% url 'lecteur-retour-lu-livre' e.id %}" title="Marquer quand un livre revient">Retour</a></td>
                     </tr>
                 {% endfor%}
             </table>
@@ -78,8 +80,6 @@
         </div>
     </div>
     <div class="col-md-6">
-
-
         <div class="panel panel-default">
           <div class="panel-heading"><a href="{% url 'lecture_list' %}">Mes lectures</a></div>
           <div class="panel-body">
@@ -89,7 +89,6 @@
                       <th>Livre</th>
                       <th>Auteur(s)</th>
                   </thead>
-
               {% for lecture in lectures %}
                   <tr>
                       <td>{{ lecture}}  </td>
@@ -102,9 +101,6 @@
 
     </div>
 </div>
-
-
-
 {% else %}
 Authentifiez-vous pour un affichage plus personnalisé et pour pouvoir enregistrer des données <br>
 <a href="{% url 'login' %}" id="lnk_login"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login</a></li>

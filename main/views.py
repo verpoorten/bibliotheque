@@ -283,12 +283,35 @@ def proprietaire_retour_livre(request, emprunt_id):
         emprunt.save()
     livre = get_object_or_404(Livre, pk=emprunt.proprietaire.livre.id)
     lecture = Livre.find_lecture(livre.id,request.user)
+    ici
     return render(request, "livre_form.html",
                   {'livre':     livre,
                    'categories': Categorie.objects.all(),
                    'lecture':   lecture})
 
+def lecture_retour_lu_livre(request, emprunt_id):
+        """
+        Indique un livre comme rendu et ajoute un enregistrement lecture
+        Exécuté depuis la page home
+        """
+        emprunt = get_object_or_404(Emprunt, pk=emprunt_id)
 
+        if emprunt:
+            emprunt.date_retour = timezone.now()
+            emprunt.save()
+        livre = get_object_or_404(Livre, pk=emprunt.proprietaire.livre.id)
+        lecture = Lecture.find_lecture(livre,emprunt.personne)
+
+        if lecture:
+            pass
+        else:
+            person = Personne.find_by_id(emprunt.personne.id)
+            lecture = Lecture()
+            lecture.personne = person
+            lecture.livre = livre
+            lecture.save()
+
+        return home(request)
 def proprietaire_retour_lu_livre(request, emprunt_id):
     """
     Indique un livre comme rendu et ajoute un enregistrement lecture

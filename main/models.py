@@ -302,9 +302,13 @@ class Lecture(models.Model):
     def find_all_by_user_livre(livre,user):
         person = Personne.find_personne_by_user(user)
         return Lecture.objects.filter(personne=person)
+
+    def find_lecture(livre,personne):
         
-
-
+        try:
+            return Lecture.objects.get(personne=person,livre= livre)
+        except:
+            return None
 class Emprunt(models.Model):
     personne     = models.ForeignKey(Personne,blank = False, null = False)
     proprietaire = models.ForeignKey(Proprietaire,blank = False, null = False)

@@ -15,6 +15,7 @@
                 <th>Titre</th>
                 <th>Auteur(s)</th>
                 <th>Langue</th>
+                <th></th>
             </thead>
         {% for livre in livres %}
             <tr>
@@ -22,9 +23,9 @@
                 <td>{{ livre.auteurs_livres_str }}</td>
                 <td>{{ livre.langue | default_if_none:'' }}</td>
                 <td>
-                  <td>
+
                     {% if request.user.is_authenticated %}<a href="{% url 'lecture-delete' livre.pk %}" title="Pour supprimer un livre"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>{%endif%}
-                  </td>
+                  <
                 </td>
             </tr>
         {% endfor%}
