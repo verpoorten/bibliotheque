@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% load staticfiles %}
+{% block breadcrumb %}
+  <li><a href="{% url 'lecture_list' %}">Lectures</a></li>
+  <li class="active">Lecture</li>
+{% endblock %}
+{% block content %}
+<script>
+$("[name='checkbox1']").bootstrapSwitch();
+</script>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <form  method="post" action="{% url 'lecture-update' %}">
+      {% csrf_token %}
+      <input type="hidden" value="modify" name="action"/>
+      <input type="hidden" value="{{ lecture.id }}" name="id"/>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="livre">Livre</label>
+          <select class="form-control" name="livre">
+              {%for livre  in livres%}
+                {% if lecture.livre.id == livre.id %}
+                  <option selected value="{{livre.id}}">{{livre}}</option>
+                {% else %}
+                  <option value="{{livre.id}}">{{livre}}</option>
+                {% endif %}
+              {%endfor%}
+            </select>
+        </div>
+        <div class="col-md-3">
+          {% if user %}
+            <label for="lu" class="control-label">Lu/pas lu</label>
+            {% if lecture %}
+            <input type="checkbox"id="lu" name="lu" checked/>
+            {%else%}
+            <input type="checkbox" id="lu" name="lu"/>
+            {%endif%}
+          {%endif%}
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-12">
+          <label for="lecteur" class="control-label">Lecteur</label>
+          <select class="form-control" name="lecteur">
+            {% for personne in personne %}
+                <option  value="">Indéfini</option>
+                {% if personne == livre.personne %}
+                  <option selected value="{{personne.id}}">{{personne}}</option>
+                {% else %}
+                  <option value="{{personne.id}}">{{personne}}</option>
+                {% endif %}
+              {% endfor%}
+            </select>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-md-12">
+            <br>
+            {% if request.user.is_authenticated %}
+            <p align="right"><input type="submit" title="Enregistrer les infos propres à un livre" value="Enregistrer"></p>
+            {% endif %}
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

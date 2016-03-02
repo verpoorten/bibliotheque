@@ -19,6 +19,9 @@ class Personne(models.Model):
     def find_personne_by_user(user):
         return Personne.objects.get(user=user)
 
+    @staticmethod
+    def find_by_id(id):
+        return Personne.objects.get(pk=id)
 
 class Categorie(models.Model):
     libelle = models.CharField(max_length = 100, blank = False, null = False)
@@ -53,15 +56,26 @@ class Livre(models.Model):
 
     @staticmethod
     def find_all_by_user(user):
-        person = Personne.find_personne_by_user(user)
-        print(person)
-        l= Proprietaire.objects.filter(personne=person)
         liste_livre=[]
-        for p in l:
-            liste_livre.append(p.livre)
+        if  user.is_authenticated():
+            person = Personne.find_personne_by_user(user)
+
+            l= Proprietaire.objects.filter(personne=person)
+
+            for p in l:
+                liste_livre.append(p.livre)
 
         return liste_livre
+    @staticmethod
+    def find_all_lecture_by_user(user):
+        liste_livre=[]
+        if  user.is_authenticated():
+            person = Personne.find_personne_by_user(user)
+            l= Lecture.objects.filter(personne=person)
+            for p in l:
+                liste_livre.append(p.livre)
 
+        return liste_livre
     def __str__(self):
         return self.titre
 
@@ -78,7 +92,6 @@ class Livre(models.Model):
         s = ""
         cpt=0
         for al in  AuteurLivre.objects.filter(livre=self):
-            print(al.livre)
             if cpt>0:
                 s = s + ", " + al.auteur
             else:
@@ -89,6 +102,36 @@ class Livre(models.Model):
     def find_by_proprietaire_auteur(proprietaire_id,auteur_id):
         return Livre.objects.all()
 
+    def find_by_proprietaire(personne_id):
+        personne = None
+        if personne_id:
+            personne = Personne.find_by_id(personne_id)
+
+        livres=[]
+        if personne:
+            #proprietaire
+            list_proprietaire =Proprietaire.objects.filter(personne = personne)
+            for l in list_proprietaire:
+                livres.append(l.livre)
+
+        return livres
+
+    def find_by_auteur(auteur_id):
+
+        auteur = None
+        if auteur_id:
+            auteur = Auteur.find_auteur(auteur_id)
+        livres=[]
+
+        if auteur:
+            list_livre_auteur = AuteurLivre.objects.filter(auteur=auteur)
+            for l in list_livre_auteur:
+                livres.append(l.livre)
+        return livres
+
+    def find_by_titre(titre):
+        return Livre.objects.filter(titre__icontains = titre)
+
 class Lecteur(models.Model):
     livre  = models.ForeignKey(Livre, blank = False, null = False)
     personne  = models.ForeignKey(Personne, blank = False, null = False)
@@ -96,6 +139,26 @@ class Lecteur(models.Model):
     def __str__(self):
         return self.livre + ", " + self.personne
 
+    def find_all():
+        return Lecteur.objects.all()
+
+    def find_by_personne(personne):
+        return Lecteur.objects.filter(personne=personne)
+
+    def find_distinct():
+
+        q= Lecteur.objects.values('personne').distinct()
+        #[{'personne': 3}, {'personne': 8}]
+        personnes = []
+        for engt in q:
+            print(engt.get('personne'))
+            p=Personne.find_by_id(engt.get('personne'))
+            print (p)
+            if p :
+                print('if')
+                personnes.append(p)
+
+        return personnes
 
 class Auteur(models.Model):
     nom    = models.CharField(max_length = 100, blank = False, null = False)
@@ -120,6 +183,9 @@ class AuteurLivre(models.Model):
     @staticmethod
     def find_auteur_livre(id):
         return AuteurLivre.objects.get(pk=id)
+    @staticmethod
+    def find_auteur_livre_by_auteur(auteur):
+        return AuteurLivre.objects.filter(auteur=auteur)
     # def __str__(self):
     #     return self.livre + ", " + self.auteur
 
@@ -150,40 +216,28 @@ class Proprietaire(models.Model):
 
 
     def est_disponible(self):
-        print('est_disponible')
         emprunt = Emprunt.objects.filter(proprietaire = self, date_retour__isnull = True)
         if emprunt:
-            print('false')
             return False
         else:
-            print('true')
             return True
 
     def find_emprunt_by_proprietaire(proprietaire):
-        print('find_emprunt_by_proprietaire')
         try:
             return Emprunt.objects.get(proprietaire = proprietaire)
         except:
             return None
 
     def find_emprunt_en_cours_by_proprietaire(proprietaire):
-        print('find_emprunt_en_cours_by_proprietaire')
         try:
-            print('try')
+
             return Emprunt.objects.get(proprietaire = proprietaire, date_retour__isnull=True)
         except:
-            print('else')
             return None
 
     def emprunt_courant(self):
-        print('emprunt_courant1')
-        print(self)
-        print(self.personne)
         emprunts =  Emprunt.objects.filter(proprietaire = self, personne=self.personne, date_retour__isnull = True)
-        print('emprunt_courant2')
 
-        for e in emprunts:
-            print(e.date_retour)
         if emprunts:
             print('existe un emprunt avec date_retour = Null')
             return emprunts[0].id
@@ -193,12 +247,37 @@ class Proprietaire(models.Model):
     def find_by_personne(personne):
         return Proprietaire.objects.filter(personne=personne)
 
+    def find_distinct():
+        print('find_distinct')
+        q= Proprietaire.objects.values('personne').distinct()
+        #[{'personne': 3}, {'personne': 8}]
+        personnes = []
+        print (q)
+        for engt in q:
+            print(engt.get('personne'))
+            p=Personne.find_by_id(engt.get('personne'))
+            print (p)
+            if p :
+                print('if')
+                personnes.append(p)
+
+        return personnes
+
+def ValuesQuerySetToDict(vqs):
+    return [item for item in vqs]
+
 class Lecture(models.Model):
     personne = models.ForeignKey(Personne,blank = False, null = False)
     livre    = models.ForeignKey(Livre, blank = False, null = False)
 
     def __str__(self):
             return self.personne.nom + ", " + self.livre.titre
+    @staticmethod
+    def find_by_id(id):
+        return Livre.objects.get(pk=id)
+    @staticmethod
+    def find_all():
+        return Lecture.objects.all()
 
     @staticmethod
     def find_all_by_user(user):
@@ -208,6 +287,22 @@ class Lecture(models.Model):
         for p in l:
             liste_livre.append(p.livre)
         return liste_livre
+
+    @staticmethod
+    def find_distinct():
+        q= Lecture.objects.values('personne').distinct()
+        personnes = []
+        for engt in q:
+            p=Personne.find_by_id(engt.get('personne'))
+            if p :
+                personnes.append(p)
+
+        return personnes
+    @staticmethod
+    def find_all_by_user_livre(livre,user):
+        person = Personne.find_personne_by_user(user)
+        return Lecture.objects.filter(personne=person)
+        
 
 
 class Emprunt(models.Model):

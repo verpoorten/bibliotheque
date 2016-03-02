@@ -35,11 +35,13 @@ $("[name='checkbox1']").bootstrapSwitch();
             </select>
         </div>
         <div class="col-md-3">
-          <label for="lu" class="control-label">Lu/pas lu</label>
-          {% if lecture %}
-          <input type="checkbox"id="lu" name="lu" checked/>
-          {%else%}
-          <input type="checkbox" id="lu" name="lu"/>
+          {% if user %}
+            <label for="lu" class="control-label">Lu/pas lu</label>
+            {% if lecture %}
+            <input type="checkbox"id="lu" name="lu" checked/>
+            {%else%}
+            <input type="checkbox" id="lu" name="lu"/>
+            {%endif%}
           {%endif%}
         </div>
       </div>
@@ -63,7 +65,9 @@ $("[name='checkbox1']").bootstrapSwitch();
       <div class="row">
           <div class="col-md-12">
             <br>
+            {% if request.user.is_authenticated %}
             <p align="right"><input type="submit" title="Enregistrer les infos propres à un livre" value="Enregistrer"></p>
+            {% endif %}
         </div>
       </div>
       <br>
@@ -81,7 +85,7 @@ $("[name='checkbox1']").bootstrapSwitch();
             <tr>
               <td>{{ auteur_livre.auteur.nom }}</td>
               <td>{{ auteur_livre.auteur.prenom }}</td>
-              <td><a href="{% url 'delete-auteur-livre' auteur_livre.id %}" title="Pour supprimer l'auteur du  livre"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></td>
+              <td>{% if request.user.is_authenticated %}<a href="{% url 'delete-auteur-livre' auteur_livre.id %}" title="Pour supprimer l'auteur du  livre"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>{% endif%}</td>
             </tr>
           {% endfor%}
           </table>
@@ -91,7 +95,9 @@ $("[name='checkbox1']").bootstrapSwitch();
       <div class="row">
         <div class="col-md-12">
           <p align="right">
+            {% if user %}
             <a href="{% url 'add-auteur-to-livre' livre.id %}" title="Ajouter un auteur"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+            {% endif%}
           </p>
         </div>
       </div>
@@ -113,13 +119,14 @@ $("[name='checkbox1']").bootstrapSwitch();
               {% for p in livre.proprietaires %}
                   <tr>
                       <td>{{ p.personne | default_if_none:'' }}</td>
-                      <td><a href="{% url 'proprietaire-remove-from-livre' p.id %}" title="Pour supprimer un propriétaire d'un livre"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a></td>
-                      <td>{% if p.est_disponible %}<a href="{% url 'proprietaire-emprunt-livre' p.id %}" title="Pour noter l'emprunt du livre">J'emprunte</a>
+                      <td>{% if user %}<a href="{% url 'proprietaire-remove-from-livre' p.id %}" title="Pour supprimer un propriétaire d'un livre"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>{%endif%}</td>
+                      <td>{% if user %}{% if p.est_disponible %}<a href="{% url 'proprietaire-emprunt-livre' p.id %}" title="Pour noter l'emprunt du livre">J'emprunte</a>
                         {% else %}
                           {%if p.emprunt_courant %}
                             <a href="{% url 'proprietaire-retour-livre' p.emprunt_courant %}" title="Retour du livre">Retour</a>
                           {%else%}
                             {%endif%}
+                        {%endif%}
                         {%endif%}
                   </tr>
               {% endfor%}
@@ -130,7 +137,7 @@ $("[name='checkbox1']").bootstrapSwitch();
       <div class="row">
         <div class="col-md-12">
           <p align="right">
-            <a href="{% url 'proprietaire-add-to-livre' livre.id %}" title="Pour ajouter un nouveau propriétaire au livre"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+            {% if user %}<a href="{% url 'proprietaire-add-to-livre' livre.id %}" title="Pour ajouter un nouveau propriétaire au livre"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>{%endif%}
           </p>
         </div>
       </div>

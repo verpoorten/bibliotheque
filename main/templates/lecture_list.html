@@ -1,0 +1,34 @@
+
+  {% extends "layout.html" %}
+  {% load staticfiles %}
+  {% block breadcrumb %}
+    <li class="active">Liste des lectures</li>
+  {% endblock %}
+  {% block content %}
+
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <br>
+        <table class="table table-striped table-hover">
+            <thead>
+                <th>Titre</th>
+                <th>Auteur(s)</th>
+                <th>Langue</th>
+            </thead>
+        {% for livre in livres %}
+            <tr>
+                <td>{{ livre.titre | default_if_none:'' }}</td>
+                <td>{{ livre.auteurs_livres_str }}</td>
+                <td>{{ livre.langue | default_if_none:'' }}</td>
+                <td>
+                  <td>
+                    {% if request.user.is_authenticated %}<a href="{% url 'lecture-delete' livre.pk %}" title="Pour supprimer un livre"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>{%endif%}
+                  </td>
+                </td>
+            </tr>
+        {% endfor%}
+        </table>
+      </div>
+    </div>
+  {% endblock %}

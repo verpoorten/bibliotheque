@@ -1,6 +1,6 @@
 from django.conf.urls import url, include
 from django.conf import settings
-from . import views
+from . import views, lecture
 from .models import *
 from django.conf.urls import url
 from django.contrib.auth.views import login,logout
@@ -11,7 +11,7 @@ urlpatterns = [
     # login / logout urls
     url(r'^login/$', login, name='login'),
     url(r'^logout/$', logout, name='logout'),
-    
+
     url(r'^auteurs/$', views.auteur_list, name='auteur_list'),
 
     url(r'^auteur/create/$', views.auteur_create, name='auteur-create'),
@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^livre/create/$', views.livre_create, name='livre-create'),
     url(r'^/livre/([0-9]+)/$', views.livre_form, name='livre'),
     url(r'^/livre/search/$', views.livre_search, name='livre-search'),
+    url(r'^meslivres/$', views.livre_my_list, name='meslivres'),
 
     url(r'^livre/update/$', views.livre_update, name='livre-update'),
     url(r'^livre/delete/([0-9]+)/$', views.livre_delete, name='livre-delete'),
@@ -37,6 +38,14 @@ urlpatterns = [
     url(r'^livre/retour/lu/([0-9]+)/$', views.proprietaire_retour_lu_livre, name='proprietaire-retour-lu-livre'),
 
     url(r'^/livre/([0-9]+)/update/$', views.livre_form),
+
+    url(r'^lectures/$', lecture.lecture_list, name='lecture_list'),
+    # url(r'^livre/update/$', lecture.lecture_update, name='lecture-update'),
+    # url(r'^lecture/create/$', lecture.lecture_create, name='lecture-create'),
+    # url(r'^/lecture/([0-9]+)/$', lecture.lecture_form, name='lecture'),
+    url(r'^/lecture/search/$', lecture.lecture_search, name='lecture-search'),
+    # url(r'^meslectures/$', lecture.lecture_my_list, name='meslectures'),
+    url(r'^lecture/delete/([0-9]+)/$', lecture.lecture_delete, name='lecture-delete'),
 
 
 

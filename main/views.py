@@ -11,15 +11,25 @@ from dateutil.relativedelta import relativedelta
 import datetime
 from django.db import models
 
-@login_required
+def page_not_found(request):
+    return render(request,'page_not_found.html')
+
+
+def access_denied(request):
+    return render(request,'acces_denied.html')
+
 def home(request):
     # return render(request, 'home.html',
     #                 {'livres': None})
-    return render(request, 'home.html',
-                    {'livres':   Livre.find_all_by_user(request.user),
-                     'lectures': Lecture.find_all_by_user(request.user),
-                     'emprunts' : Emprunt.find_emprunt_courant_by_user(request.user),
-                     'en_locations' : Emprunt.find_locations(request.user)})
+    if request.user.is_authenticated():
+        return render(request, 'home.html',
+                        {'livres':   Livre.find_all_by_user(request.user),
+                         'lectures': Lecture.find_all_by_user(request.user),
+                         'emprunts' : Emprunt.find_emprunt_courant_by_user(request.user),
+                         'en_locations' : Emprunt.find_locations(request.user)})
+    else:
+        return render(request, 'home.html',
+                        {})
 
 def auteur_list(request):
         return render(request, 'auteur_list.html',
@@ -60,27 +70,50 @@ def auteur_delete(request, id):
     return render(request, 'auteur_list.html',
                     {'auteurs': Auteur.find_all()})
 
+def livre_my_list(request):
+    personne = Personne.find_personne_by_user(request.user)
+    livres = Livre.find_by_proprietaire(personne.id)
+    return render(request, 'livre_list.html',
+                    {'livres':    livres,
+                    'personnes' : Proprietaire.find_distinct(),
+                    'auteurs' :   Auteur.objects.all(),
+                    'titre' :     None,
+                    'auteur':     None,
+                    'personne':   personne.id})
 
 def livre_search(request):
+    print('livre_search')
     query = Livre.objects.all()
-    proprietaire = None
+    personne = None
     auteur = None
-    if request.GET['proprietaire_id']:
-        proprietaire = request.GET['proprietaire_id']
+    if request.GET['personne_id']:
+        personne = request.GET['personne_id']
+        livres = Livre.find_by_proprietaire(personne)
 
     if request.GET['auteur_id']:
         auteur = request.GET['auteur_id']
-
-    livres = Livre.find_by_proprietaire_auteur(proprietaire, auteur)
+        livres = Livre.find_by_auteur(auteur)
+    titre = None
+    if request.GET['titre']:
+        titre = request.GET['titre']
+        livres = Livre.find_by_titre(request.GET['titre'])
+    # livres = Livre.find_by_proprietaire_auteur(proprietaire, auteur)
+    personne_id = None
+    if personne:
+        personne_id = int(personne)
     return render(request, 'livre_list.html',
-                    {'livres': livres,
-                    'proprietaires' : Proprietaire.objects.all(),
-                    'auteurs' : Auteur.objects.all()})
+                    {'livres':    livres,
+                    'personnes' : Proprietaire.find_distinct(),
+                    'auteurs' :   Auteur.objects.all(),
+                    'titre' :     titre,
+                    'auteur':     auteur,
+                    'personne':   personne_id})
 
 def livre_list(request):
+    print('livre_list')
     return render(request, 'livre_list.html',
                     {'livres': Livre.find_all(),
-                     'proprietaires' : Proprietaire.objects.all(),
+                     'personnes' : Proprietaire.find_distinct(),
                      'auteurs' : Auteur.objects.all()})
 
 
@@ -91,11 +124,20 @@ def livre_create(request):
 
 def livre_form(request, livre_id):
     livre = Livre.find_livre(livre_id)
-    lecture = Livre.find_lecture(livre_id,request.user)
+    lecture = None
+    if request.user.is_authenticated():
+        lecture = Livre.find_lecture(livre_id,request.user)
+
+    user = None
+    if request.user.is_authenticated():
+        user = request.user
+
+
     return render(request, "livre_form.html",
                   {'livre':     livre,
                    'categories': Categorie.objects.all(),
-                   'lecture':   lecture})
+                   'lecture':   lecture,
+                   'user' : user})
 
 def livre_update(request):
     print('livreupdate')
@@ -116,11 +158,7 @@ def livre_update(request):
         livre.save()
         lu=False
         if request.POST.get('lu',None) == "on":
-            print('on')
             lu= True
-
-        else:
-            print ('off')
         if lu:
             lecture = Livre.find_lecture(livre.id,request.user)
             if lecture:
@@ -218,10 +256,8 @@ def proprietaire_emprunt_livre(request, proprietaire_id):
     livre = proprietaire.livre
     emprunt = Proprietaire.find_emprunt_en_cours_by_proprietaire(proprietaire)
     if emprunt:
-        print('il existe déjà un emprunt')
         pass
     else:
-        print('il n existe déjà un emprunt')
         emprunt = Emprunt()
         personne = Personne.find_personne_by_user(request.user)
         emprunt.personne = personne
