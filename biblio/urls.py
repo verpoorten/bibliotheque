@@ -20,3 +20,5 @@ urlpatterns = [
     url(r'', include('main.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]
+handler404 = 'main.views.page_not_found'
+handler403 = 'main.views.access_denied'

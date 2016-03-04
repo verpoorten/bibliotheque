@@ -14,7 +14,6 @@ from django.db import models
 def page_not_found(request):
     return render(request,'page_not_found.html')
 
-
 def access_denied(request):
     return render(request,'acces_denied.html')
 

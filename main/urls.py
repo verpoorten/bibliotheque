@@ -6,6 +6,8 @@ from django.conf.urls import url
 from django.contrib.auth.views import login,logout
 from django.views.generic import ListView
 
+from main.utils import export_xls
+
 urlpatterns = [
     url(r'^$', views.home, name='home'),
     # login / logout urls
@@ -49,6 +51,8 @@ urlpatterns = [
     url(r'^lecture/search/$', lecture.lecture_search, name='lecture-search'),
     # url(r'^meslectures/$', lecture.lecture_my_list, name='meslectures'),
     url(r'^lecture/delete/([0-9]+)/$', lecture.lecture_delete, name='lecture-delete'),
+    url(r'^livres/print/$', export_xls.export_xls_livres, name='livres-print'),
+
 
 
 

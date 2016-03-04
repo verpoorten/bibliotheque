@@ -45,6 +45,7 @@ class Livre(models.Model):
     date_creation     = models.DateTimeField(auto_now_add=True, blank = True, null = True)
     date_modification = models.DateTimeField(auto_now=True, blank = True, null = True)
 
+    @property
     def proprietaires(self):
         return Proprietaire.objects.filter(livre = self)
 
@@ -104,21 +105,23 @@ class Livre(models.Model):
             return Lecture.objects.get(personne=person,livre= livre)
         except:
             return None
-
+    @property
     def auteurs_livres_str(self):
         s = ""
         cpt=0
         for al in  AuteurLivre.objects.filter(livre=self):
             if cpt>0:
-                s = s + ", " + al.auteur
+                s = s + ", " + str(al.auteur)
             else:
                 s = al.auteur
             cpt=cpt+1
         return s
 
+    @staticmethod
     def find_by_proprietaire_auteur(proprietaire_id,auteur_id):
         return Livre.objects.all()
 
+    @staticmethod
     def find_by_proprietaire(personne_id):
         personne = None
         if personne_id:
@@ -132,7 +135,7 @@ class Livre(models.Model):
                 livres.append(l.livre)
 
         return livres
-
+    @staticmethod
     def find_by_auteur(auteur_id):
 
         auteur = None
@@ -146,6 +149,7 @@ class Livre(models.Model):
                 livres.append(l.livre)
         return livres
 
+    @staticmethod
     def find_by_titre(titre):
         return Livre.objects.filter(titre__icontains = titre)
 
@@ -155,13 +159,13 @@ class Lecteur(models.Model):
 
     def __str__(self):
         return self.livre + ", " + self.personne
-
+    @staticmethod
     def find_all():
         return Lecteur.objects.all()
-
+    @staticmethod
     def find_by_personne(personne):
         return Lecteur.objects.filter(personne=personne)
-
+    @staticmethod
     def find_distinct():
 
         q= Lecteur.objects.values('personne').distinct()
@@ -231,20 +235,19 @@ class Proprietaire(models.Model):
     def __str__(self):
             return self.personne.nom + ", " + self.livre.titre
 
-
     def est_disponible(self):
         emprunt = Emprunt.objects.filter(proprietaire = self, date_retour__isnull = True)
         if emprunt:
             return False
         else:
             return True
-
+    @staticmethod
     def find_emprunt_by_proprietaire(proprietaire):
         try:
             return Emprunt.objects.get(proprietaire = proprietaire)
         except:
             return None
-
+    @staticmethod
     def find_emprunt_en_cours_by_proprietaire(proprietaire):
         try:
 
@@ -261,9 +264,11 @@ class Proprietaire(models.Model):
         else:
             return None
 
+    @staticmethod
     def find_by_personne(personne):
         return Proprietaire.objects.filter(personne=personne)
 
+    @staticmethod
     def find_distinct():
         print('find_distinct')
         q= Proprietaire.objects.values('personne').distinct()
@@ -325,8 +330,8 @@ class Lecture(models.Model):
             p=Personne.find_by_id(engt.get('personne'))
             if p :
                 personnes.append(p)
-
         return personnes
+
     @staticmethod
     def find_all_by_user_livre(livre,user):
         person = Personne.find_personne_by_user(user)
@@ -349,11 +354,10 @@ class Emprunt(models.Model):
         personne = Personne.find_personne_by_user(user)
         return Emprunt.objects.filter(personne = personne, date_retour__isnull=True)
 
+    @staticmethod
     def find_locations(user):
-        print('find_locations')
         personne = Personne.find_personne_by_user(user)
         list_propriete = Proprietaire.find_by_personne(personne)
-        print(list_propriete)
         locations = []
         for p in list_propriete:
             loc =  Emprunt.objects.filter(proprietaire = p, date_retour__isnull=True)
