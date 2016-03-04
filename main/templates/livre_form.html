@@ -51,7 +51,7 @@ $("[name='checkbox1']").bootstrapSwitch();
           <label for="categorie" class="control-label">Categorie</label>
           <select class="form-control" name="categorie">
             {% for categorie in categories %}
-                <option  value="">Indéfini</option>
+                <option  value="None">Indéfini</option>
                 {% if categorie == livre.categorie %}
                   <option selected value="{{categorie.id}}">{{categorie}}</option>
                 {% else %}
@@ -73,7 +73,7 @@ $("[name='checkbox1']").bootstrapSwitch();
       <br>
       <div class="row">
         <div class="col-md-12">
-        <label for="auteurs">Auteur(s)</label>
+        {% if livre.id %}<label for="auteurs">Auteur(s)</label>{% endif %}
         {% if livre.auteurs_livres  %}
           <table class="table table-striped table-hover">
             <thead>
@@ -95,7 +95,7 @@ $("[name='checkbox1']").bootstrapSwitch();
       <div class="row">
         <div class="col-md-12">
           <p align="right">
-            {% if user %}
+            {% if user and livre.id %}
             <a href="{% url 'add-auteur-to-livre' livre.id %}" title="Ajouter un auteur"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
             {% endif%}
           </p>
@@ -104,7 +104,7 @@ $("[name='checkbox1']").bootstrapSwitch();
 
       <div class="row">
           <div class="col-md-12">
-            <label>Propriétaire(s)</label>
+            {% if livre.id %}<label>Propriétaire(s)</label>{%endif%}
         </div>
       </div>
       {%if livre.proprietaires|length > 0 %}
@@ -119,8 +119,8 @@ $("[name='checkbox1']").bootstrapSwitch();
               {% for p in livre.proprietaires %}
                   <tr>
                       <td>{{ p.personne | default_if_none:'' }}</td>
-                      <td>{% if user %}<a href="{% url 'proprietaire-remove-from-livre' p.id %}" title="Pour supprimer un propriétaire d'un livre"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>{%endif%}</td>
-                      <td>{% if user %}{% if p.est_disponible and user != p.personne.user%}<a href="{% url 'proprietaire-emprunt-livre' p.id %}" title="Pour noter l'emprunt du livre">J'emprunte</a>
+                      <td>{% if user and livre.id%}<a href="{% url 'proprietaire-remove-from-livre' p.id %}" title="Pour supprimer un propriétaire d'un livre"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>{%endif%}</td>
+                      <td>{% if user and livre.id %}{% if p.est_disponible and user != p.personne.user%}<a href="{% url 'proprietaire-emprunt-livre' p.id %}" title="Pour noter l'emprunt du livre">J'emprunte</a>
                         {% else %}
                           {%if p.emprunt_courant %}
                             <a href="{% url 'proprietaire-retour-livre' p.emprunt_courant %}" title="Retour du livre">Retour</a>
@@ -137,7 +137,7 @@ $("[name='checkbox1']").bootstrapSwitch();
       <div class="row">
         <div class="col-md-12">
           <p align="right">
-            {% if user %}<a href="{% url 'proprietaire-add-to-livre' livre.id %}" title="Pour ajouter un nouveau propriétaire au livre"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>{%endif%}
+            {% if user and livre.id%}<a href="{% url 'proprietaire-add-to-livre' livre.id %}" title="Pour ajouter un nouveau propriétaire au livre"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>{%endif%}
           </p>
         </div>
       </div>

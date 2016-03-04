@@ -4,7 +4,8 @@
     "pk": 9,
     "fields": {
       "prenom": "Leila",
-      "nom": "Verpoorten"
+      "nom": "Verpoorten",
+      "localite" : "Lisogne"
     }
   },
   {
@@ -28,7 +29,8 @@
     "pk": 3,
     "fields": {
       "prenom": "Germaine",
-      "nom": "Lesquoy"
+      "nom": "Lesquoy",
+      "localite" : "Lisogne"
     }
   },
   {
@@ -52,7 +54,8 @@
     "pk": 6,
     "fields": {
       "prenom": "Stéphan",
-      "nom": "Marchal"
+      "nom": "Marchal",
+      "localite" : "Lisogne"
     }
   },
   {
@@ -60,7 +63,8 @@
     "pk": 7,
     "fields": {
       "prenom": "Roger",
-      "nom": "Verpoorten"
+      "nom": "Verpoorten",
+      "localite" : "Lisogne"
     }
   },
   {

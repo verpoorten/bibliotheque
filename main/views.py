@@ -127,8 +127,12 @@ def livre_list(request):
 
 def livre_create(request):
     livre = Livre()
-    return render(request, "livre_form.html",
-                  {'livre':         livre})
+    return render(request, "livre_form_new.html",
+                  {'livre':         livre,
+                   'categories': Categorie.objects.all(),
+                   'personnes' : Proprietaire.find_distinct(),
+                   'auteurs' : Auteur.objects.all()})
+
 
 def livre_form(request, livre_id):
     livre = Livre.find_livre(livre_id)
@@ -158,6 +162,8 @@ def livre_update(request):
             livre = Livre()
         livre.titre = request.POST['titre']
         livre.langue = request.POST['langue']
+
+
         if request.POST['categorie'] and not request.POST['categorie'] == 'None':
             categorie = get_object_or_404(Categorie, pk=request.POST['categorie'])
         else:
@@ -191,13 +197,60 @@ def livre_delete(request, id):
     return render(request, 'livre_list.html',
                     {'livres': Livre.find_all()})
 
+def livre_new(request):
+    livre = Livre()
+
+    livre.titre = request.POST['titre']
+    livre.langue = request.POST['langue']
+
+
+    if request.POST['categorie'] and not request.POST['categorie'] == 'None':
+        categorie = get_object_or_404(Categorie, pk=request.POST['categorie'])
+    else:
+        categorie = None
+    livre.categorie = categorie
+    livre.save()
+    lu=False
+    if request.POST.get('lu',None) == "on":
+        lu= True
+    if lu:
+        lecture = Livre.find_lecture(livre.id,request.user)
+        if lecture:
+            pass
+        else:
+            personne = Personne.find_personne_by_user(request.user)
+            lecture = Lecture()
+            lecture.livre  = livre
+            lecture.personne = personne
+            lecture.save()
+    else:
+        lecture = Livre.find_lecture(livre.id,request.user)
+        if lecture:
+            lecture.delete()
+    if request.POST['auteur_id']:
+        auteur = get_object_or_404(Auteur, pk=request.POST['auteur_id'])
+        auteur_livre = AuteurLivre()
+        auteur_livre.auteur = auteur
+        auteur_livre.livre = livre
+        auteur_livre.save()
+
+    if request.POST['personne_id']:
+        personne = get_object_or_404(Personne, pk=request.POST['personne_id'])
+        proprietaire = Proprietaire()
+        proprietaire.personne = personne
+        proprietaire.livre = livre
+        proprietaire.save()
+        
+    return render(request, 'livre_list.html',
+                    {'livres': Livre.find_all()})
 
 def delete_auteur_livre(request, auteur_livre_id):
     auteur_livre = AuteurLivre.find_auteur_livre(auteur_livre_id)
     livre = auteur_livre.livre
     auteur_livre.delete()
     return render(request, "livre_form.html",
-                  {'livre': livre})
+                  {'livre': livre,
+                   'categories': Categorie.objects.all()})
 
 def add_auteur_livre(request, livre_id):
     livre = get_object_or_404(Livre, pk=livre_id)
@@ -205,7 +258,8 @@ def add_auteur_livre(request, livre_id):
     auteur.livre= livre
 
     return render(request, "auteur_form.html",
-                  {'auteur':     auteur})
+                  {'auteur':     auteur,
+                   'categories': Categorie.objects.all(),})
 
 def add_auteur_to_livre(request, livre_id):
     livre = get_object_or_404(Livre, pk=livre_id)
@@ -215,7 +269,8 @@ def add_auteur_to_livre(request, livre_id):
     return render(request, "auteur_livre_form.html",
                   {'auteur_livre': auteur_livre,
                    'auteurs':      Auteur.find_all(),
-                   'livre':        livre})
+                   'livre':        livre,
+                   'categories': Categorie.objects.all(),})
 
 def save_auteur_livre(request):
     auteur_id=request.POST['auteur_id']
@@ -228,7 +283,8 @@ def save_auteur_livre(request):
     auteur_livre.save()
 
     return render(request, "livre_form.html",
-                  {'livre': livre})
+                  {'livre': livre,
+                   'categories': Categorie.objects.all()})
 
 def add_proprietaire_to_livre(request, livre_id):
     proprietaire = Proprietaire()
@@ -247,14 +303,16 @@ def save_proprietaire(request):
     proprietaire.personne = personne
     proprietaire.save()
     return render(request, "livre_form.html",
-                  {'livre': livre})
+                  {'livre': livre,
+                   'categories': Categorie.objects.all(),})
 
 def delete_proprietaire(request, proprietaire_id):
     proprietaire = get_object_or_404(Proprietaire, pk=proprietaire_id)
     livre = proprietaire.livre
     proprietaire.delete()
     return render(request, "livre_form.html",
-                  {'livre': livre})
+                  {'livre': livre,
+                   'categories': Categorie.objects.all(),})
 
 
 def proprietaire_emprunt_livre(request, proprietaire_id):
@@ -319,6 +377,7 @@ def lecture_retour_lu_livre(request, emprunt_id):
             lecture.save()
 
         return home(request)
+
 def proprietaire_retour_lu_livre(request, emprunt_id):
     """
     Indique un livre comme rendu et ajoute un enregistrement lecture
@@ -364,6 +423,8 @@ def do_sign_in_new(request):
         password = request.POST['password']
         nom = request.POST['nom']
         prenom = request.POST['prenom']
+        email = request.POST['email']
+        localite = request.POST['localite']
         user = authenticate(username=username, password=password)
         if user is not None:
             if user.is_active:
@@ -385,14 +446,15 @@ def do_sign_in_new(request):
                 # to anything, because it won't be checked; the password
                 # from settings.py will.
                 try:
-                    user = User.objects.create_user(username, '', password)
-                    # user = User(username=username, password=password)
+                    user = User.objects.create_user(username, email, password)
+
                     user.is_staff = False
                     user.is_superuser = False
                     user.save()
                     personne = Personne()
                     personne.nom=nom
                     personne.prenom=prenom
+                    personne.localite=localite
                     personne.user = user
                     personne.save()
                     print('ici')

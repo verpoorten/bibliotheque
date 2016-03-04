@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+{% load staticfiles %}
+{% block breadcrumb %}
+  <li><a href="{% url 'livre_list' %}">Livres</a></li>
+  <li class="active">Livre</li>
+{% endblock %}
+{% block content %}
+<script>
+$("[name='checkbox1']").bootstrapSwitch();
+</script>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <form  method="post" action="{% url 'livre-new' %}">
+      {% csrf_token %}
+      <input type="hidden" value="modify" name="action"/>
+      <input type="hidden" value="{{ livre.id }}" name="id"/>
+      <div class="row">
+        <div class="col-md-6">
+        <label for="nom">Titre</label>
+        <input class="form-control" id="titre" value="{{ livre.titre| default_if_none:'' }}" name="titre">
+        </div>
+        <div class="col-md-3">
+          <label for="langue" class="control-label">Langue</label>
+          <select class="form-control" name="langue">
+              {% if livre.langue == 'FR' %}
+                <option selected value="FR">Français</option>
+              {% else %}
+                <option value="FR">Français</option>
+              {% endif %}
+              {% if livre.langue == 'ENG' %}
+                <option selected value="ENG">Anglais</option>
+              {% else %}
+                <option value="ENG">Anglais</option>
+              {% endif %}
+            </select>
+        </div>
+        <div class="col-md-3">
+          {% if user %}
+            <label for="lu" class="control-label">Lu/pas lu</label>
+            {% if lecture %}
+            <input type="checkbox"id="lu" name="lu" checked/>
+            {%else%}
+            <input type="checkbox" id="lu" name="lu"/>
+            {%endif%}
+          {%endif%}
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-12">
+          <label for="categorie" class="control-label">Categorie</label>
+          <select class="form-control" name="categorie">
+            {% for categorie in categories %}
+                <option  value="None">Indéfini</option>
+                {% if categorie == livre.categorie %}
+                  <option selected value="{{categorie.id}}">{{categorie}}</option>
+                {% else %}
+                  <option value="{{categorie.id}}">{{categorie}}</option>
+                {% endif %}
+              {% endfor%}
+            </select>
+        </div>
+      </div>
+
+      <br>
+      <div class="row">
+        <div class="col-md-12">
+        <label for="auteur_id" class="control-label">Auteur</label>
+        <select name="auteur_id">
+          <option value="">-</option>
+          {% for a in auteurs %}
+          <option value="{{a.id}}" {%if a.id == auteur.id%} selected {%endif%}>{{a}}</option>
+          {% endfor %}
+        </select>
+        </div>
+      </div>
+<br>
+
+      <div class="row">
+        <div class="col-md-12">
+          <label for="personne_id" class="control-label">Propriétaire</label>
+          <select class="form-control"  name="personne_id" >
+            <option value="">-</option>
+            {% for p in personnes %}
+              {%if p.id == personne %}
+              <option selected value="{{p.id}}" >{{p.nom}} {{p.prenom}}</option>
+              {%else%}
+              <option value="{{p.id}}"  >{{p.nom}} {{p.prenom}}</option>
+              {%endif%}
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+
+      <br>
+      <div class="row">
+          <div class="col-md-12">
+            <br>
+            {% if request.user.is_authenticated %}
+            <p align="right"><input type="submit" title="Enregistrer les infos propres à un livre" value="Enregistrer"></p>
+            {% endif %}
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

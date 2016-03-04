@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^meslivres/$', views.livre_my_list, name='meslivres'),
 
     url(r'^livre/update/$', views.livre_update, name='livre-update'),
+    url(r'^livre/new/$', views.livre_new, name='livre-new'),
     url(r'^livre/delete/([0-9]+)/$', views.livre_delete, name='livre-delete'),
     url(r'^livre/deletea/([0-9]+)/$', views.delete_auteur_livre, name='delete-auteur-livre'),
     url(r'^livre/add/auteurlivre/([0-9]+)/$', views.add_auteur_to_livre, name='add-auteur-to-livre'),
