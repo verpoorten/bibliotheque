@@ -120,7 +120,7 @@ $("[name='checkbox1']").bootstrapSwitch();
                   <tr>
                       <td>{{ p.personne | default_if_none:'' }}</td>
                       <td>{% if user %}<a href="{% url 'proprietaire-remove-from-livre' p.id %}" title="Pour supprimer un propriétaire d'un livre"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></a>{%endif%}</td>
-                      <td>{% if user %}{% if p.est_disponible %}<a href="{% url 'proprietaire-emprunt-livre' p.id %}" title="Pour noter l'emprunt du livre">J'emprunte</a>
+                      <td>{% if user %}{% if p.est_disponible and user != p.personne.user%}<a href="{% url 'proprietaire-emprunt-livre' p.id %}" title="Pour noter l'emprunt du livre">J'emprunte</a>
                         {% else %}
                           {%if p.emprunt_courant %}
                             <a href="{% url 'proprietaire-retour-livre' p.emprunt_courant %}" title="Retour du livre">Retour</a>

@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 class Personne(models.Model):
     nom    = models.CharField(max_length = 100, blank = False, null = False)
     prenom = models.CharField(max_length = 100, blank = False, null = False)
-    user        = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
+    user   = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
         return self.nom.upper() + ", " + self.prenom
@@ -17,7 +17,10 @@ class Personne(models.Model):
 
     @staticmethod
     def find_personne_by_user(user):
-        return Personne.objects.get(user=user)
+        try:
+            return Personne.objects.get(user=user)
+        except:
+            return None
 
     @staticmethod
     def find_by_id(id):
@@ -36,9 +39,11 @@ class Livre(models.Model):
         ('ENG','Anglais')
     )
 
-    titre      = models.CharField(max_length = 100, blank = False, null = False)
-    langue     = models.CharField(max_length=5,choices = LANGUE, default = 'FR')
-    categorie  = models.ForeignKey(Categorie, blank = True, null = True)
+    titre             = models.CharField(max_length = 100, blank = False, null = False)
+    langue            = models.CharField(max_length=5,choices = LANGUE, default = 'FR')
+    categorie         = models.ForeignKey(Categorie, blank = True, null = True)
+    date_creation     = models.DateTimeField(auto_now_add=True, blank = True, null = True)
+    date_modification = models.DateTimeField(auto_now=True, blank = True, null = True)
 
     def proprietaires(self):
         return Proprietaire.objects.filter(livre = self)
@@ -53,6 +58,18 @@ class Livre(models.Model):
 
     def auteurs_livres(self):
         return AuteurLivre.objects.filter(livre=self)
+
+    @staticmethod
+    def find_last_by_user(user):
+        liste_livre=[]
+        if  user.is_authenticated():
+            person = Personne.find_personne_by_user(user)
+            l= Proprietaire.objects.filter(personne=person).order_by('-livre__date_modification')
+
+            for p in l:
+                liste_livre.append(p.livre)
+
+        return liste_livre
 
     @staticmethod
     def find_all_by_user(user):
@@ -266,9 +283,12 @@ class Proprietaire(models.Model):
 def ValuesQuerySetToDict(vqs):
     return [item for item in vqs]
 
+
 class Lecture(models.Model):
-    personne = models.ForeignKey(Personne,blank = False, null = False)
-    livre    = models.ForeignKey(Livre, blank = False, null = False)
+    personne          = models.ForeignKey(Personne,blank = False, null = False)
+    livre             = models.ForeignKey(Livre, blank = False, null = False)
+    date_creation     = models.DateTimeField(auto_now_add=True, blank = True, null = True)
+    date_modification = models.DateTimeField(auto_now=True, blank = True, null = True)
 
     def __str__(self):
             return self.personne.nom + ", " + self.livre.titre
@@ -278,6 +298,15 @@ class Lecture(models.Model):
     @staticmethod
     def find_all():
         return Lecture.objects.all()
+
+    @staticmethod
+    def find_last_by_user(user):
+        person = Personne.find_personne_by_user(user)
+        l= Lecture.objects.filter(personne=person).order_by('-livre__date_modification')
+        liste_livre=[]
+        for p in l:
+            liste_livre.append(p.livre)
+        return liste_livre
 
     @staticmethod
     def find_all_by_user(user):
@@ -304,7 +333,7 @@ class Lecture(models.Model):
         return Lecture.objects.filter(personne=person)
 
     def find_lecture(livre,personne):
-        
+
         try:
             return Lecture.objects.get(personne=person,livre= livre)
         except:

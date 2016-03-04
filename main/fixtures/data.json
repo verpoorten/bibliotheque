@@ -1,7 +1,7 @@
 [
   {
     "model": "main.personne",
-    "pk": 8,
+    "pk": 9,
     "fields": {
       "prenom": "Leila",
       "nom": "Verpoorten"
@@ -63,7 +63,14 @@
       "nom": "Verpoorten"
     }
   },
-
+  {
+    "model": "main.personne",
+    "pk": 8,
+    "fields": {
+      "prenom": "-",
+      "nom": "Inconnu"
+    }
+  },
   {    "model":"main.auteur",    "pk": 1 ,    "fields": {      "prenom": "Warren",
       "nom": "Adler"
     }
@@ -3960,5 +3967,73 @@
   ,{"model":"main.auteurLivre", "pk" : 566 , "fields" : { "auteur" : "111", "livre" : "572"  } }
   ,{"model":"main.auteurLivre", "pk" : 567 , "fields" : { "auteur" : "110", "livre" : "573"  } }
   ,{"model":"main.auteurLivre", "pk" : 568 , "fields" : { "auteur" : "109", "livre" : "574"  } }
+  ,{"model":"main.proprietaire", "pk" : 1 , "fields" : { "personne" : "9", "livre" : "1"  } }
+  ,{"model":"main.proprietaire", "pk" : 2 , "fields" : { "personne" : "9", "livre" : "2"  } }
+  ,{"model":"main.proprietaire", "pk" : 3 , "fields" : { "personne" : "9", "livre" : "3"  } }
+  ,{"model":"main.proprietaire", "pk" : 4 , "fields" : { "personne" : "9", "livre" : "4"  } }
+  ,{"model":"main.proprietaire", "pk" : 5 , "fields" : { "personne" : "9", "livre" : "5"  } }
+  ,{"model":"main.proprietaire", "pk" : 6 , "fields" : { "personne" : "9", "livre" : "6"  } }
+  ,{"model":"main.proprietaire", "pk" : 7 , "fields" : { "personne" : "9", "livre" : "7"  } }
+  ,{"model":"main.proprietaire", "pk" : 8 , "fields" : { "personne" : "9", "livre" : "8"  } }
+  ,{"model":"main.proprietaire", "pk" : 9, "fields" : { "personne" : "9", "livre" : "9"  } }
+  ,{"model":"main.proprietaire", "pk" : 10 , "fields" : { "personne" : "9", "livre" : "10"  } }
+  ,{"model":"main.proprietaire", "pk" : 11 , "fields" : { "personne" : "9", "livre" : "11"  } }
+  ,{"model":"main.proprietaire", "pk" : 12 , "fields" : { "personne" : "9", "livre" : "12"  } }
+  ,{"model":"main.proprietaire", "pk" : 13 , "fields" : { "personne" : "9", "livre" : "13"  } }
+  ,{"model":"main.proprietaire", "pk" : 14 , "fields" : { "personne" : "9", "livre" : "14"  } }
+  ,{"model":"main.proprietaire", "pk" : 15 , "fields" : { "personne" : "9", "livre" : "15"  } }
+  ,{"model":"main.proprietaire", "pk" : 16 , "fields" : { "personne" : "9", "livre" : "16"  } }
+  ,{"model":"main.proprietaire", "pk" : 17 , "fields" : { "personne" : "9", "livre" : "17"  } }
+  ,{"model":"main.proprietaire", "pk" : 18 , "fields" : { "personne" : "9", "livre" : "18"  } }
+  ,{"model":"main.proprietaire", "pk" : 19 , "fields" : { "personne" : "3", "livre" : "19"  } }
+  ,{"model":"main.proprietaire", "pk" : 20 , "fields" : { "personne" : "3", "livre" : "20"  } }
+  ,{"model":"main.proprietaire", "pk" : 21 , "fields" : { "personne" : "3", "livre" : "21"  } }
+  ,{"model":"main.proprietaire", "pk" : 22 , "fields" : { "personne" : "3", "livre" : "22"  } }
+  ,{"model":"main.proprietaire", "pk" : 23 , "fields" : { "personne" : "3", "livre" : "23"  } }
+  ,{"model":"main.proprietaire", "pk" : 24 , "fields" : { "personne" : "3", "livre" : "24"  } }
+  ,{"model":"main.proprietaire", "pk" : 25 , "fields" : { "personne" : "3", "livre" : "25"  } }
+  ,{"model":"main.proprietaire", "pk" : 26 , "fields" : { "personne" : "3", "livre" : "26"  } }
+  ,{"model":"main.proprietaire", "pk" : 27 , "fields" : { "personne" : "3", "livre" : "27"  } }
+  ,{"model":"main.proprietaire", "pk" : 28 , "fields" : { "personne" : "3", "livre" : "28"  } }
+  ,{"model":"main.proprietaire", "pk" : 29 , "fields" : { "personne" : "3", "livre" : "29"  } }
+  ,{"model":"main.proprietaire", "pk" : 30 , "fields" : { "personne" : "3", "livre" : "30"  } }
+
+  ,{"model":"main.lecture", "pk" : 1 , "fields" : { "personne" : "9", "livre" : "1"  } }
+  ,{"model":"main.lecture", "pk" : 2 , "fields" : { "personne" : "9", "livre" : "2"  } }
+  ,{"model":"main.lecture", "pk" : 3 , "fields" : { "personne" : "9", "livre" : "3"  } }
+  ,{"model":"main.lecture", "pk" : 4 , "fields" : { "personne" : "9", "livre" : "4"  } }
+  ,{"model":"main.lecture", "pk" : 5 , "fields" : { "personne" : "9", "livre" : "5"  } }
+  ,{"model":"main.lecture", "pk" : 6 , "fields" : { "personne" : "9", "livre" : "6"  } }
+  ,{"model":"main.lecture", "pk" : 7 , "fields" : { "personne" : "9", "livre" : "7"  } }
+  ,{"model":"main.lecture", "pk" : 8 , "fields" : { "personne" : "9", "livre" : "8"  } }
+  ,{"model":"main.lecture", "pk" : 9, "fields" : { "personne" : "9", "livre" : "9"  } }
+  ,{"model":"main.lecture", "pk" : 10 , "fields" : { "personne" : "9", "livre" : "10"  } }
+  ,{"model":"main.lecture", "pk" : 11 , "fields" : { "personne" : "9", "livre" : "11"  } }
+  ,{"model":"main.lecture", "pk" : 12 , "fields" : { "personne" : "9", "livre" : "12"  } }
+  ,{"model":"main.lecture", "pk" : 13 , "fields" : { "personne" : "9", "livre" : "13"  } }
+  ,{"model":"main.lecture", "pk" : 14 , "fields" : { "personne" : "9", "livre" : "14"  } }
+  ,{"model":"main.lecture", "pk" : 15 , "fields" : { "personne" : "9", "livre" : "15"  } }
+  ,{"model":"main.lecture", "pk" : 16 , "fields" : { "personne" : "9", "livre" : "16"  } }
+  ,{"model":"main.lecture", "pk" : 17 , "fields" : { "personne" : "9", "livre" : "17"  } }
+  ,{"model":"main.lecture", "pk" : 18 , "fields" : { "personne" : "9", "livre" : "18"  } }
+  ,{"model":"main.lecture", "pk" : 19 , "fields" : { "personne" : "3", "livre" : "19"  } }
+  ,{"model":"main.lecture", "pk" : 20 , "fields" : { "personne" : "3", "livre" : "20"  } }
+  ,{"model":"main.lecture", "pk" : 21 , "fields" : { "personne" : "3", "livre" : "21"  } }
+  ,{"model":"main.lecture", "pk" : 22 , "fields" : { "personne" : "3", "livre" : "22"  } }
+  ,{"model":"main.lecture", "pk" : 23 , "fields" : { "personne" : "3", "livre" : "23"  } }
+  ,{"model":"main.lecture", "pk" : 24 , "fields" : { "personne" : "3", "livre" : "24"  } }
+  ,{"model":"main.lecture", "pk" : 25 , "fields" : { "personne" : "3", "livre" : "25"  } }
+  ,{"model":"main.lecture", "pk" : 26 , "fields" : { "personne" : "3", "livre" : "26"  } }
+  ,{"model":"main.lecture", "pk" : 27 , "fields" : { "personne" : "3", "livre" : "27"  } }
+  ,{"model":"main.lecture", "pk" : 28 , "fields" : { "personne" : "3", "livre" : "28"  } }
+  ,{"model":"main.lecture", "pk" : 29 , "fields" : { "personne" : "3", "livre" : "29"  } }
+  ,{"model":"main.lecture", "pk" : 30 , "fields" : { "personne" : "3", "livre" : "30"  } }
+  ,{"model":"main.categorie", "pk" : 1 , "fields" : { "libelle" : "Thriller"  } }
+  ,{"model":"main.categorie", "pk" : 2 , "fields" : { "libelle" : "Littérature jeunesse"  } }
+  ,{"model":"main.categorie", "pk" : 3 , "fields" : { "libelle" : "Nouvelles"  } }
+  ,{"model":"main.categorie", "pk" : 4 , "fields" : { "libelle" : "Romance"  } }
+  ,{"model":"main.categorie", "pk" : 5 , "fields" : { "libelle" : "Horreur"  } }
+  ,{"model":"main.categorie", "pk" : 6 , "fields" : { "libelle" : "Science-fiction"  } }
+  ,{"model":"main.categorie", "pk" : 7 , "fields" : { "libelle" : "Indéfini"  } }
 
 ]

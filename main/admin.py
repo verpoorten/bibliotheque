@@ -16,7 +16,11 @@ admin.site.register(Personne)
 admin.site.register(Lecteur)
 admin.site.register(Auteur)
 admin.site.register(Categorie)
-admin.site.register(Livre)
+
+class LivreAdmin(admin.ModelAdmin):
+    search_fields = ['titre']
+
+admin.site.register(Livre,LivreAdmin)
 admin.site.register(AuteurLivre)
 admin.site.register(Location)
 admin.site.register(Proprietaire)

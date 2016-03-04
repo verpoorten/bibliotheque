@@ -22,9 +22,15 @@ def home(request):
     # return render(request, 'home.html',
     #                 {'livres': None})
     if request.user.is_authenticated():
+        livres = Livre.find_last_by_user(request.user)
+        if livres:
+            livres = livres[:10]
+        lectures = Lecture.find_last_by_user(request.user)
+        if lectures:
+            lectures = lectures[:10]
         return render(request, 'home.html',
-                        {'livres':   Livre.find_all_by_user(request.user),
-                         'lectures': Lecture.find_all_by_user(request.user),
+                        {'livres':  livres,
+                         'lectures': lectures,
                          'emprunts' : Emprunt.find_emprunt_courant_by_user(request.user),
                          'en_locations' : Emprunt.find_locations(request.user)})
     else:
@@ -72,7 +78,10 @@ def auteur_delete(request, id):
 
 def livre_my_list(request):
     personne = Personne.find_personne_by_user(request.user)
-    livres = Livre.find_by_proprietaire(personne.id)
+    livres = None
+    if personne:
+        livres = Livre.find_by_proprietaire(personne.id)
+
     return render(request, 'livre_list.html',
                     {'livres':    livres,
                     'personnes' : Proprietaire.find_distinct(),
