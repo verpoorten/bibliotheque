@@ -12,7 +12,7 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     # login / logout urls
     url(r'^login/$', login, name='login'),
-    url(r'^logout/$', logout, name='logout'),
+    #url(r'^logout/$', logout, name='logout'),
 
     url(r'^auteurs/$', views.auteur_list, name='auteur_list'),
 
@@ -53,8 +53,11 @@ urlpatterns = [
     url(r'^lecture/delete/([0-9]+)/$', lecture.lecture_delete, name='lecture-delete'),
     url(r'^livres/print/$', export_xls.export_xls_livres, name='livres-print'),
 
-
-
+    url(r'^sign_in/$',views.sign_in,name="sign_in"),
+    url(r'^do_sign_in/$',views.do_sign_in,name='do_sign_in'),
+    url(r'^logout/$',views.log_out,name='logout'),
+    url(r'^sign_in_new/$',views.sign_in_new,name="sign_in_new"),
+    url(r'^do_sign_in_new/$',views.do_sign_in_new,name="do_sign_in_new"),
 
 
 

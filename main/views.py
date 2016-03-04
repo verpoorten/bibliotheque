@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-
+from django.contrib.auth import authenticate, login, logout
 from main.models import *
 from django.core.urlresolvers import reverse
 import os
@@ -177,7 +177,6 @@ def livre_update(request):
                 lecture.livre  = livre
                 lecture.personne = personne
                 lecture.save()
-
         else:
             lecture = Livre.find_lecture(livre.id,request.user)
             if lecture:
@@ -343,3 +342,106 @@ def proprietaire_retour_lu_livre(request, emprunt_id):
         lecture.save()
 
     return home(request)
+
+def sign_in_new(request):
+    """
+    Manage sign in view
+    :param request: the http request
+    :return: the sign_in view
+    """
+    return render(request,'sign_in_new.html',)
+def sign_in(request):
+    """
+    Manage sign in view
+    :param request: the http request
+    :return: the sign_in view
+    """
+    return render(request,'sign_in.html',)
+
+def do_sign_in_new(request):
+    if request.POST:
+        username = request.POST['username']
+        password = request.POST['password']
+        nom = request.POST['nom']
+        prenom = request.POST['prenom']
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                # Redirect to a success page.
+                return HttpResponseRedirect(reverse('home'))
+            else:
+                # Return a 'disabled account' error message
+                return render(request,'sign_in.html',{ 'error_messages' : ('Compte inactivé',),})
+        else:
+            print('new')
+            try:
+                user = User.objects.get(username=username)
+                print('try')
+                return render(request,'sign_in.html',{ 'error_messages' : ('Nom d\'utilisateur déjà existant',),})
+            except User.DoesNotExist:
+                print('except')
+                # Create a new user. Note that we can set password
+                # to anything, because it won't be checked; the password
+                # from settings.py will.
+                try:
+                    user = User.objects.create_user(username, '', password)
+                    # user = User(username=username, password=password)
+                    user.is_staff = False
+                    user.is_superuser = False
+                    user.save()
+                    personne = Personne()
+                    personne.nom=nom
+                    personne.prenom=prenom
+                    personne.user = user
+                    personne.save()
+                    print('ici')
+                    user = authenticate(username=username, password=password)
+                    print('kkk')
+                    if user is not None:
+                        print('kkk1')
+                        if user.is_active:
+                            print('kkk2')
+                            login(request, user)
+                            # Redirect to a success page.
+                            return HttpResponseRedirect(reverse('home'))
+
+                except:
+                    print('except2')
+                    return render(request,'sign_in.html',{ 'error_messages' : ('Problème lors de l\'inscription',),})
+
+            return HttpResponseRedirect(reverse('home'))
+
+        return render_to_response('sign_in.html',context_instance=RequestContext(request))
+
+def do_sign_in(request):
+    """
+    Perform sign in with information from POST
+    :param request: the http request
+    :return:The main menu if the user start on the site, the page from where the user went if not.
+    """
+    if request.POST:
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                # Redirect to a success page.
+                return HttpResponseRedirect(reverse('home'))
+            else:
+                # Return a 'disabled account' error message
+                return render(request,'sign_in.html',{ 'error_messages' : ('Compte inactivé',),})
+        else:
+            # Return an 'invalid login' error message.
+            return render(request,'sign_in.html',{ 'error_messages' : ('Utilisateur ou mot de pass invalide',),})
+        return render_to_response('sign_in.html',context_instance=RequestContext(request))
+
+def log_out(request):
+    """
+    Perform logout from session
+    :param request: the httprequest
+    :return: The sign_in view
+    """
+    logout(request)
+    return render(request,'sign_in.html',{ 'info_messages' : ('Successfully log out',),})
