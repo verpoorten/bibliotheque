@@ -43,8 +43,8 @@ class Livre(models.Model):
     titre             = models.CharField(max_length = 100, blank = False, null = False)
     langue            = models.CharField(max_length=5,choices = LANGUE, default = 'FR')
     categorie         = models.ForeignKey(Categorie, blank = True, null = True)
-    date_creation     = models.DateTimeField(auto_now_add=True, blank = True, null = True)
-    date_modification = models.DateTimeField(auto_now=True, blank = True, null = True)
+    date_creation     = models.DateTimeField(auto_now_add=True, blank = False, null = False)
+    date_modification = models.DateTimeField(auto_now=True, blank = False, null = False)
 
     @property
     def proprietaires(self):
@@ -106,6 +106,8 @@ class Livre(models.Model):
             return Lecture.objects.get(personne=person,livre= livre)
         except:
             return None
+
+
     @property
     def auteurs_livres_str(self):
         s = ""
@@ -154,33 +156,47 @@ class Livre(models.Model):
     def find_by_titre(titre):
         return Livre.objects.filter(titre__icontains = titre)
 
+
+    @staticmethod
+    def is_lu(livre,user):
+        person = Personne.find_personne_by_user(user)
+        livre = Livre.objects.get(pk=livre.id)
+        try:
+            if Lecture.objects.get(personne=person,livre= livre):
+                return True
+        except:
+            return False
+        return False
+
+
 class Lecteur(models.Model):
     livre  = models.ForeignKey(Livre, blank = False, null = False)
     personne  = models.ForeignKey(Personne, blank = False, null = False)
 
     def __str__(self):
         return self.livre + ", " + self.personne
+
+
     @staticmethod
     def find_all():
         return Lecteur.objects.all()
+
+
     @staticmethod
     def find_by_personne(personne):
         return Lecteur.objects.filter(personne=personne)
+
+
     @staticmethod
     def find_distinct():
-
         q= Lecteur.objects.values('personne').distinct()
-        #[{'personne': 3}, {'personne': 8}]
         personnes = []
         for engt in q:
-            print(engt.get('personne'))
             p=Personne.find_by_id(engt.get('personne'))
-            print (p)
             if p :
-                print('if')
                 personnes.append(p)
-
         return personnes
+
 
 class Auteur(models.Model):
     nom    = models.CharField(max_length = 100, blank = False, null = False)
@@ -205,11 +221,10 @@ class AuteurLivre(models.Model):
     @staticmethod
     def find_auteur_livre(id):
         return AuteurLivre.objects.get(pk=id)
+
     @staticmethod
     def find_auteur_livre_by_auteur(auteur):
         return AuteurLivre.objects.filter(auteur=auteur)
-    # def __str__(self):
-    #     return self.livre + ", " + self.auteur
 
 
 class Location(models.Model):
@@ -242,25 +257,24 @@ class Proprietaire(models.Model):
             return False
         else:
             return True
+
     @staticmethod
     def find_emprunt_by_proprietaire(proprietaire):
         try:
             return Emprunt.objects.get(proprietaire = proprietaire)
         except:
             return None
+
     @staticmethod
     def find_emprunt_en_cours_by_proprietaire(proprietaire):
         try:
-
             return Emprunt.objects.get(proprietaire = proprietaire, date_retour__isnull=True)
         except:
             return None
 
     def emprunt_courant(self):
         emprunts =  Emprunt.objects.filter(proprietaire = self, personne=self.personne, date_retour__isnull = True)
-
         if emprunts:
-            print('existe un emprunt avec date_retour = Null')
             return emprunts[0].id
         else:
             return None
@@ -271,17 +285,11 @@ class Proprietaire(models.Model):
 
     @staticmethod
     def find_distinct():
-        print('find_distinct')
         q= Proprietaire.objects.values('personne').distinct()
-        #[{'personne': 3}, {'personne': 8}]
         personnes = []
-        print (q)
         for engt in q:
-            print(engt.get('personne'))
             p=Personne.find_by_id(engt.get('personne'))
-            print (p)
             if p :
-                print('if')
                 personnes.append(p)
 
         return personnes
@@ -344,6 +352,8 @@ class Lecture(models.Model):
             return Lecture.objects.get(personne=person,livre= livre)
         except:
             return None
+
+            
 class Emprunt(models.Model):
     personne     = models.ForeignKey(Personne,blank = False, null = False)
     proprietaire = models.ForeignKey(Proprietaire,blank = False, null = False)

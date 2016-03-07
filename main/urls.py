@@ -15,7 +15,7 @@ urlpatterns = [
     #url(r'^logout/$', logout, name='logout'),
 
     url(r'^auteurs/$', views.auteur_list, name='auteur_list'),
-
+url(r'^auteur/new/$', views.auteur_new, name='auteur-new'),
     url(r'^auteur/create/$', views.auteur_create, name='auteur-create'),
     url(r'^auteur/([0-9]+)/$', views.auteur_form, name='auteur'),
     url(r'^auteur/update/$', views.auteur_update, name='auteur-update'),

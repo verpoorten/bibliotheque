@@ -51,6 +51,15 @@ def auteur_form(request, auteur_id):
 
     return render(request, "auteur_form.html",
                   {'auteur':     auteur})
+def auteur_new(request):
+
+    auteur = Auteur()
+
+    auteur.nom = request.POST['nom']
+    auteur.prenom = request.POST['prenom']
+
+    auteur.save()
+
 
 def auteur_update(request):
 
@@ -94,6 +103,7 @@ def livre_search(request):
     query = Livre.objects.all()
     personne = None
     auteur = None
+    livres = Livre.find_all()
     if request.GET['personne_id']:
         personne = request.GET['personne_id']
         livres = Livre.find_by_proprietaire(personne)
@@ -240,7 +250,7 @@ def livre_new(request):
         proprietaire.personne = personne
         proprietaire.livre = livre
         proprietaire.save()
-        
+
     return render(request, 'livre_list.html',
                     {'livres': Livre.find_all()})
 

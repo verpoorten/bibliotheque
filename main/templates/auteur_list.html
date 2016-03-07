@@ -9,8 +9,13 @@
   {% block content %}
 
   <div class="panel panel-default">
+
+
+
     <div class="panel-body">
-      <br>
+      <p align="right">
+            <a href="{% url 'auteur-create' %}" title="Pour ajouter un nouvel auteur"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+      </p>
         <table class="table table-striped table-hover">
             <thead>
                 <th>Nom</th>
@@ -29,9 +34,7 @@
             </tr>
         {% endfor%}
         </table>
-        <p align="right">
-          <a href="{% url 'auteur-create' %}" title="Pour créer un nouvel auteur"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
-        </p>
+
       </div>
     </div>
   {% endblock %}

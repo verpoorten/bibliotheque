@@ -12,7 +12,6 @@ import datetime
 from django.db import models
 
 def lecture_my_list(request):
-    print('lecture_my_list')
     personne = Personne.find_personne_by_user(request.user)
     lectures = Lecteur.find_by_personne(personne.id)
     livres=[]
@@ -26,13 +25,12 @@ def lecture_my_list(request):
                     'auteur':     None,
                     'personne':   personne.id})
 
+
 def lecture_search(request):
-    print('livre_search')
     query = Lecteur.objects.all()
     personne = None
     auteur = None
     livres = Livre.find_all_lecture_by_user(request.user)
-
 
     return render(request, 'lecture_list.html',
                     {'livres':    livres,
@@ -40,6 +38,7 @@ def lecture_search(request):
                     'auteurs' :   Auteur.objects.all(),
                     'titre' :     titre,
                     'auteur':     auteur})
+
 
 def lecture_list(request):
     livres = Livre.find_all_lecture_by_user(request.user)
@@ -54,14 +53,15 @@ def lecture_create(request):
     return render(request, "lecture_form.html",
                   {'lecture':         lecture})
 
+
 def lecture_form(request, lecture_id):
     lecture = Lecture.find_by_id(lecture_id)
     return render(request, "lecture_form.html",
                   {'lecture':   lecture,
                    'livres' : Livre.find_all})
 
+
 def lecture_update(request):
-    print('livreupdate')
     livre = Livre()
 
     if ('add' == request.POST['action'] or 'modify' == request.POST['action']):
