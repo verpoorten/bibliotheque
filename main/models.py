@@ -43,8 +43,8 @@ class Livre(models.Model):
     titre             = models.CharField(max_length = 100, blank = False, null = False)
     langue            = models.CharField(max_length=5,choices = LANGUE, default = 'FR')
     categorie         = models.ForeignKey(Categorie, blank = True, null = True)
-    date_creation     = models.DateTimeField(auto_now_add=True, blank = False, null = False)
-    date_modification = models.DateTimeField(auto_now=True, blank = False, null = False)
+    date_creation     = models.DateTimeField(auto_now_add=True, blank = True, null = True)
+    date_modification = models.DateTimeField(auto_now=True, blank = True, null = True)
 
     @property
     def proprietaires(self):
