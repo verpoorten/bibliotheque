@@ -112,12 +112,16 @@ class Livre(models.Model):
     def auteurs_livres_str(self):
         s = ""
         cpt=0
+        auteurs=[]
         for al in  AuteurLivre.objects.filter(livre=self):
-            if cpt>0:
-                s = s + ", " + str(al.auteur)
-            else:
-                s = al.auteur
-            cpt=cpt+1
+            auteurs.append(al.auteur)
+        s= ""
+        cpt = 0
+        for a in auteurs:
+            if cpt > 0:
+                s = s + " / "
+            s = s + str(a)
+            cpt = cpt+1
         return s
 
     @staticmethod
@@ -353,7 +357,7 @@ class Lecture(models.Model):
         except:
             return None
 
-            
+
 class Emprunt(models.Model):
     personne     = models.ForeignKey(Personne,blank = False, null = False)
     proprietaire = models.ForeignKey(Proprietaire,blank = False, null = False)

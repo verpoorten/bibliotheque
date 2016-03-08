@@ -1,13 +1,5 @@
 [
-  {
-    "model": "main.personne",
-    "pk": 9,
-    "fields": {
-      "prenom": "Leila",
-      "nom": "Verpoorten",
-      "localite" : "Lisogne"
-    }
-  },
+
   {
     "model": "main.personne",
     "pk": 1,
@@ -74,7 +66,15 @@
       "prenom": "-",
       "nom": "Inconnu"
     }
-  },
+  },  {
+      "model": "main.personne",
+      "pk": 9,
+      "fields": {
+        "prenom": "Leila",
+        "nom": "Verpoorten",
+        "localite" : "Lisogne"
+      }
+    },
   {    "model":"main.auteur",    "pk": 1 ,    "fields": {      "prenom": "Warren",
       "nom": "Adler"
     }
