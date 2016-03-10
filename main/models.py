@@ -99,13 +99,29 @@ class Livre(models.Model):
         return self.titre
 
     @staticmethod
-    def find_lecture(livre_id,user):
+    def find_lecture(livre_id, user):
         person = Personne.find_personne_by_user(user)
         livre = Livre.objects.get(pk=livre_id)
         try:
             return Lecture.objects.get(personne=person,livre= livre)
         except:
             return None
+
+    @staticmethod
+    def find_by_etat_lecture(etat_lecture, user):
+        person = Personne.find_personne_by_user(user)
+        livres = []
+        if etat_lecture:
+            lecture_liste =  Lecture.objects.filter(personne=person)
+            for lecture in lecture_liste:
+                livres.append(lecture.livre)
+            return livres
+        else:
+            liste_livre = Livre.objects.all()
+            for livre in liste_livre:
+                if not  Lecture.objects.filter(personne=person):
+                    livres.append(livre)
+            return livres
 
 
     @property
@@ -123,6 +139,7 @@ class Livre(models.Model):
             s = s + str(a)
             cpt = cpt+1
         return s
+
 
     @staticmethod
     def find_by_proprietaire_auteur(proprietaire_id,auteur_id):
@@ -142,9 +159,9 @@ class Livre(models.Model):
                 livres.append(l.livre)
 
         return livres
+
     @staticmethod
     def find_by_auteur(auteur_id):
-
         auteur = None
         if auteur_id:
             auteur = Auteur.find_auteur(auteur_id)
@@ -164,6 +181,8 @@ class Livre(models.Model):
     @staticmethod
     def is_lu(livre,user):
         person = Personne.find_personne_by_user(user)
+        print(livre)
+        print(livre.id, livre.titre)
         livre = Livre.objects.get(pk=livre.id)
         try:
             if Lecture.objects.get(personne=person,livre= livre):

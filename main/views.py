@@ -99,7 +99,6 @@ def livre_my_list(request):
                     'personne':   personne.id})
 
 def livre_search(request):
-    print('livre_search')
     query = Livre.objects.all()
     personne = None
     auteur = None
@@ -111,14 +110,25 @@ def livre_search(request):
     if request.GET['auteur_id']:
         auteur = request.GET['auteur_id']
         livres = Livre.find_by_auteur(auteur)
+
     titre = None
     if request.GET['titre']:
         titre = request.GET['titre']
         livres = Livre.find_by_titre(request.GET['titre'])
     # livres = Livre.find_by_proprietaire_auteur(proprietaire, auteur)
+
+    if request.GET['lu']:
+        etat_lecture = request.GET['lu']
+        if etat_lecture == "lu":
+            livres = Livre.find_by_etat_lecture(True, request.user)
+        else:
+            if etat_lecture == "paslu":
+                livres = Livre.find_by_etat_lecture(False, request.user)  
+
     personne_id = None
     if personne:
         personne_id = int(personne)
+
     return render(request, 'livre_list.html',
                     {'livres':    livres,
                     'personnes' : Proprietaire.find_distinct(),
@@ -127,8 +137,8 @@ def livre_search(request):
                     'auteur':     auteur,
                     'personne':   personne_id})
 
+
 def livre_list(request):
-    print('livre_list')
     return render(request, 'livre_list.html',
                     {'livres': Livre.find_all(),
                      'personnes' : Proprietaire.find_distinct(),

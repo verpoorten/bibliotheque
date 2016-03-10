@@ -29,10 +29,7 @@
               {% endfor %}
             </select>
           </div>
-          <div class="col-md-1">
-            <label class="control-label">Ou</label>
-          </div>
-          <div class="col-md-3">
+          <div class="col-md-4">
             <label for="auteur_id" class="control-label">Auteur</label>
             <select name="auteur_id">
               <option value="">-</option>
@@ -41,15 +38,31 @@
               {% endfor %}
             </select>
           </div>
-          <div class="col-md-1">
-            <label class="control-label">Ou</label>
-          </div>
           <div class="col-md-3">
             <label for="titre" class="control-label">Titre</label>
             <input class="form-control" id="titre" value="{{ titre | default_if_none:'' }}" name="titre">
           </div>
+          {% if request.user.is_authenticated %}
+            <div class="col-md-1">
+                <label for="lu" class="control-label">Lu</label><br>
+                <select id="lu" name="lu">
+                  <option value="">-</option>
+                  <option value="lu">Lu</option>
+                  <option value="paslu">Pas lu</option>
+                </select>
+            </div>
+          {% else %}
+            <div class="col-md-1">
+            </div>
+          {%endif%}
           <div class="col-md-1">
-            <input type="submit" value="OK" name="btn"
+            <input type="submit" value="OK" name="btn">
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-12">
+            <span style="color:gray">Les critères de recherche sont exclusifs (càd un seul prit en compte)</span>
           </div>
         </div>
     </form>
