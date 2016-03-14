@@ -116,14 +116,14 @@ def livre_search(request):
         titre = request.GET['titre']
         livres = Livre.find_by_titre(request.GET['titre'])
     # livres = Livre.find_by_proprietaire_auteur(proprietaire, auteur)
-
-    if request.GET['lu']:
-        etat_lecture = request.GET['lu']
-        if etat_lecture == "lu":
-            livres = Livre.find_by_etat_lecture(True, request.user)
-        else:
-            if etat_lecture == "paslu":
-                livres = Livre.find_by_etat_lecture(False, request.user)  
+    if request.user.is_authenticated():
+        if request.GET['lu']:
+            etat_lecture = request.GET['lu']
+            if etat_lecture == "lu":
+                livres = Livre.find_by_etat_lecture(True, request.user)
+            else:
+                if etat_lecture == "paslu":
+                    livres = Livre.find_by_etat_lecture(False, request.user)
 
     personne_id = None
     if personne:
