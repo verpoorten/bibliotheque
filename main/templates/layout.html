@@ -45,6 +45,7 @@
                   <li><a href="{% url 'livre_list' %}">Livres</a></li>
                   {% if request.user.is_authenticated %}
                   <li><a href="{% url 'lecture_list' %}">Lectures</a></li>
+                  <li><a href="{% url 'lecteur_list' %}">Lecteurs</a></li>
                   {% endif %}
                 </ul>
               </li>
@@ -52,6 +53,10 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Impression <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="{% url 'livres-print' %}">Livres</a></li>
+                  {% if request.user.is_authenticated %}
+                  <li><a href="{% url 'meslivres-print' %}">Mes livres</a></li>
+                  <li><a href="{% url 'meslivres-lu-print' %}">Livres lus</a></li>
+                  {% endif %}
                 </ul>
               </li>
             </ul>

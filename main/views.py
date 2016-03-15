@@ -164,15 +164,14 @@ def livre_form(request, livre_id):
     if request.user.is_authenticated():
         user = request.user
 
-
     return render(request, "livre_form.html",
                   {'livre':     livre,
                    'categories': Categorie.objects.all(),
                    'lecture':   lecture,
                    'user' : user})
 
+
 def livre_update(request):
-    print('livreupdate')
     livre = Livre()
 
     if ('add' == request.POST['action'] or 'modify' == request.POST['action']):
@@ -336,7 +335,6 @@ def delete_proprietaire(request, proprietaire_id):
 
 
 def proprietaire_emprunt_livre(request, proprietaire_id):
-    print('proprietaire_emprunt_livre')
     proprietaire = get_object_or_404(Proprietaire, pk=proprietaire_id)
     livre = proprietaire.livre
     emprunt = Proprietaire.find_emprunt_en_cours_by_proprietaire(proprietaire)
@@ -368,7 +366,7 @@ def proprietaire_retour_livre(request, emprunt_id):
         emprunt.save()
     livre = get_object_or_404(Livre, pk=emprunt.proprietaire.livre.id)
     lecture = Livre.find_lecture(livre.id,request.user)
-    ici
+
     return render(request, "livre_form.html",
                   {'livre':     livre,
                    'categories': Categorie.objects.all(),
@@ -455,13 +453,10 @@ def do_sign_in_new(request):
                 # Return a 'disabled account' error message
                 return render(request,'sign_in.html',{ 'error_messages' : ('Compte inactivé',),})
         else:
-            print('new')
             try:
                 user = User.objects.get(username=username)
-                print('try')
                 return render(request,'sign_in.html',{ 'error_messages' : ('Nom d\'utilisateur déjà existant',),})
             except User.DoesNotExist:
-                print('except')
                 # Create a new user. Note that we can set password
                 # to anything, because it won't be checked; the password
                 # from settings.py will.
@@ -477,19 +472,14 @@ def do_sign_in_new(request):
                     personne.localite=localite
                     personne.user = user
                     personne.save()
-                    print('ici')
                     user = authenticate(username=username, password=password)
-                    print('kkk')
                     if user is not None:
-                        print('kkk1')
                         if user.is_active:
-                            print('kkk2')
                             login(request, user)
                             # Redirect to a success page.
                             return HttpResponseRedirect(reverse('home'))
 
                 except:
-                    print('except2')
                     return render(request,'sign_in.html',{ 'error_messages' : ('Problème lors de l\'inscription',),})
 
             return HttpResponseRedirect(reverse('home'))
@@ -527,3 +517,7 @@ def log_out(request):
     """
     logout(request)
     return render(request,'sign_in.html',{ 'info_messages' : ('Successfully log out',),})
+
+
+def lecteur_list(request):
+    return render(request,'lecteur_list.html',{ 'lecteurs' : Personne.find_all(),})

@@ -53,12 +53,18 @@ url(r'^auteur/new/$', views.auteur_new, name='auteur-new'),
     # url(r'^meslectures/$', lecture.lecture_my_list, name='meslectures'),
     url(r'^lecture/delete/([0-9]+)/$', lecture.lecture_delete, name='lecture-delete'),
     url(r'^livres/print/$', export_xls.export_xls_livres, name='livres-print'),
+    url(r'^livres/print/meslivres/$', export_xls.export_xls_mes_livres, name='meslivres-print'),
+    url(r'^livres/print/livres/lus/$', export_xls.export_xls_livres_lu, name='meslivres-lu-print'),
+
+
 
     url(r'^sign_in/$',views.sign_in,name="sign_in"),
     url(r'^do_sign_in/$',views.do_sign_in,name='do_sign_in'),
     url(r'^logout/$',views.log_out,name='logout'),
     url(r'^sign_in_new/$',views.sign_in_new,name="sign_in_new"),
     url(r'^do_sign_in_new/$',views.do_sign_in_new,name="do_sign_in_new"),
+    url(r'^lecteurs/$', views.lecteur_list, name='lecteur_list'),
+
 
 
 

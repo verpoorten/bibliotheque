@@ -1,0 +1,32 @@
+
+  {% extends "layout.html" %}
+  {% load staticfiles %}
+  {% block breadcrumb %}
+
+    <li class="active">Liste des lecteurs</li>
+
+  {% endblock %}
+  {% block content %}
+
+  <div class="panel panel-default">
+
+    <div class="panel-body">
+
+        <table class="table table-striped table-hover">
+            <thead>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Localité</th>
+            </thead>
+        {% for lecteur in lecteurs %}
+            <tr>
+                <td>{{lecteur.nom | default_if_none:'' }}  </td>
+                <td>{{lecteur.prenom | default_if_none:'' }}</td>
+                <td>{{lecteur.localite | default_if_none:'' }}</td>
+            </tr>
+        {% endfor%}
+        </table>
+
+      </div>
+    </div>
+  {% endblock %}

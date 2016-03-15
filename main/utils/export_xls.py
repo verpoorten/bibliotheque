@@ -6,7 +6,7 @@ from openpyxl.styles import Color, Style, PatternFill
 from django.utils.translation import ugettext_lazy as _
 
 from main.models import *
-
+from django.utils import timezone
 
 HEADER = [str(_('Titre')),
           str(_('Auteur(s)')),
@@ -14,22 +14,22 @@ HEADER = [str(_('Titre')),
           str(_('Lu/pas lu'))]
 
 def export_xls_livres(request):
-
     livres = Livre.find_all()
+    return impression(request, livres, 'livres')
 
+def impression(request, livres, titre):
     wb = Workbook()
     ws = wb.active
+    ws.title = titre
     __columns_ajusting(ws)
     if request.user.is_authenticated():
         ws.append(HEADER)
-        nom_fichier = str(request.user) + "_livres.xlsx"
+        nom_fichier = str(request.user) + "_" + titre + ".xlsx"
     else:
         ws.append([str(_('Titre')),
                    str(_('Auteur(s)')),
                    str(_('Proprietaire(s)'))])
         nom_fichier ="livres.xlsx"
-
-
 
     cptr = 1
     for l in livres:
@@ -53,11 +53,31 @@ def export_xls_livres(request):
                    str(auteurs),
                    str(proprio),
                    etat_lecture])
+    ws1 = wb.create_sheet()
+    ws1.append([timezone.now()])
+    if request.user.is_authenticated():
+        personne = Personne.find_personne_by_user(request.user)
+        val = personne.nom + ", " + personne.prenom
+        ws1.append([val])
 
+    ws1.title = 'Paramètres'
+    col_date = ws1.column_dimensions['A']
+    col_date.width = 40
     response = HttpResponse(content=save_virtual_workbook(wb))
     response['Content-Disposition'] = 'attachment; filename=%s' % nom_fichier
     response['Content-type'] = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
     return response
+
+
+def export_xls_mes_livres(request):
+    livres = Livre.find_all_by_user(request.user)
+    return impression(request, livres, 'mes_livres')
+
+
+def export_xls_livres_lu(request):
+    livres = Lecture.find_all_by_user(request.user)
+
+    return impression(request, livres, 'livres_lus')
 
 
 def __columns_ajusting(ws):

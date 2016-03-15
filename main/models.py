@@ -73,6 +73,7 @@ class Livre(models.Model):
 
         return liste_livre
 
+
     @staticmethod
     def find_all_by_user(user):
         liste_livre=[]
@@ -85,6 +86,8 @@ class Livre(models.Model):
                 liste_livre.append(p.livre)
 
         return liste_livre
+
+
     @staticmethod
     def find_all_lecture_by_user(user):
         liste_livre=[]
@@ -181,8 +184,6 @@ class Livre(models.Model):
     @staticmethod
     def is_lu(livre,user):
         person = Personne.find_personne_by_user(user)
-        print(livre)
-        print(livre.id, livre.titre)
         livre = Livre.objects.get(pk=livre.id)
         try:
             if Lecture.objects.get(personne=person,livre= livre):
