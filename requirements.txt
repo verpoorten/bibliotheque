@@ -1,0 +1,7 @@
+Django==1.9.3
+et-xmlfile==1.0.1
+jdcal==1.2
+openpyxl==2.3.3
+python-dateutil==2.5.0
+six==1.10.0
+wheel==0.29.0
