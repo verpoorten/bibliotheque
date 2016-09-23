@@ -13,9 +13,11 @@ HEADER = [str(_('Titre')),
           str(_('Proprietaire(s)')),
           str(_('Lu/pas lu'))]
 
+
 def export_xls_livres(request):
     livres = Livre.find_all()
     return impression(request, livres, 'livres')
+
 
 def impression(request, livres, titre):
     wb = Workbook()
@@ -29,25 +31,25 @@ def impression(request, livres, titre):
         ws.append([str(_('Titre')),
                    str(_('Auteur(s)')),
                    str(_('Proprietaire(s)'))])
-        nom_fichier ="livres.xlsx"
+        nom_fichier = "livres.xlsx"
 
     cptr = 1
     for l in livres:
         proprietaires = l.proprietaires
         proprio = ""
-        cpt=0
+        cpt = 0
         for p in proprietaires:
-            if cpt >0:
-                proprio += ", " + p.personne.nom + " " +p.personne.prenom
+            if cpt > 0:
+                proprio += ", " + p.personne.nom + " " + p.personne.prenom
             else:
-                proprio +=  p.personne.nom + " " + p.personne.prenom
-            cpt=cpt+1
+                proprio += p.personne.nom + " " + p.personne.prenom
+            cpt = cpt + 1
         etat_lecture = ""
 
         if request.user.is_authenticated():
-            lecture = Livre.find_lecture(l.id,request.user)
+            lecture = Livre.find_lecture(l.id, request.user)
             if lecture:
-                etat_lecture="Lu"
+                etat_lecture = "Lu"
         auteurs = l.auteurs_livres_str
         ws.append([l.titre,
                    str(auteurs),
@@ -90,3 +92,61 @@ def __columns_ajusting(ws):
     col_academic_year.width = 40
     col_academic_year = ws.column_dimensions['C']
     col_academic_year.width = 20
+
+
+def export_xls_livres_by_auteur(request):
+    auteurs = Auteur.find_all()
+    return impression_by_auteur(request, auteurs, 'livres_par_auteurs')
+
+
+def impression_by_auteur(request, auteurs, titre):
+    wb = Workbook()
+    ws = wb.active
+    ws.title = titre
+    __columns_ajusting(ws)
+    if request.user.is_authenticated():
+        ws.append(HEADER)
+        nom_fichier = str(request.user) + "_" + titre + ".xlsx"
+    else:
+        ws.append([str(_('Auteur(s)')),
+                   str(_('Titre')),
+                   str(_('Proprietaire(s)'))])
+        nom_fichier = "livres.xlsx"
+
+    for auteur in auteurs:
+        livres = Livre.find_by_auteur(auteur.id)
+        for l in livres:
+            proprietaires = l.proprietaires
+            proprio = ""
+            cpt = 0
+            for p in proprietaires:
+                if cpt > 0:
+                    proprio += ", " + p.personne.nom + " " + p.personne.prenom
+                else:
+                    proprio += p.personne.nom + " " + p.personne.prenom
+                cpt = cpt + 1
+            etat_lecture = ""
+
+            if request.user.is_authenticated():
+                lecture = Livre.find_lecture(l.id, request.user)
+                if lecture:
+                    etat_lecture = "Lu"
+            auteurs = l.auteurs_livres_str
+            ws.append([str(auteurs),
+                       l.titre,
+                       str(proprio),
+                       etat_lecture])
+    ws1 = wb.create_sheet()
+    ws1.append([timezone.now()])
+    if request.user.is_authenticated():
+        personne = Personne.find_personne_by_user(request.user)
+        val = personne.nom + ", " + personne.prenom
+        ws1.append([val])
+
+    ws1.title = 'Paramètres'
+    col_date = ws1.column_dimensions['A']
+    col_date.width = 40
+    response = HttpResponse(content=save_virtual_workbook(wb))
+    response['Content-Disposition'] = 'attachment; filename=%s' % nom_fichier
+    response['Content-type'] = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+    return response

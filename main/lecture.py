@@ -101,7 +101,7 @@ def lecture_update(request):
 
 def lecture_delete(request, livre_id):
     livre = Livre.find_livre(livre_id)
-    lectures = Lecture.find_all_by_user_livre(livre_id,request.user)
+    lectures = Lecture.find_all_by_user_livre(request.user)
     for l in lectures:
         l.delete()
     livres = Livre.find_all_lecture_by_user(request.user)

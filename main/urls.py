@@ -55,6 +55,8 @@ url(r'^auteur/new/$', views.auteur_new, name='auteur-new'),
     url(r'^livres/print/$', export_xls.export_xls_livres, name='livres-print'),
     url(r'^livres/print/meslivres/$', export_xls.export_xls_mes_livres, name='meslivres-print'),
     url(r'^livres/print/livres/lus/$', export_xls.export_xls_livres_lu, name='meslivres-lu-print'),
+    url(r'^livres/print_auteur/$', export_xls.export_xls_livres_by_auteur, name='livres-print-auteur'),
+
 
 
 

@@ -17,7 +17,7 @@
       <form method="get" action="{% url 'livre-search' %}" >
         <div class="row">
           <div class="col-md-3">
-            <label for="personne_id" class="control-label">Propriétaire</label>
+            <label class="control-label">Propriétaire</label>
             <select class="form-control"  name="personne_id" >
               <option value="">-</option>
               {% for p in personnes %}
@@ -30,7 +30,7 @@
             </select>
           </div>
           <div class="col-md-4">
-            <label for="auteur_id" class="control-label">Auteur</label>
+            <label class="control-label">Auteur</label>
             <select name="auteur_id">
               <option value="">-</option>
               {% for a in auteurs %}
