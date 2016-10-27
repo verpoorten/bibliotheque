@@ -52,6 +52,7 @@ class Livre(models.Model):
     categorie = models.ForeignKey(Categorie, blank=True, null=True)
     date_creation = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     date_modification = models.DateTimeField(auto_now=True, blank=True, null=True)
+    remarque = models.TextField(blank=True, null=True)
 
     @property
     def proprietaires(self):
