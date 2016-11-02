@@ -3,23 +3,20 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from main.models import *
 from django.core.urlresolvers import reverse
-import os
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
-from dateutil.relativedelta import relativedelta
-import datetime
-from django.db import models
+
 
 def page_not_found(request):
-    return render(request,'page_not_found.html')
+    return render(request, 'page_not_found.html')
+
 
 def access_denied(request):
-    return render(request,'acces_denied.html')
+    return render(request, 'acces_denied.html')
+
 
 def home(request):
-    # return render(request, 'home.html',
-    #                 {'livres': None})
     if request.user.is_authenticated():
         livres = Livre.find_last_by_user(request.user)
         if livres:
@@ -28,17 +25,16 @@ def home(request):
         if lectures:
             lectures = lectures[:10]
         return render(request, 'home.html',
-                        {'livres':  livres,
-                         'lectures': lectures,
-                         'emprunts' : Emprunt.find_emprunt_courant_by_user(request.user),
-                         'en_locations' : Emprunt.find_locations(request.user)})
+                      {'livres':  livres,
+                       'lectures': lectures,
+                       'emprunts': Emprunt.find_emprunt_courant_by_user(request.user),
+                       'en_locations': Emprunt.find_locations(request.user)})
     else:
-        return render(request, 'home.html',
-                        {})
+        return render(request, 'home.html', {})
+
 
 def auteur_list(request):
-        return render(request, 'auteur_list.html',
-                        {'auteurs': Auteur.find_all()})
+        return render(request, 'auteur_list.html', {'auteurs': Auteur.find_all()})
 
 
 def auteur_create(request):
@@ -46,13 +42,15 @@ def auteur_create(request):
     return render(request, "auteur_form.html",
                   {'auteur':         auteur})
 
+
 def auteur_form(request, auteur_id):
     auteur = Auteur.find_auteur(auteur_id)
 
     return render(request, "auteur_form.html",
                   {'auteur':     auteur})
-def auteur_new(request):
 
+
+def auteur_new(request):
     auteur = Auteur()
 
     auteur.nom = request.POST['nom']
@@ -75,14 +73,14 @@ def auteur_update(request):
 
         auteur.save()
 
-    return render(request, 'auteur_list.html',
-                    {'auteurs': Auteur.find_all()})
+    return render(request, 'auteur_list.html', {'auteurs': Auteur.find_all()})
+
 
 def auteur_delete(request, id):
     auteur = get_object_or_404(Auteur, pk=id)
     auteur.delete()
-    return render(request, 'auteur_list.html',
-                    {'auteurs': Auteur.find_all()})
+    return render(request, 'auteur_list.html', {'auteurs': Auteur.find_all()})
+
 
 def livre_my_list(request):
     personne = Personne.find_personne_by_user(request.user)
@@ -91,12 +89,13 @@ def livre_my_list(request):
         livres = Livre.find_by_proprietaire(personne.id)
 
     return render(request, 'livre_list.html',
-                    {'livres':    livres,
-                    'personnes' : Proprietaire.find_distinct(),
-                    'auteurs' :   Auteur.objects.all(),
-                    'titre' :     None,
-                    'auteur':     None,
-                    'personne':   personne.id})
+                  {'livres':    livres,
+                   'personnes': Proprietaire.find_distinct(),
+                   'auteurs':   Auteur.objects.all(),
+                   'titre':     None,
+                   'auteur':    None,
+                   'personne':  personne.id})
+
 
 def livre_search(request):
     query = Livre.objects.all()
@@ -130,45 +129,45 @@ def livre_search(request):
         personne_id = int(personne)
 
     return render(request, 'livre_list.html',
-                    {'livres':    livres,
-                    'personnes' : Proprietaire.find_distinct(),
-                    'auteurs' :   Auteur.objects.all(),
-                    'titre' :     titre,
-                    'auteur':     auteur,
-                    'personne':   personne_id})
+                  {'livres':    livres,
+                   'personnes': Proprietaire.find_distinct(),
+                   'auteurs':   Auteur.objects.all(),
+                   'titre':     titre,
+                   'auteur':    auteur,
+                   'personne':  personne_id})
 
 
 def livre_list(request):
     return render(request, 'livre_list.html',
-                    {'livres': Livre.find_all(),
-                     'personnes' : Proprietaire.find_distinct(),
-                     'auteurs' : Auteur.objects.all()})
+                  {'livres': Livre.find_all(),
+                   'personnes': Proprietaire.find_distinct(),
+                   'auteurs': Auteur.objects.all()})
 
 
 def livre_create(request):
     livre = Livre()
     return render(request, "livre_form_new.html",
-                  {'livre':         livre,
+                  {'livre':      livre,
                    'categories': Categorie.objects.all(),
-                   'personnes' : Proprietaire.find_distinct(),
-                   'auteurs' : Auteur.objects.all()})
+                   'personnes':  Proprietaire.find_distinct(),
+                   'auteurs':    Auteur.objects.all()})
 
 
 def livre_form(request, livre_id):
     livre = Livre.find_livre(livre_id)
     lecture = None
     if request.user.is_authenticated():
-        lecture = Livre.find_lecture(livre_id,request.user)
+        lecture = Livre.find_lecture(livre_id, request.user)
 
     user = None
     if request.user.is_authenticated():
         user = request.user
 
     return render(request, "livre_form.html",
-                  {'livre':     livre,
+                  {'livre':      livre,
                    'categories': Categorie.objects.all(),
-                   'lecture':   lecture,
-                   'user' : user})
+                   'lecture':    lecture,
+                   'user':       user})
 
 
 def livre_update(request):
@@ -190,38 +189,37 @@ def livre_update(request):
         livre.categorie = categorie
         livre.save()
         lu=False
-        if request.POST.get('lu',None) == "on":
+        if request.POST.get('lu', None) == "on":
             lu= True
         if lu:
-            lecture = Livre.find_lecture(livre.id,request.user)
+            lecture = Livre.find_lecture(livre.id, request.user)
             if lecture:
                 pass
             else:
                 personne = Personne.find_personne_by_user(request.user)
                 lecture = Lecture()
-                lecture.livre  = livre
+                lecture.livre = livre
                 lecture.personne = personne
                 lecture.save()
         else:
-            lecture = Livre.find_lecture(livre.id,request.user)
+            lecture = Livre.find_lecture(livre.id, request.user)
             if lecture:
                 lecture.delete()
 
-    return render(request, 'livre_list.html',
-                    {'livres': Livre.find_all()})
+    return render(request, 'livre_list.html', {'livres': Livre.find_all()})
+
 
 def livre_delete(request, id):
     livre = get_object_or_404(Livre, pk=id)
     livre.delete()
-    return render(request, 'livre_list.html',
-                    {'livres': Livre.find_all()})
+    return render(request, 'livre_list.html', {'livres': Livre.find_all()})
+
 
 def livre_new(request):
     livre = Livre()
 
     livre.titre = request.POST['titre']
     livre.langue = request.POST['langue']
-
 
     if request.POST['categorie'] and not request.POST['categorie'] == 'None':
         categorie = get_object_or_404(Categorie, pk=request.POST['categorie'])
@@ -230,10 +228,10 @@ def livre_new(request):
     livre.categorie = categorie
     livre.save()
     lu=False
-    if request.POST.get('lu',None) == "on":
+    if request.POST.get('lu', None) == "on":
         lu= True
     if lu:
-        lecture = Livre.find_lecture(livre.id,request.user)
+        lecture = Livre.find_lecture(livre.id, request.user)
         if lecture:
             pass
         else:
@@ -243,7 +241,7 @@ def livre_new(request):
             lecture.personne = personne
             lecture.save()
     else:
-        lecture = Livre.find_lecture(livre.id,request.user)
+        lecture = Livre.find_lecture(livre.id, request.user)
         if lecture:
             lecture.delete()
     if request.POST['auteur_id']:
@@ -260,8 +258,8 @@ def livre_new(request):
         proprietaire.livre = livre
         proprietaire.save()
 
-    return render(request, 'livre_list.html',
-                    {'livres': Livre.find_all()})
+    return render(request, 'livre_list.html',  {'livres': Livre.find_all()})
+
 
 def delete_auteur_livre(request, auteur_livre_id):
     auteur_livre = AuteurLivre.find_auteur_livre(auteur_livre_id)
@@ -271,6 +269,7 @@ def delete_auteur_livre(request, auteur_livre_id):
                   {'livre': livre,
                    'categories': Categorie.objects.all()})
 
+
 def add_auteur_livre(request, livre_id):
     livre = get_object_or_404(Livre, pk=livre_id)
     auteur = Auteur()
@@ -278,7 +277,8 @@ def add_auteur_livre(request, livre_id):
 
     return render(request, "auteur_form.html",
                   {'auteur':     auteur,
-                   'categories': Categorie.objects.all(),})
+                   'categories': Categorie.objects.all()})
+
 
 def add_auteur_to_livre(request, livre_id):
     livre = get_object_or_404(Livre, pk=livre_id)
@@ -289,7 +289,8 @@ def add_auteur_to_livre(request, livre_id):
                   {'auteur_livre': auteur_livre,
                    'auteurs':      Auteur.find_all(),
                    'livre':        livre,
-                   'categories': Categorie.objects.all(),})
+                   'categories':   Categorie.objects.all()})
+
 
 def save_auteur_livre(request):
     auteur_id=request.POST['auteur_id']
@@ -312,7 +313,8 @@ def add_proprietaire_to_livre(request, livre_id):
     personnes = Personne.find_all()
     return render(request, "proprietaire_form.html",
                   {'proprietaire': proprietaire,
-                   'personnes'   : personnes,})
+                   'personnes':    personnes})
+
 
 def save_proprietaire(request):
     livre = get_object_or_404(Livre, pk=request.POST['livre_id'])
@@ -323,7 +325,8 @@ def save_proprietaire(request):
     proprietaire.save()
     return render(request, "livre_form.html",
                   {'livre': livre,
-                   'categories': Categorie.objects.all(),})
+                   'categories': Categorie.objects.all()})
+
 
 def delete_proprietaire(request, proprietaire_id):
     proprietaire = get_object_or_404(Proprietaire, pk=proprietaire_id)
@@ -358,6 +361,8 @@ def proprietaire_emprunt_livre(request, proprietaire_id):
 def proprietaire_retour_livre(request, emprunt_id):
     """
     Indique un livre comme rendu
+    param: request
+    param: emprunt_id
     """
     emprunt = get_object_or_404(Emprunt, pk=emprunt_id)
 
@@ -372,6 +377,7 @@ def proprietaire_retour_livre(request, emprunt_id):
                    'categories': Categorie.objects.all(),
                    'lecture':   lecture})
 
+
 def lecture_retour_lu_livre(request, emprunt_id):
         """
         Indique un livre comme rendu et ajoute un enregistrement lecture
@@ -383,7 +389,7 @@ def lecture_retour_lu_livre(request, emprunt_id):
             emprunt.date_retour = timezone.now()
             emprunt.save()
         livre = get_object_or_404(Livre, pk=emprunt.proprietaire.livre.id)
-        lecture = Lecture.find_lecture(livre,emprunt.personne)
+        lecture = Lecture.find_lecture(livre, emprunt.personne)
 
         if lecture:
             pass
@@ -395,6 +401,7 @@ def lecture_retour_lu_livre(request, emprunt_id):
             lecture.save()
 
         return home(request)
+
 
 def proprietaire_retour_lu_livre(request, emprunt_id):
     """
@@ -420,6 +427,7 @@ def proprietaire_retour_lu_livre(request, emprunt_id):
 
     return home(request)
 
+
 def sign_in_new(request):
     """
     Manage sign in view
@@ -427,6 +435,8 @@ def sign_in_new(request):
     :return: the sign_in view
     """
     return render(request,'sign_in_new.html',)
+
+
 def sign_in(request):
     """
     Manage sign in view
@@ -434,6 +444,7 @@ def sign_in(request):
     :return: the sign_in view
     """
     return render(request,'sign_in.html',)
+
 
 def do_sign_in_new(request):
     if request.POST:
@@ -480,11 +491,13 @@ def do_sign_in_new(request):
                             return HttpResponseRedirect(reverse('home'))
 
                 except:
-                    return render(request,'sign_in.html',{ 'error_messages' : ('Problème lors de l\'inscription',),})
+                    return render(request, 'sign_in.html',
+                                  {'error_messages': ('Problème lors de l\'inscription',)})
 
             return HttpResponseRedirect(reverse('home'))
 
         return render_to_response('sign_in.html',context_instance=RequestContext(request))
+
 
 def do_sign_in(request):
     """
@@ -503,11 +516,12 @@ def do_sign_in(request):
                 return HttpResponseRedirect(reverse('home'))
             else:
                 # Return a 'disabled account' error message
-                return render(request,'sign_in.html',{ 'error_messages' : ('Compte inactivé',),})
+                return render(request,'sign_in.html', {'error_messages' : ('Compte inactivé',)})
         else:
             # Return an 'invalid login' error message.
-            return render(request,'sign_in.html',{ 'error_messages' : ('Utilisateur ou mot de pass invalide',),})
-        return render_to_response('sign_in.html',context_instance=RequestContext(request))
+            return render(request,'sign_in.html', {'error_messages' : ('Utilisateur ou mot de pass invalide',)})
+        return render_to_response('sign_in.html', context_instance=RequestContext(request))
+
 
 def log_out(request):
     """
@@ -516,8 +530,8 @@ def log_out(request):
     :return: The sign_in view
     """
     logout(request)
-    return render(request,'sign_in.html',{ 'info_messages' : ('Successfully log out',),})
+    return render(request, 'sign_in.html', {'info_messages': ('Successfully log out',)})
 
 
 def lecteur_list(request):
-    return render(request,'lecteur_list.html',{ 'lecteurs' : Personne.find_all(),})
+    return render(request, 'lecteur_list.html', {'lecteurs': Personne.find_all()})

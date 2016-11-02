@@ -11,7 +11,7 @@
       {% csrf_token %}
       <div class="row">
         <div class="col-md-6">
-          <label for="personne_id" class="control-label">Langue</label>
+          <label class="control-label">Propriétaire</label>
           <select class="form-control" name="personne_id">
               {% for p in personnes %}
                 <option value="{{p.id}}">{{p}}</option>

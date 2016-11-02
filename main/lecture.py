@@ -41,11 +41,11 @@ def lecture_search(request):
 
 
 def lecture_list(request):
-    livres = Livre.find_all_lecture_by_user(request.user)
+
     return render(request, 'lecture_list.html',
-                    {'livres':livres,
-                     'personnes' : Lecture.find_distinct(),
-                     'auteurs' : Auteur.objects.all()})
+                    {'lectures': Livre.find_all_lecture_by_user(request.user),
+                     'personnes': Lecture.find_distinct(),
+                     'auteurs': Auteur.objects.all()})
 
 
 def lecture_create(request):

@@ -12,11 +12,9 @@ class Personne(models.Model):
     def __str__(self):
         return self.nom.upper() + ", " + self.prenom
 
-    def find_all(self):
+    @staticmethod
+    def find_all():
         return Personne.objects.all()
-
-    def find_all_exclude_user(self, current_user):
-        return Personne.objects.all().exclude(user=current_user)
 
     @staticmethod
     def find_personne_by_user(user):
@@ -98,9 +96,8 @@ class Livre(models.Model):
         liste_livre = []
         if user.is_authenticated():
             person = Personne.find_personne_by_user(user)
-            l = Lecture.objects.filter(personne=person)
-            for p in l:
-                liste_livre.append(p.livre)
+            l = Lecture.objects.filter(personne=person).order_by('-date_modification')
+            return l
 
         return liste_livre
     
@@ -271,10 +268,12 @@ class Location(models.Model):
     def __str__(self):
         return self.lecteur.nom + ", " + self.livre.titre
 
+
 class ProprietaireAdmin(admin.ModelAdmin):
     raw_id_fields = ('personne', 'livre')
     list_filter = ('livre',)
     search_fields = ['livre']
+
 
 class Proprietaire(models.Model):
     personne = models.ForeignKey(Personne)
@@ -332,6 +331,7 @@ class Lecture(models.Model):
     livre = models.ForeignKey(Livre, blank=False, null=False)
     date_creation = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     date_modification = models.DateTimeField(auto_now=True, blank=True, null=True)
+    remarque = models.TextField(blank=True, null=True)
 
     def __str__(self):
             return self.personne.nom + ", " + self.livre.titre
@@ -377,7 +377,8 @@ class Lecture(models.Model):
         person = Personne.find_personne_by_user(user)
         return Lecture.objects.filter(personne=person)
 
-    def find_lecture(self, livre, personne):
+    @staticmethod
+    def find_lecture(livre, personne):
         try:
             return Lecture.objects.get(personne=personne, livre=livre)
         except Exception:
