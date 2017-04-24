@@ -37,6 +37,7 @@ class Categorie(models.Model):
 
 class LivreAdmin(admin.ModelAdmin):
     search_fields = ['titre']
+    raw_id_fields = ('categorie', )
 
 
 class Livre(models.Model):
